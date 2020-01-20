@@ -1,0 +1,1409 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<metadata>
+  <tables>
+    <table name="MGSTCTCONTRVLRSERV" sequenceType="A" sequenceField="NUCONTRMATSRV">
+      <description><![CDATA[Valores dos Produtos]]></description>
+    </table>
+    <table name="MGSTCTALOCACAOSERV" sequenceType="A" sequenceField="NUALOCASERV">
+      <description><![CDATA[Alocações de Serviços]]></description>
+    </table>
+    <table name="MGSTCTALOCACAOPS" sequenceType="A" sequenceField="NUALOCAPS">
+      <description><![CDATA[Alocações de PS]]></description>
+    </table>
+    <table name="MGSTCTTRIBUTOFATURA" sequenceType="M">
+      <description><![CDATA[Tributos da Fatura]]></description>
+    </table>
+    <table name="MGSTCTCONTRATOPREV" sequenceType="A" sequenceField="NUCONTRPREV">
+      <description><![CDATA[Previsões do Contrato]]></description>
+    </table>
+    <table name="MGSTCTLOCALCONT" sequenceType="A" sequenceField="NULOCALCONT">
+      <description><![CDATA[Local do Contrato]]></description>
+    </table>
+    <table name="MGSTCTUNIDADEPREV" sequenceType="A" sequenceField="NUUNIDPREV">
+      <description><![CDATA[Previsões da Unidade]]></description>
+    </table>
+    <table name="MGSTCTUNIDPREVVAGA" sequenceType="A" sequenceField="NUUNIDPREVVAGA">
+      <description><![CDATA[Vagas Previsão da Unidade]]></description>
+    </table>
+    <table name="MGSTCTEVTCUS" sequenceType="A" sequenceField="NUEVTCUS">
+      <description><![CDATA[Parâmetros dos Eventos e Custos]]></description>
+    </table>
+    <table name="MGSTCTEVTMENSAL" sequenceType="M">
+      <description><![CDATA[Detalhamento de Custo]]></description>
+    </table>
+    <table name="MGSTCTLCTCUSTO" sequenceType="M">
+      <description><![CDATA[Lançamento de Custo]]></description>
+    </table>
+    <table name="MGSTCTFTRANEXO" sequenceType="M">
+      <description><![CDATA[Fatura Anexo]]></description>
+    </table>
+    <table name="MGSTCTINTEGRADC" sequenceType="M">
+      <description><![CDATA[Integração Detalhamento de Custo]]></description>
+    </table>
+    <table name="MGSVCTCARGO" sequenceType="M">
+      <description><![CDATA[Cargo]]></description>
+    </table>
+    <table name="MGSTCTCONTRCENT" sequenceType="A" sequenceField="NUCONTRCENT">
+      <description><![CDATA[Unidades]]></description>
+    </table>
+    <table name="MGSTCTLOCALTIPOFAT" sequenceType="A" sequenceField="NULOCALCONT">
+      <description><![CDATA[Local Tipo de Fatura]]></description>
+    </table>
+    <table name="MGSTCTTIPOFATURA" sequenceType="A" sequenceField="CODTIPOFATURA">
+      <description><![CDATA[Apoio Tipo de Fatura]]></description>
+    </table>
+    <table name="MGSTCTCONTROLE" sequenceType="A" sequenceField="CODCONTROLE">
+      <description><![CDATA[Apoio de Controle]]></description>
+    </table>
+    <table name="MGSTCTRLTANEXO" sequenceType="M">
+      <description><![CDATA[Relatório Anexo]]></description>
+    </table>
+    <table name="MGSTCTMETRICAS" sequenceType="A" sequenceField="NUMETRICAS">
+      <description><![CDATA[Métricas]]></description>
+    </table>
+    <table name="MGSTCTVAGAS" sequenceType="A" sequenceField="CODVAGA">
+      <description><![CDATA[Apoio de Vagas]]></description>
+    </table>
+    <table name="MGSTCTFATURA" sequenceType="M">
+      <description><![CDATA[Geração das Faturas]]></description>
+    </table>
+    <table name="MGSTCTNFENOTAS" sequenceType="M">
+      <description><![CDATA[Número da Nfe]]></description>
+    </table>
+    <table name="MGSTCTBOLETOFATURA" sequenceType="M">
+      <description><![CDATA[Boleto da Fatura]]></description>
+    </table>
+    <table name="MGSTCTCONTRATOTRIB" sequenceType="A" sequenceField="NUCONTRATOTRIB">
+      <description><![CDATA[Tributos do Contrato]]></description>
+    </table>
+    <table name="MGSTCTCONTRATOTAXA" sequenceType="A" sequenceField="NUCONTRTAXA">
+      <description><![CDATA[Taxa do Contrato]]></description>
+    </table>
+    <table name="MGSTCTTIPOSITUACAO" sequenceType="A" sequenceField="CODTIPSITUACAO">
+      <description><![CDATA[Situação do Contrato]]></description>
+    </table>
+    <table name="MGSTCTTIPOTAXA" sequenceType="A" sequenceField="CODTAXA">
+      <description><![CDATA[Apoio Taxa]]></description>
+    </table>
+    <table name="MGSTCTCONTRVLRPS" sequenceType="A" sequenceField="NUCONTREVENTO">
+      <description><![CDATA[Valores dos Eventos]]></description>
+    </table>
+    <table name="MGSTCTITEMFATURA" sequenceType="M">
+      <description><![CDATA[Itens da Fatura]]></description>
+    </table>
+    <table name="MGSTCTGERABOLETO" sequenceType="M">
+      <description><![CDATA[Geração do Boleto]]></description>
+    </table>
+    <table name="MGSTCTPOSTOCARGO" sequenceType="A" sequenceField="NUPOSTOCARGO">
+      <description><![CDATA[Apoio Posto Cargo]]></description>
+    </table>
+    <table name="MGSTCTCONTRATO" sequenceType="M" sequenceField="NUMCONTRATO">
+      <description><![CDATA[Dados do Contrato]]></description>
+    </table>
+    <table name="MGSTCTCONTRATOVAGA" sequenceType="A" sequenceField="NUCONTRVAGA">
+      <description><![CDATA[Vagas Previsão do Contrato]]></description>
+    </table>
+    <table name="MGSTCTINTEGRALC" sequenceType="M">
+      <description><![CDATA[Integração Lançamento de Custo]]></description>
+    </table>
+    <table name="MGSTCTTAXAFATURA" sequenceType="M">
+      <description><![CDATA[Taxas da Fatura]]></description>
+    </table>
+    <table name="MGSTCTMODALCONTR" sequenceType="A" sequenceField="NUMODALIDADE">
+      <description><![CDATA[Modalidade do Contrato]]></description>
+    </table>
+    <table name="CTCONTRVLRSERV" sequenceType="M">
+      <description><![CDATA[Valores dos Produtos]]></description>
+    </table>
+    <table name="MGSTCTEVTAPT" sequenceType="A" sequenceField="NUEVTAPT">
+      <description><![CDATA[Parâmetros dos Eventos e Apontamentos]]></description>
+    </table>
+  </tables>
+  <fields>
+    <field name="VLRTOTAL" table="MGSTCTCONTRATO" dataType="F" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="7">
+      <description><![CDATA[Valor Total]]></description>
+    </field>
+    <field name="OBSCONTRATO" table="MGSTCTCONTRATO" dataType="S" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="8">
+      <description><![CDATA[Observação do Contrato]]></description>
+    </field>
+    <field name="DTINICIO" table="MGSTCTCONTRATO" dataType="H" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="2">
+      <description><![CDATA[Data Início]]></description>
+    </field>
+    <field name="DTFIM" table="MGSTCTCONTRATO" dataType="H" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="3">
+      <description><![CDATA[Data Fim]]></description>
+    </field>
+    <field name="CODPARC" table="MGSTCTCONTRATO" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="4">
+      <description><![CDATA[Parceiro]]></description>
+    </field>
+    <field name="CODTIPSITUACAO" table="MGSTCTCONTRATO" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="1">
+      <description><![CDATA[Situação do Contrato]]></description>
+    </field>
+    <field name="VLRMES" table="MGSTCTCONTRATO" dataType="F" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="6">
+      <description><![CDATA[Valor Mês]]></description>
+    </field>
+    <field name="NUMCONTRATO" table="MGSTCTCONTRATO" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="0">
+      <description><![CDATA[Num. Contrato]]></description>
+    </field>
+    <field name="DTASSINATURA" table="MGSTCTCONTRATO" dataType="H" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="5">
+      <description><![CDATA[Data Assinatura]]></description>
+    </field>
+    <field name="NUMERO" table="MGSTCTLOCALCONT" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="7">
+      <description><![CDATA[Número]]></description>
+    </field>
+    <field name="CODUF" table="MGSTCTLOCALCONT" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="11">
+      <description><![CDATA[UF]]></description>
+    </field>
+    <field name="CODCID" table="MGSTCTLOCALCONT" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="10">
+      <description><![CDATA[Cidade]]></description>
+    </field>
+    <field name="COMPLEMENTO" table="MGSTCTLOCALCONT" dataType="S" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="8">
+      <description><![CDATA[Complemento]]></description>
+    </field>
+    <field name="NUMLOCAL" table="MGSTCTLOCALCONT" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="3">
+      <description><![CDATA[Num. Local]]></description>
+    </field>
+    <field name="NULOCALCONT" table="MGSTCTLOCALCONT" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="0">
+      <description><![CDATA[Nro. Único]]></description>
+    </field>
+    <field name="CODPARC" table="MGSTCTLOCALCONT" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="4">
+      <description><![CDATA[Parceiro]]></description>
+    </field>
+    <field name="NUMODALIDADE" table="MGSTCTLOCALCONT" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="2">
+      <description><![CDATA[Modalidade]]></description>
+    </field>
+    <field name="CEP" table="MGSTCTLOCALCONT" dataType="S" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="5">
+      <description><![CDATA[CEP]]></description>
+    </field>
+    <field name="CODBAI" table="MGSTCTLOCALCONT" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="9">
+      <description><![CDATA[Bairro]]></description>
+    </field>
+    <field name="CODEND" table="MGSTCTLOCALCONT" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="6">
+      <description><![CDATA[Endereço]]></description>
+    </field>
+    <field name="CODCONTROLE" table="MGSTCTCONTROLE" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="0">
+      <description><![CDATA[Controle]]></description>
+    </field>
+    <field name="DESCRCONTROLE" table="MGSTCTCONTROLE" dataType="S" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="S" order="1">
+      <description><![CDATA[Descrição]]></description>
+    </field>
+    <field name="NUMCONTRATO" table="MGSTCTCONTRATOPREV" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="1">
+      <description><![CDATA[Num. Contrato]]></description>
+    </field>
+    <field name="DSCEVENTO" table="MGSTCTEVTMENSAL" dataType="S" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="13">
+      <description><![CDATA[DSCEVENTO]]></description>
+    </field>
+    <field name="CODAPONTAMENTO" table="MGSTCTEVTMENSAL" dataType="S" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="38">
+      <description><![CDATA[CODAPONTAMENTO]]></description>
+    </field>
+    <field name="CODCARGA" table="MGSTCTEVTMENSAL" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="25">
+      <description><![CDATA[CODCARGA]]></description>
+    </field>
+    <field name="PERCITF" table="MGSTCTEVTMENSAL" dataType="F" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="27">
+      <description><![CDATA[PERCITF]]></description>
+    </field>
+    <field name="VLRUNIEVENTO" table="MGSTCTEVTMENSAL" dataType="F" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="15">
+      <description><![CDATA[VLRUNIEVENTO]]></description>
+    </field>
+    <field name="CODCUSTO" table="MGSTCTEVTMENSAL" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="31">
+      <description><![CDATA[CODCUSTO]]></description>
+    </field>
+    <field name="CODORIGEM" table="MGSTCTEVTMENSAL" dataType="S" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="40">
+      <description><![CDATA[CODORIGEM]]></description>
+    </field>
+    <field name="DTINIEVENTO" table="MGSTCTEVTMENSAL" dataType="H" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="11">
+      <description><![CDATA[DTINIEVENTO]]></description>
+    </field>
+    <field name="DTALTERLANC" table="MGSTCTEVTMENSAL" dataType="H" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="34">
+      <description><![CDATA[DTALTERLANC]]></description>
+    </field>
+    <field name="NOME" table="MGSTCTEVTMENSAL" dataType="S" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="9">
+      <description><![CDATA[NOME]]></description>
+    </field>
+    <field name="CODUNIDADEFATURANT" table="MGSTCTEVTMENSAL" dataType="S" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="36">
+      <description><![CDATA[CODUNIDADEFATURANT]]></description>
+    </field>
+    <field name="VLRTXADM" table="MGSTCTEVTMENSAL" dataType="F" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="29">
+      <description><![CDATA[VLRTXADM]]></description>
+    </field>
+    <field name="CODUNIDADEFATUR" table="MGSTCTEVTMENSAL" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="3">
+      <description><![CDATA[CODUNIDADEFATUR]]></description>
+    </field>
+    <field name="CODINTEGRACAODC" table="MGSTCTEVTMENSAL" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="23">
+      <description><![CDATA[CODINTEGRACAODC]]></description>
+    </field>
+    <field name="DHINS" table="MGSTCTEVTMENSAL" dataType="H" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="44">
+      <description><![CDATA[DHINS]]></description>
+    </field>
+    <field name="TIPLANCEVENTO" table="MGSTCTEVTMENSAL" dataType="S" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="21">
+      <description><![CDATA[TIPLANCEVENTO]]></description>
+    </field>
+    <field name="IDEVENTOREFGLOSA" table="MGSTCTEVTMENSAL" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="42">
+      <description><![CDATA[IDEVENTOREFGLOSA]]></description>
+    </field>
+    <field name="NUMODALIDADE" table="MGSTCTEVTMENSAL" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="1">
+      <description><![CDATA[NUMODALIDADE]]></description>
+    </field>
+    <field name="QTDEVENTO" table="MGSTCTEVTMENSAL" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="16">
+      <description><![CDATA[QTDEVENTO]]></description>
+    </field>
+    <field name="VLRTOTEVENTO" table="MGSTCTEVTMENSAL" dataType="F" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="17">
+      <description><![CDATA[VLRTOTEVENTO]]></description>
+    </field>
+    <field name="CODSERVMATERIAL" table="MGSTCTEVTMENSAL" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="5">
+      <description><![CDATA[CODSERVMATERIAL]]></description>
+    </field>
+    <field name="TERMINS" table="MGSTCTEVTMENSAL" dataType="S" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="46">
+      <description><![CDATA[TERMINS]]></description>
+    </field>
+    <field name="CODCARGO" table="MGSTCTEVTMENSAL" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="7">
+      <description><![CDATA[CODCARGO]]></description>
+    </field>
+    <field name="COMPLANC" table="MGSTCTEVTMENSAL" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="19">
+      <description><![CDATA[COMPLANC]]></description>
+    </field>
+    <field name="DTUNIDADEFATURANT" table="MGSTCTEVTMENSAL" dataType="H" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="37">
+      <description><![CDATA[DTUNIDADEFATURANT]]></description>
+    </field>
+    <field name="PERCTXADM" table="MGSTCTEVTMENSAL" dataType="F" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="28">
+      <description><![CDATA[PERCTXADM]]></description>
+    </field>
+    <field name="USUUPD" table="MGSTCTEVTMENSAL" dataType="S" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="48">
+      <description><![CDATA[USUUPD]]></description>
+    </field>
+    <field name="MTVCARGA" table="MGSTCTEVTMENSAL" dataType="S" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="26">
+      <description><![CDATA[MTVCARGA]]></description>
+    </field>
+    <field name="DTFIMEVENTO" table="MGSTCTEVTMENSAL" dataType="H" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="12">
+      <description><![CDATA[DTFIMEVENTO]]></description>
+    </field>
+    <field name="INFEVENTO" table="MGSTCTEVTMENSAL" dataType="S" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="14">
+      <description><![CDATA[INFEVENTO]]></description>
+    </field>
+    <field name="TIPAPONTAMENTO" table="MGSTCTEVTMENSAL" dataType="S" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="39">
+      <description><![CDATA[TIPAPONTAMENTO]]></description>
+    </field>
+    <field name="CODEVENTO" table="MGSTCTEVTMENSAL" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="10">
+      <description><![CDATA[CODEVENTO]]></description>
+    </field>
+    <field name="USUALTERLANC" table="MGSTCTEVTMENSAL" dataType="S" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="35">
+      <description><![CDATA[USUALTERLANC]]></description>
+    </field>
+    <field name="CODINTEGRACAOLC" table="MGSTCTEVTMENSAL" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="33">
+      <description><![CDATA[CODINTEGRACAOLC]]></description>
+    </field>
+    <field name="DTLCCUSTO" table="MGSTCTEVTMENSAL" dataType="H" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="30">
+      <description><![CDATA[DTLCCUSTO]]></description>
+    </field>
+    <field name="CODPRONTUARIO" table="MGSTCTEVTMENSAL" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="8">
+      <description><![CDATA[CODPRONTUARIO]]></description>
+    </field>
+    <field name="VERVLR" table="MGSTCTEVTMENSAL" dataType="S" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="43">
+      <description><![CDATA[VERVLR]]></description>
+    </field>
+    <field name="NUMCONTRATO" table="MGSTCTEVTMENSAL" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="2">
+      <description><![CDATA[NUMCONTRATO]]></description>
+    </field>
+    <field name="NUEVTMENSAL" table="MGSTCTEVTMENSAL" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="0">
+      <description><![CDATA[NUEVTMENSAL]]></description>
+    </field>
+    <field name="CODSITLANC" table="MGSTCTEVTMENSAL" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="22">
+      <description><![CDATA[CODSITLANC]]></description>
+    </field>
+    <field name="CODTIPOFATURA" table="MGSTCTEVTMENSAL" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="32">
+      <description><![CDATA[CODTIPOFATURA]]></description>
+    </field>
+    <field name="IDEVENTOREF" table="MGSTCTEVTMENSAL" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="41">
+      <description><![CDATA[IDEVENTOREF]]></description>
+    </field>
+    <field name="CODVAGA" table="MGSTCTEVTMENSAL" dataType="S" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="4">
+      <description><![CDATA[CODVAGA]]></description>
+    </field>
+    <field name="COMPEVENTO" table="MGSTCTEVTMENSAL" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="18">
+      <description><![CDATA[COMPEVENTO]]></description>
+    </field>
+    <field name="USUINS" table="MGSTCTEVTMENSAL" dataType="S" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="45">
+      <description><![CDATA[USUINS]]></description>
+    </field>
+    <field name="COMPFATU" table="MGSTCTEVTMENSAL" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="20">
+      <description><![CDATA[COMPFATU]]></description>
+    </field>
+    <field name="DHUPD" table="MGSTCTEVTMENSAL" dataType="H" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="47">
+      <description><![CDATA[DHUPD]]></description>
+    </field>
+    <field name="NUMSEQINTEGRACAO" table="MGSTCTEVTMENSAL" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="24">
+      <description><![CDATA[NUMSEQINTEGRACAO]]></description>
+    </field>
+    <field name="CODTIPOPOSTO" table="MGSTCTEVTMENSAL" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="6">
+      <description><![CDATA[CODTIPOPOSTO]]></description>
+    </field>
+    <field name="VLRUNITARIO" table="MGSTCTCONTRATOPREV" dataType="F" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="9">
+      <description><![CDATA[Vlr. Unitário]]></description>
+    </field>
+    <field name="QTDCONTRATADA" table="MGSTCTCONTRATOPREV" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="8">
+      <description><![CDATA[Qtd. Contratada]]></description>
+    </field>
+    <field name="CODEVENTO" table="MGSTCTCONTRATOPREV" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="4">
+      <description><![CDATA[Evento]]></description>
+    </field>
+    <field name="VLRCONTRATADA" table="MGSTCTCONTRATOPREV" dataType="F" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="10">
+      <description><![CDATA[Vlr. Contratado]]></description>
+    </field>
+    <field name="NUCONTRPREV" table="MGSTCTCONTRATOPREV" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="0">
+      <description><![CDATA[Nro. Único]]></description>
+    </field>
+    <field name="NUMODALIDADE" table="MGSTCTCONTRATOPREV" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="2">
+      <description><![CDATA[Nro. Modalidade]]></description>
+    </field>
+    <field name="NUCONTRMATSRV" table="MGSTCTCONTRVLRSERV" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="0">
+      <description><![CDATA[Nro. Único]]></description>
+    </field>
+    <field name="CODSERVMATERIAL" table="MGSTCTCONTRATOPREV" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="7">
+      <description><![CDATA[Serviço ou Material]]></description>
+    </field>
+    <field name="CODCONTROLE" table="MGSTCTCONTRATOPREV" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="5">
+      <description><![CDATA[Controle]]></description>
+    </field>
+    <field name="CODTIPOPOSTO" table="MGSTCTCONTRATOPREV" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="3">
+      <description><![CDATA[Tipo do Posto]]></description>
+    </field>
+    <field name="DTEXTINCAO" table="MGSTCTVAGAS" dataType="H" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="4">
+      <description><![CDATA[Data da Extinção]]></description>
+    </field>
+    <field name="NUUNIDPREVVAGA" table="MGSTCTUNIDPREVVAGA" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="0">
+      <description><![CDATA[Nro. Único]]></description>
+    </field>
+    <field name="NUUNIDPREV" table="MGSTCTUNIDPREVVAGA" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="2">
+      <description><![CDATA[Nro. Unidade Previsão]]></description>
+    </field>
+    <field name="NUCONTRCENT" table="MGSTCTUNIDPREVVAGA" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="1">
+      <description><![CDATA[Nro. Contr. Cent.]]></description>
+    </field>
+    <field name="CODVAGA" table="MGSTCTUNIDPREVVAGA" dataType="S" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="5">
+      <description><![CDATA[Cód. da Vaga]]></description>
+    </field>
+    <field name="DTINICIO" table="MGSTCTUNIDPREVVAGA" dataType="H" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="3">
+      <description><![CDATA[Dt. Inicio Vigência]]></description>
+    </field>
+    <field name="DTFIM" table="MGSTCTUNIDPREVVAGA" dataType="H" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="4">
+      <description><![CDATA[Dt. Fim Vigência]]></description>
+    </field>
+    <field name="NULOCALTIPOFAT" table="MGSTCTCONTRATOTRIB" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="1">
+      <description><![CDATA[Nro. Local Tipo Faturamento]]></description>
+    </field>
+    <field name="NUCONTRATOTRIB" table="MGSTCTCONTRATOTRIB" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="0">
+      <description><![CDATA[Nro. Único]]></description>
+    </field>
+    <field name="ATIVO" table="MGSTCTCONTRATOTRIB" dataType="S" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="5">
+      <description><![CDATA[Ativo]]></description>
+    </field>
+    <field name="CODPROD" table="MGSTCTCONTRATOTRIB" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="2">
+      <description><![CDATA[Produto]]></description>
+    </field>
+    <field name="DTFIM" table="MGSTCTCONTRATOTRIB" dataType="H" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="4">
+      <description><![CDATA[Data Fim Vigência]]></description>
+    </field>
+    <field name="DTINICIO" table="MGSTCTCONTRATOTRIB" dataType="H" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="3">
+      <description><![CDATA[Data Início Vigência]]></description>
+    </field>
+    <field name="DTFIM" table="MGSTCTCONTRVLRSERV" dataType="H" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="7">
+      <description><![CDATA[Dt. Fim Vigência]]></description>
+    </field>
+    <field name="DTINICIO" table="MGSTCTCONTRVLRSERV" dataType="H" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="6">
+      <description><![CDATA[Dt. Inicio Vigência]]></description>
+    </field>
+    <field name="CODSERVMATERIAL" table="MGSTCTCONTRVLRSERV" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="3">
+      <description><![CDATA[Cód. Serviço ou Material]]></description>
+    </field>
+    <field name="NUMCONTRATO" table="MGSTCTCONTRVLRSERV" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="2">
+      <description><![CDATA[Num. Contrato]]></description>
+    </field>
+    <field name="CODEVENTO" table="MGSTCTCONTRVLRSERV" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="4">
+      <description><![CDATA[Cód. Evento]]></description>
+    </field>
+    <field name="ALIQADM" table="MGSTCTCONTRVLRSERV" dataType="F" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="11">
+      <description><![CDATA[Alíquota da Taxa de Adm.]]></description>
+    </field>
+    <field name="NROOCORENCIA" table="MGSTCTCONTRVLRSERV" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="5">
+      <description><![CDATA[Nro.da Ocorrência]]></description>
+    </field>
+    <field name="ALIQISS" table="MGSTCTCONTRVLRSERV" dataType="F" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="8">
+      <description><![CDATA[Alíquota de ISS]]></description>
+    </field>
+    <field name="DTREFERCCT" table="MGSTCTCONTRVLRSERV" dataType="H" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="10">
+      <description><![CDATA[Dt. De Referência de CCT]]></description>
+    </field>
+    <field name="NUMODALIDADE" table="MGSTCTCONTRVLRSERV" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="1">
+      <description><![CDATA[Cód. Modalidade]]></description>
+    </field>
+    <field name="STATUSALOCACAO" table="MGSTCTALOCACAOPS" dataType="S" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="7">
+      <description><![CDATA[Ativo]]></description>
+    </field>
+    <field name="CODTIPOPOSTO" table="MGSTCTALOCACAOPS" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="9">
+      <description><![CDATA[Cód. Tipo do Posto]]></description>
+    </field>
+    <field name="DTFIM" table="MGSTCTALOCACAOPS" dataType="H" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="6">
+      <description><![CDATA[Dt. Fim Vigência]]></description>
+    </field>
+    <field name="MATRICULA" table="MGSTCTALOCACAOPS" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="4">
+      <description><![CDATA[Matrícula do Emrpegado]]></description>
+    </field>
+    <field name="NUALOCAPS" table="MGSTCTALOCACAOPS" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="0">
+      <description><![CDATA[Nro. Único]]></description>
+    </field>
+    <field name="CODEVENTO" table="MGSTCTALOCACAOPS" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="10">
+      <description><![CDATA[Cód. Evento]]></description>
+    </field>
+    <field name="DTINICIO" table="MGSTCTALOCACAOPS" dataType="H" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="5">
+      <description><![CDATA[Dt. Inicio Vigência]]></description>
+    </field>
+    <field name="NUUNIDPREV" table="MGSTCTALOCACAOPS" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="1">
+      <description><![CDATA[Unid. Previsão]]></description>
+    </field>
+    <field name="DTINS" table="MGSTCTALOCACAOPS" dataType="H" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="8">
+      <description><![CDATA[Dt. Inserção]]></description>
+    </field>
+    <field name="NUUNIDPREVVAGA" table="MGSTCTALOCACAOPS" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="2">
+      <description><![CDATA[Unid. Previsão Vaga]]></description>
+    </field>
+    <field name="CODCARGO" table="MGSTCTALOCACAOPS" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="3">
+      <description><![CDATA[Cód. Cargo]]></description>
+    </field>
+    <field name="CODTIPOPOSTO" table="MGSTCTPOSTOCARGO" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="2">
+      <description><![CDATA[Cód. Tipo do Posto]]></description>
+    </field>
+    <field name="CODCARGO" table="MGSTCTPOSTOCARGO" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="1">
+      <description><![CDATA[Cód. do Cargo]]></description>
+    </field>
+    <field name="NUPOSTOCARGO" table="MGSTCTPOSTOCARGO" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="0">
+      <description><![CDATA[Nro. Único]]></description>
+    </field>
+    <field name="CD_CARGO" table="MGSVCTCARGO" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="0">
+      <description><![CDATA[Cód. Cargo]]></description>
+    </field>
+    <field name="NM_EXTENSO" table="MGSVCTCARGO" dataType="S" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="1">
+      <description><![CDATA[Descrição]]></description>
+    </field>
+    <field name="NUMCONTRATO" table="MGSTCTMETRICAS" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="1">
+      <description><![CDATA[Num. Contrato]]></description>
+    </field>
+    <field name="GCSUSBT" table="MGSTCTMETRICAS" dataType="S" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="7">
+      <description><![CDATA[GCSUSBT]]></description>
+    </field>
+    <field name="GCPOSTO" table="MGSTCTMETRICAS" dataType="S" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="2">
+      <description><![CDATA[GCPOSTO]]></description>
+    </field>
+    <field name="GCLICENCAS" table="MGSTCTMETRICAS" dataType="S" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="5">
+      <description><![CDATA[GCLICENCAS]]></description>
+    </field>
+    <field name="GCFERIAS" table="MGSTCTMETRICAS" dataType="S" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="4">
+      <description><![CDATA[GCFERIAS]]></description>
+    </field>
+    <field name="GCHORAS" table="MGSTCTMETRICAS" dataType="S" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="6">
+      <description><![CDATA[GCHORAS]]></description>
+    </field>
+    <field name="GCPOSTORETRO" table="MGSTCTMETRICAS" dataType="S" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="3">
+      <description><![CDATA[GCPOSTORETRO]]></description>
+    </field>
+    <field name="NUMETRICAS" table="MGSTCTMETRICAS" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="0">
+      <description><![CDATA[Nro. Único]]></description>
+    </field>
+    <field name="CODTIPSITUACAO" table="MGSTCTTIPOSITUACAO" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="0">
+      <description><![CDATA[Situação]]></description>
+    </field>
+    <field name="DESCRSITUACAO" table="MGSTCTTIPOSITUACAO" dataType="S" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="1">
+      <description><![CDATA[Descrição]]></description>
+    </field>
+    <field name="CODTIPOFATURA" table="MGSTCTLOCALTIPOFAT" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="3">
+      <description><![CDATA[Fatura]]></description>
+    </field>
+    <field name="NUMCONTRATO" table="MGSTCTLOCALTIPOFAT" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="2">
+      <description><![CDATA[Num. Contrato]]></description>
+    </field>
+    <field name="NULOCALCONT" table="MGSTCTLOCALTIPOFAT" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="1">
+      <description><![CDATA[Nro. Local do Contrato]]></description>
+    </field>
+    <field name="NULOCALTIPOFAT" table="MGSTCTLOCALTIPOFAT" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="0">
+      <description><![CDATA[Nro. Único]]></description>
+    </field>
+    <field name="DTINICIO" table="MGSTCTCONTRVLRPS" dataType="H" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="6">
+      <description><![CDATA[Dt. Inicio Vigência]]></description>
+    </field>
+    <field name="NUMCONTRATO" table="MGSTCTCONTRVLRPS" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="1">
+      <description><![CDATA[Num. Contrato]]></description>
+    </field>
+    <field name="CODEVENTO" table="MGSTCTCONTRVLRPS" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="4">
+      <description><![CDATA[Cód. Evento]]></description>
+    </field>
+    <field name="CODTIPOPOSTO" table="MGSTCTCONTRVLRPS" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="3">
+      <description><![CDATA[Cód. Tipo do Posto]]></description>
+    </field>
+    <field name="NROOCORENCIA" table="MGSTCTCONTRVLRPS" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="5">
+      <description><![CDATA[Nro. da Ocorrência]]></description>
+    </field>
+    <field name="NUCONTREVENTO" table="MGSTCTCONTRVLRPS" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="0">
+      <description><![CDATA[Nro. Único]]></description>
+    </field>
+    <field name="DTREFERCCT" table="MGSTCTCONTRVLRPS" dataType="H" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="10">
+      <description><![CDATA[Dt. De Referência de CCT]]></description>
+    </field>
+    <field name="ALIQADM" table="MGSTCTCONTRVLRPS" dataType="F" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="11">
+      <description><![CDATA[Alíquota da Taxa de Adm.]]></description>
+    </field>
+    <field name="VLRTOTAL" table="MGSTCTCONTRVLRPS" dataType="F" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="9">
+      <description><![CDATA[Valor total]]></description>
+    </field>
+    <field name="DTFIM" table="MGSTCTCONTRVLRPS" dataType="H" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="7">
+      <description><![CDATA[Dt. Fim Vigência]]></description>
+    </field>
+    <field name="DESCRTAXA" table="MGSTCTTIPOTAXA" dataType="S" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="1">
+      <description><![CDATA[Descrição da Taxa]]></description>
+    </field>
+    <field name="CODTAXA" table="MGSTCTTIPOTAXA" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="0">
+      <description><![CDATA[Cód. da Taxa]]></description>
+    </field>
+    <field name="VLRPADRAO" table="MGSTCTTIPOTAXA" dataType="F" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="2">
+      <description><![CDATA[Valor Padrão da Taxa]]></description>
+    </field>
+    <field name="QTDEALOCACAO" table="MGSTCTALOCACAOSERV" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="6">
+      <description><![CDATA[Qtde Alocada]]></description>
+    </field>
+    <field name="DTINS" table="MGSTCTALOCACAOSERV" dataType="H" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="5">
+      <description><![CDATA[Dt. Inserção]]></description>
+    </field>
+    <field name="STATUSALOCACAO" table="MGSTCTALOCACAOSERV" dataType="S" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="4">
+      <description><![CDATA[Ativo]]></description>
+    </field>
+    <field name="VLRUNITARIO" table="MGSTCTALOCACAOSERV" dataType="F" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="7">
+      <description><![CDATA[Valor Unitário]]></description>
+    </field>
+    <field name="NUUNIDPREV" table="MGSTCTALOCACAOSERV" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="1">
+      <description><![CDATA[Unid. Previsão]]></description>
+    </field>
+    <field name="VLRTOTAL" table="MGSTCTALOCACAOSERV" dataType="F" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="8">
+      <description><![CDATA[Valor Total]]></description>
+    </field>
+    <field name="NUALOCASERV" table="MGSTCTALOCACAOSERV" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="0">
+      <description><![CDATA[Nro. Único]]></description>
+    </field>
+    <field name="DTINICIO" table="MGSTCTALOCACAOSERV" dataType="H" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="2">
+      <description><![CDATA[Dt. Inicio Vigência]]></description>
+    </field>
+    <field name="DTFIM" table="MGSTCTALOCACAOSERV" dataType="H" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="3">
+      <description><![CDATA[Dt. Fim Vigência]]></description>
+    </field>
+    <field name="NUTIPOSERVICO" table="MGSTCTMODALCONTR" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="3">
+      <description><![CDATA[Tipo Serviço]]></description>
+    </field>
+    <field name="NUMODALIDADE" table="MGSTCTMODALCONTR" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="0">
+      <description><![CDATA[Nro. Único]]></description>
+    </field>
+    <field name="CODTPN" table="MGSTCTMODALCONTR" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="2">
+      <description><![CDATA[Modalidade]]></description>
+    </field>
+    <field name="NUMCONTRATO" table="MGSTCTMODALCONTR" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="1">
+      <description><![CDATA[Num. Contrato]]></description>
+    </field>
+    <field name="CODSITEPAI" table="MGSTCTCONTRCENT" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="3">
+      <description><![CDATA[Unidade Faturamento Pai]]></description>
+      <expression><![CDATA[#type.sql# SELECT CODSITEPAI FROM TGFSIT WHERE CODSITE = MGSTCTCONTRCENT.CODSITE]]></expression>
+    </field>
+    <field name="DTINICIO" table="MGSTCTCONTRCENT" dataType="H" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="5">
+      <description><![CDATA[Data Início Vigência]]></description>
+    </field>
+    <field name="DTFIM" table="MGSTCTCONTRCENT" dataType="H" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="6">
+      <description><![CDATA[Data Fim Vigência]]></description>
+    </field>
+    <field name="NULOCALCONT" table="MGSTCTCONTRCENT" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="1">
+      <description><![CDATA[Local do Contrato]]></description>
+    </field>
+    <field name="NUMCONTRATO" table="MGSTCTCONTRCENT" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="2">
+      <description><![CDATA[Num. Contrato]]></description>
+    </field>
+    <field name="ALIQISS" table="MGSTCTCONTRVLRPS" dataType="F" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="8">
+      <description><![CDATA[Alíquota de ISS]]></description>
+    </field>
+    <field name="CODSITE" table="MGSTCTCONTRCENT" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="4">
+      <description><![CDATA[Unidade Faturamento]]></description>
+    </field>
+    <field name="NUCONTRCENT" table="MGSTCTCONTRCENT" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="0">
+      <description><![CDATA[Nro. Único]]></description>
+    </field>
+    <field name="CODVAGA" table="MGSTCTVAGAS" dataType="S" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="0">
+      <description><![CDATA[Cód. da Vaga]]></description>
+    </field>
+    <field name="DISPONIVEL" table="MGSTCTVAGAS" dataType="S" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="3">
+      <description><![CDATA[Vaga disponível]]></description>
+    </field>
+    <field name="DTCRIAO" table="MGSTCTVAGAS" dataType="H" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="2">
+      <description><![CDATA[Data da Criação da Vaga]]></description>
+    </field>
+    <field name="NUCONTRCENT" table="MGSTCTUNIDADEPREV" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="1">
+      <description><![CDATA[Nro. Contr. Cent.]]></description>
+    </field>
+    <field name="NUMODALIDADE" table="MGSTCTCONTRVLRPS" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="2">
+      <description><![CDATA[Cód. Modalidade]]></description>
+    </field>
+    <field name="NUUNIDPREV" table="MGSTCTUNIDADEPREV" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="0">
+      <description><![CDATA[Nro. Único]]></description>
+    </field>
+    <field name="CODTIPOPOSTO" table="MGSTCTUNIDADEPREV" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="2">
+      <description><![CDATA[Cód. Tipo do Posto]]></description>
+    </field>
+    <field name="CODEVENTO" table="MGSTCTUNIDADEPREV" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="4">
+      <description><![CDATA[Cód. Evento]]></description>
+    </field>
+    <field name="CODCONTROLE" table="MGSTCTUNIDADEPREV" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="11">
+      <description><![CDATA[Cód. Controle]]></description>
+    </field>
+    <field name="CODSERVMATERIAL" table="MGSTCTUNIDADEPREV" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="3">
+      <description><![CDATA[Cód. Serviço ou Material]]></description>
+    </field>
+    <field name="QTDEMPREGADOS" table="MGSTCTUNIDADEPREV" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="10">
+      <description><![CDATA[Quant. Informativa Empreg.]]></description>
+    </field>
+    <field name="DTFIM" table="MGSTCTUNIDADEPREV" dataType="H" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="9">
+      <description><![CDATA[Data Fim Vigência]]></description>
+    </field>
+    <field name="VLRUNITARIO" table="MGSTCTUNIDADEPREV" dataType="F" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="6">
+      <description><![CDATA[Valor Unitário]]></description>
+    </field>
+    <field name="QTDCONTRATADA" table="MGSTCTUNIDADEPREV" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="5">
+      <description><![CDATA[Quantidade Contratada]]></description>
+    </field>
+    <field name="VLRCONTRATADA" table="MGSTCTUNIDADEPREV" dataType="F" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="7">
+      <description><![CDATA[Valor Contratado]]></description>
+    </field>
+    <field name="DTINICIO" table="MGSTCTUNIDADEPREV" dataType="H" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="8">
+      <description><![CDATA[Data Início Vigência]]></description>
+    </field>
+    <field name="ATIVO" table="MGSTCTCONTRATOTAXA" dataType="S" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="2">
+      <description><![CDATA[Ativo]]></description>
+    </field>
+    <field name="NUCONTRTAXA" table="MGSTCTCONTRATOTAXA" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="0">
+      <description><![CDATA[Nro. Único]]></description>
+    </field>
+    <field name="FORMULA" table="MGSTCTCONTRATOTAXA" dataType="S" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="7">
+      <description><![CDATA[Formúla para o Cálculo]]></description>
+    </field>
+    <field name="NULOCALTIPOFAT" table="MGSTCTCONTRATOTAXA" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="1">
+      <description><![CDATA[Nro. Local Tipo Faturamento]]></description>
+    </field>
+    <field name="DTFIM" table="MGSTCTCONTRATOTAXA" dataType="H" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="6">
+      <description><![CDATA[Data Fim Vigência]]></description>
+    </field>
+    <field name="CODTAXA" table="MGSTCTCONTRATOTAXA" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="3">
+      <description><![CDATA[Cód. da Taxa]]></description>
+    </field>
+    <field name="VLRTAXA" table="MGSTCTCONTRATOTAXA" dataType="F" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="4">
+      <description><![CDATA[Valor da Taxa]]></description>
+    </field>
+    <field name="DTINICIO" table="MGSTCTCONTRATOTAXA" dataType="H" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="5">
+      <description><![CDATA[Data Início Vigência]]></description>
+    </field>
+    <field name="NUMCONTRATO" table="MGSTCTLOCALCONT" dataType="I" presentationType="P" calculated="N" allowSearch="S" allowDefault="S" visibleOnSearch="S" isPresentation="N" order="1">
+      <description><![CDATA[Num. Contrato]]></description>
+    </field>
+    <field name="DESCRTIPOFAT" table="MGSTCTTIPOFATURA" dataType="S" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="1">
+      <description><![CDATA[Descrição]]></description>
+    </field>
+    <field name="CODTIPOFATURA" table="MGSTCTTIPOFATURA" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="0">
+      <description><![CDATA[Fatura]]></description>
+    </field>
+    <field name="DTFIM" table="MGSTCTCONTRATOVAGA" dataType="H" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="4">
+      <description><![CDATA[Dt. Fim Vigência]]></description>
+    </field>
+    <field name="CODVAGA" table="MGSTCTCONTRATOVAGA" dataType="S" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="2">
+      <description><![CDATA[Cód. da Vaga]]></description>
+    </field>
+    <field name="NUCONTRVAGA" table="MGSTCTCONTRATOVAGA" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="0">
+      <description><![CDATA[Nro. Único]]></description>
+    </field>
+    <field name="NUCONTRPREV" table="MGSTCTCONTRATOVAGA" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="1">
+      <description><![CDATA[Previsão Contrato]]></description>
+    </field>
+    <field name="DTINICIO" table="MGSTCTCONTRATOVAGA" dataType="H" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="3">
+      <description><![CDATA[Dt. Inicio Vigência]]></description>
+    </field>
+    <field name="VLRTOTAL" table="MGSTCTCONTRVLRSERV" dataType="F" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="9">
+      <description><![CDATA[Valor total]]></description>
+    </field>
+    <field name="CODCIDNF" table="MGSTCTLOCALCONT" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="12">
+      <description><![CDATA[Cidade NF]]></description>
+    </field>
+    <field name="DHUPD" table="MGSTCTEVTAPT" dataType="H" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="16">
+      <description><![CDATA[DHUPD]]></description>
+    </field>
+    <field name="FR_APONTAMENTO" table="MGSTCTEVTAPT" dataType="S" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="5">
+      <description><![CDATA[FR_APONTAMENTO]]></description>
+    </field>
+    <field name="USUINS" table="MGSTCTEVTAPT" dataType="S" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="15">
+      <description><![CDATA[USUINS]]></description>
+    </field>
+    <field name="DHINS" table="MGSTCTEVTAPT" dataType="H" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="14">
+      <description><![CDATA[DHINS]]></description>
+    </field>
+    <field name="QTDEVTVLR" table="MGSTCTEVTAPT" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="13">
+      <description><![CDATA[QTDEVTVLR]]></description>
+    </field>
+    <field name="USUUPD" table="MGSTCTEVTAPT" dataType="S" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="17">
+      <description><![CDATA[USUUPD]]></description>
+    </field>
+    <field name="CODEVTVA" table="MGSTCTEVTAPT" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="10">
+      <description><![CDATA[CODEVTVA]]></description>
+    </field>
+    <field name="QTDEVTVA" table="MGSTCTEVTAPT" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="11">
+      <description><![CDATA[QTDEVTVA]]></description>
+    </field>
+    <field name="CODEVTVLR" table="MGSTCTEVTAPT" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="12">
+      <description><![CDATA[CODEVTVLR]]></description>
+    </field>
+    <field name="VA" table="MGSTCTEVTAPT" dataType="S" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="9">
+      <description><![CDATA[VA]]></description>
+    </field>
+    <field name="NUEVTAPT" table="MGSTCTEVTAPT" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="0">
+      <description><![CDATA[NUEVTAPT]]></description>
+    </field>
+    <field name="TIPPERIODO" table="MGSTCTEVTAPT" dataType="S" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="8">
+      <description><![CDATA[TIPPERIODO]]></description>
+    </field>
+    <field name="NUMCONTRATO" table="MGSTCTEVTAPT" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="1">
+      <description><![CDATA[NUMCONTRATO]]></description>
+    </field>
+    <field name="TABORIGEM" table="MGSTCTEVTAPT" dataType="S" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="7">
+      <description><![CDATA[TABORIGEM]]></description>
+    </field>
+    <field name="TIPAPONTAMENTO" table="MGSTCTEVTAPT" dataType="S" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="4">
+      <description><![CDATA[TIPAPONTAMENTO]]></description>
+    </field>
+    <field name="CODAPONTAMENTO" table="MGSTCTEVTAPT" dataType="S" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="3">
+      <description><![CDATA[CODAPONTAMENTO]]></description>
+    </field>
+    <field name="CODEVENTO" table="MGSTCTEVTAPT" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="2">
+      <description><![CDATA[CODEVENTO]]></description>
+    </field>
+    <field name="CODORIGEM" table="MGSTCTEVTAPT" dataType="S" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="6">
+      <description><![CDATA[CODORIGEM]]></description>
+    </field>
+    <field name="CODTIPOFATURA" table="MGSTCTEVTCUS" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="4">
+      <description><![CDATA[CODTIPOFATURA]]></description>
+    </field>
+    <field name="LCNUMDOCLANC" table="MGSTCTEVTCUS" dataType="S" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="5">
+      <description><![CDATA[LCNUMDOCLANC]]></description>
+    </field>
+    <field name="LCSOMAQTDE" table="MGSTCTEVTCUS" dataType="S" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="7">
+      <description><![CDATA[LCSOMAQTDE]]></description>
+    </field>
+    <field name="LCHISTORICO" table="MGSTCTEVTCUS" dataType="S" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="6">
+      <description><![CDATA[LCHISTORICO]]></description>
+    </field>
+    <field name="DHUPD" table="MGSTCTEVTCUS" dataType="H" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="13">
+      <description><![CDATA[DHUPD]]></description>
+    </field>
+    <field name="DHINS" table="MGSTCTEVTCUS" dataType="H" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="11">
+      <description><![CDATA[DHINS]]></description>
+    </field>
+    <field name="NUEVTCUS" table="MGSTCTEVTCUS" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="0">
+      <description><![CDATA[NUEVTCUS]]></description>
+    </field>
+    <field name="LCDIA" table="MGSTCTEVTCUS" dataType="S" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="10">
+      <description><![CDATA[LCDIA]]></description>
+    </field>
+    <field name="USUINS" table="MGSTCTEVTCUS" dataType="S" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="12">
+      <description><![CDATA[USUINS]]></description>
+    </field>
+    <field name="LCCOMPLNUMDOC" table="MGSTCTEVTCUS" dataType="S" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="8">
+      <description><![CDATA[LCCOMPLNUMDOC]]></description>
+    </field>
+    <field name="USUUPD" table="MGSTCTEVTCUS" dataType="S" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="14">
+      <description><![CDATA[USUUPD]]></description>
+    </field>
+    <field name="NUMCONTRATO" table="MGSTCTEVTCUS" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="1">
+      <description><![CDATA[NUMCONTRATO]]></description>
+    </field>
+    <field name="LCCOMPLHISTORICO" table="MGSTCTEVTCUS" dataType="S" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="9">
+      <description><![CDATA[LCCOMPLHISTORICO]]></description>
+    </field>
+    <field name="CODCUSTO" table="MGSTCTEVTCUS" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="3">
+      <description><![CDATA[CODCUSTO]]></description>
+    </field>
+    <field name="CODEVENTO" table="MGSTCTEVTCUS" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="2">
+      <description><![CDATA[CODEVENTO]]></description>
+    </field>
+  </fields>
+  <fieldProperties>
+    <prop table="MGSTCTCONTRATOPREV" field="NUCONTRPREV" name="readOnly"><![CDATA[S]]></prop>
+    <prop table="MGSTCTCONTRCENT" field="CODSITEPAI" name="readOnly"><![CDATA[S]]></prop>
+    <prop table="MGSTCTCONTRCENT" field="NUCONTRCENT" name="readOnly"><![CDATA[S]]></prop>
+  </fieldProperties>
+  <fieldOptions>
+    <option table="MGSTCTCONTRATOTRIB" field="ATIVO" value="S"><![CDATA[Sim]]></option>
+    <option table="MGSTCTCONTRATOTRIB" field="ATIVO" value="N"><![CDATA[Não]]></option>
+    <option table="MGSTCTCONTRATOTAXA" field="ATIVO" value="S"><![CDATA[Sim]]></option>
+    <option table="MGSTCTCONTRATOTAXA" field="ATIVO" value="N"><![CDATA[Não]]></option>
+    <option table="MGSTCTALOCACAOSERV" field="STATUSALOCACAO" value="S"><![CDATA[Sim]]></option>
+    <option table="MGSTCTALOCACAOSERV" field="STATUSALOCACAO" value="N"><![CDATA[Não]]></option>
+    <option table="MGSTCTALOCACAOPS" field="STATUSALOCACAO" value="S"><![CDATA[Sim]]></option>
+    <option table="MGSTCTALOCACAOPS" field="STATUSALOCACAO" value="N"><![CDATA[Não]]></option>
+  </fieldOptions>
+  <instances>
+    <instance name="MGSCT_Metricas" tableName="MGSTCTMETRICAS">
+      <description><![CDATA[Métricas]]></description>
+    </instance>
+    <instance name="MGSCT_Apoio_Controle" tableName="MGSTCTCONTROLE">
+      <description><![CDATA[Apoio de Controle]]></description>
+    </instance>
+    <instance name="MGSCT_Taxa_Contrato" tableName="MGSTCTCONTRATOTAXA">
+      <description><![CDATA[Taxa do Contrato]]></description>
+    </instance>
+    <instance name="MGSCT_Local_Contrato" tableName="MGSTCTLOCALCONT">
+      <description><![CDATA[Local do Contrato]]></description>
+    </instance>
+    <instance name="MGSCT_Unidades_Pai" tableName="MGSTCTCONTRCENT">
+      <description><![CDATA[Unidades]]></description>
+    </instance>
+    <instance name="MGSCT_Situacao_Contrato" tableName="MGSTCTTIPOSITUACAO">
+      <description><![CDATA[Situação do Contrato]]></description>
+    </instance>
+    <instance name="MGSCT_Alocacoes_Serviços" tableName="MGSTCTALOCACAOSERV">
+      <description><![CDATA[Alocações de Serviços]]></description>
+    </instance>
+    <instance name="MGSCT_Cargo" tableName="MGSVCTCARGO">
+      <description><![CDATA[Cargo]]></description>
+    </instance>
+    <instance name="MGSCT_Previsoes_Contrato" tableName="MGSTCTCONTRATOPREV">
+      <description><![CDATA[Previsões do Contrato]]></description>
+    </instance>
+    <instance name="MGSCT_Vagas_Unid_Fat" tableName="MGSTCTUNIDPREVVAGA">
+      <description><![CDATA[Vagas Previsão da Unidade]]></description>
+    </instance>
+    <instance name="MGSCT_Unidades_Filho" tableName="MGSTCTUNIDADEPREV">
+      <description><![CDATA[Previsões da Unidade]]></description>
+    </instance>
+    <instance name="MGSCT_Apoio_Tipo_Fatura" tableName="MGSTCTTIPOFATURA">
+      <description><![CDATA[Apoio Tipo de Fatura]]></description>
+    </instance>
+    <instance name="MGSCT_Apoio_Taxa" tableName="MGSTCTTIPOTAXA">
+      <description><![CDATA[Apoio Taxa]]></description>
+    </instance>
+    <instance name="MGSCT_Alocacoes_PS" tableName="MGSTCTALOCACAOPS">
+      <description><![CDATA[Alocações de Posto Serviço]]></description>
+    </instance>
+    <instance name="MGSCT_Dados_Contrato" tableName="MGSTCTCONTRATO">
+      <description><![CDATA[Dados do Contrato]]></description>
+    </instance>
+    <instance name="MGSCT_Local_Contrato_V" tableName="MGSTCTLOCALCONT">
+      <description><![CDATA[Local do Contrato]]></description>
+    </instance>
+    <instance name="MGSCT_Vagas_Previsao_Contrato" tableName="MGSTCTCONTRATOVAGA">
+      <description><![CDATA[Vagas Previsão do Contrato]]></description>
+    </instance>
+    <instance name="MGSCT_Valores_Eventos" tableName="MGSTCTCONTRVLRPS">
+      <description><![CDATA[Valores dos Eventos]]></description>
+    </instance>
+    <instance name="MGSCT_Valores_Produtos" tableName="MGSTCTCONTRVLRSERV">
+      <description><![CDATA[Valores dos Produtos]]></description>
+    </instance>
+    <instance name="MGSCT_Modalidade_Contrato" tableName="MGSTCTMODALCONTR">
+      <description><![CDATA[Modalidade do Contrato]]></description>
+    </instance>
+    <instance name="MGSCT_Apoio_Vagas" tableName="MGSTCTVAGAS">
+      <description><![CDATA[Apoio de Vagas]]></description>
+    </instance>
+    <instance name="MGSCT_Local_Tipo_Fatura" tableName="MGSTCTLOCALTIPOFAT">
+      <description><![CDATA[Local Tipo de Fatura]]></description>
+    </instance>
+    <instance name="MGSCT_Previsoes_Contrato_V" tableName="MGSTCTCONTRATOPREV">
+      <description><![CDATA[Previsões do Contrato]]></description>
+    </instance>
+    <instance name="MGSCT_Tributos_Contrato" tableName="MGSTCTCONTRATOTRIB">
+      <description><![CDATA[Tributos do Contrato]]></description>
+    </instance>
+    <instance name="MGSCT_Apoio_Posto_Cargo" tableName="MGSTCTPOSTOCARGO">
+      <description><![CDATA[Apoio Posto Cargo]]></description>
+    </instance>
+  </instances>
+  <relationShip>
+    <relation fromEntity="MGSCT_Previsoes_Contrato" toEntity="MGSCT_Apoio_Controle" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="CODCONTROLE" targetName="CODCONTROLE" />
+      </fields>
+    </relation>
+    <relation fromEntity="MGSCT_Taxa_Contrato" toEntity="MGSCT_Local_Tipo_Fatura" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="NULOCALTIPOFAT" targetName="NULOCALTIPOFAT" />
+      </fields>
+    </relation>
+    <relation fromEntity="MGSCT_Unidades_Filho" toEntity="Produto3" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="CODSERVMATERIAL" targetName="CODPROD" />
+      </fields>
+    </relation>
+    <relation fromEntity="MGSCT_Vagas_Unid_Fat" toEntity="MGSCT_Unidades_Filho" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="NUUNIDPREV" targetName="NUUNIDPREV" />
+      </fields>
+    </relation>
+    <relation fromEntity="MGSCT_Local_Contrato" toEntity="MGSCT_Local_Tipo_Fatura" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="NULOCALCONT" targetName="NULOCALCONT" />
+      </fields>
+    </relation>
+    <relation fromEntity="MGSCT_Dados_Contrato" toEntity="MGSCT_Metricas" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="NUMCONTRATO" targetName="NUMCONTRATO" />
+      </fields>
+    </relation>
+    <relation fromEntity="MGSCT_Valores_Eventos" toEntity="MGSCT_Modalidade_Contrato" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="NUMODALIDADE" targetName="NUMODALIDADE" />
+      </fields>
+    </relation>
+    <relation fromEntity="MGSCT_Previsoes_Contrato_V" toEntity="MGSCT_Apoio_Controle" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="CODCONTROLE" targetName="CODCONTROLE" />
+      </fields>
+    </relation>
+    <relation fromEntity="MGSCT_Tributos_Contrato" toEntity="Servico" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="CODPROD" targetName="CODPROD" />
+      </fields>
+    </relation>
+    <relation fromEntity="MGSCT_Local_Contrato" toEntity="MGSCT_Dados_Contrato" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="NUMCONTRATO" targetName="NUMCONTRATO" />
+      </fields>
+    </relation>
+    <relation fromEntity="MGSCT_Unidades_Pai" toEntity="Site_AD001" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="CODSITE" targetName="CODSITE" />
+      </fields>
+    </relation>
+    <relation fromEntity="MGSCT_Dados_Contrato" toEntity="Parceiro" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="CODPARC" targetName="CODPARC" />
+      </fields>
+    </relation>
+    <relation fromEntity="MGSCT_Local_Contrato" toEntity="Parceiro" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="CODPARC" targetName="CODPARC" />
+      </fields>
+    </relation>
+    <relation fromEntity="MGSCT_Local_Contrato" toEntity="Bairro" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="CODBAI" targetName="CODBAI" />
+      </fields>
+    </relation>
+    <relation fromEntity="MGSCT_Tributos_Contrato" toEntity="MGSCT_Local_Tipo_Fatura" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="NULOCALTIPOFAT" targetName="NULOCALTIPOFAT" />
+      </fields>
+    </relation>
+    <relation fromEntity="MGSCT_Unidades_Filho" toEntity="MGSCT_Apoio_Controle" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="CODCONTROLE" targetName="CODCONTROLE" />
+      </fields>
+    </relation>
+    <relation fromEntity="MGSCT_Local_Contrato_V" toEntity="UnidadeFederativa" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="CODUF" targetName="CODUF" />
+      </fields>
+    </relation>
+    <relation fromEntity="MGSCT_Unidades_Pai" toEntity="Site" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="CODSITEPAI" targetName="CODSITE" />
+      </fields>
+    </relation>
+    <relation fromEntity="MGSCT_Modalidade_Contrato" toEntity="TGFTSE" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="NUTIPOSERVICO" targetName="NUTIPOSERVICO" />
+      </fields>
+    </relation>
+    <relation fromEntity="MGSCT_Modalidade_Contrato" toEntity="MGSCT_Previsoes_Contrato" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="NUMODALIDADE" targetName="NUMODALIDADE" />
+      </fields>
+    </relation>
+    <relation fromEntity="MGSCT_Local_Contrato" toEntity="MGSCT_Modalidade_Contrato" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="NUMODALIDADE" targetName="NUMODALIDADE" />
+      </fields>
+    </relation>
+    <relation fromEntity="MGSCT_Vagas_Previsao_Contrato" toEntity="MGSCT_Previsoes_Contrato" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="NUCONTRPREV" targetName="NUCONTRPREV" />
+      </fields>
+    </relation>
+    <relation fromEntity="MGSCT_Previsoes_Contrato" toEntity="TGFECUS" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="CODEVENTO" targetName="CODEVENTO" />
+      </fields>
+    </relation>
+    <relation fromEntity="MGSCT_Metricas" toEntity="MGSCT_Dados_Contrato" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="NUMCONTRATO" targetName="NUMCONTRATO" />
+      </fields>
+    </relation>
+    <relation fromEntity="MGSCT_Local_Tipo_Fatura" toEntity="MGSCT_Tributos_Contrato" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="NULOCALTIPOFAT" targetName="NULOCALTIPOFAT" />
+      </fields>
+    </relation>
+    <relation fromEntity="MGSCT_Previsoes_Contrato_V" toEntity="Produto3" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="CODSERVMATERIAL" targetName="CODPROD" />
+      </fields>
+    </relation>
+    <relation fromEntity="MGSCT_Unidades_Filho" toEntity="MGSCT_Vagas_Unid_Fat" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="NUUNIDPREV" targetName="NUUNIDPREV" />
+      </fields>
+    </relation>
+    <relation fromEntity="MGSCT_Previsoes_Contrato_V" toEntity="MGSCT_Modalidade_Contrato" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="NUMODALIDADE" targetName="NUMODALIDADE" />
+      </fields>
+    </relation>
+    <relation fromEntity="MGSCT_Alocacoes_PS" toEntity="MGSCT_Unidades_Filho" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="NUUNIDPREV" targetName="NUUNIDPREV" />
+      </fields>
+    </relation>
+    <relation fromEntity="MGSCT_Valores_Produtos" toEntity="TGFECUS" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="CODEVENTO" targetName="CODEVENTO" />
+      </fields>
+    </relation>
+    <relation fromEntity="MGSCT_Previsoes_Contrato" toEntity="MGSCT_Modalidade_Contrato" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="NUMODALIDADE" targetName="NUMODALIDADE" />
+      </fields>
+    </relation>
+    <relation fromEntity="MGSCT_Local_Contrato" toEntity="Endereco" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="CODEND" targetName="CODEND" />
+      </fields>
+    </relation>
+    <relation fromEntity="MGSCT_Local_Contrato" toEntity="UnidadeFederativa" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="CODUF" targetName="CODUF" />
+      </fields>
+    </relation>
+    <relation fromEntity="MGSCT_Previsoes_Contrato" toEntity="MGSCT_Vagas_Previsao_Contrato" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="NUCONTRPREV" targetName="NUCONTRPREV" />
+      </fields>
+    </relation>
+    <relation fromEntity="MGSCT_Local_Tipo_Fatura" toEntity="MGSCT_Taxa_Contrato" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="NULOCALTIPOFAT" targetName="NULOCALTIPOFAT" />
+      </fields>
+    </relation>
+    <relation fromEntity="MGSCT_Local_Contrato_V" toEntity="Endereco" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="CODEND" targetName="CODEND" />
+      </fields>
+    </relation>
+    <relation fromEntity="MGSCT_Unidades_Pai" toEntity="MGSCT_Unidades_Filho" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="NUCONTRCENT" targetName="NUCONTRCENT" />
+      </fields>
+    </relation>
+    <relation fromEntity="MGSCT_Taxa_Contrato" toEntity="MGSCT_Apoio_Taxa" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="CODTAXA" targetName="CODTAXA" />
+      </fields>
+    </relation>
+    <relation fromEntity="MGSCT_Valores_Produtos" toEntity="Produto3" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="CODSERVMATERIAL" targetName="CODPROD" />
+      </fields>
+    </relation>
+    <relation fromEntity="MGSCT_Vagas_Previsao_Contrato" toEntity="MGSCT_Apoio_Vagas" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="CODVAGA" targetName="CODVAGA" />
+      </fields>
+    </relation>
+    <relation fromEntity="MGSCT_Dados_Contrato" toEntity="MGSCT_Situacao_Contrato" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="CODTIPSITUACAO" targetName="CODTIPSITUACAO" />
+      </fields>
+    </relation>
+    <relation fromEntity="MGSCT_Local_Contrato_V" toEntity="MGSCT_Dados_Contrato" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="NUMCONTRATO" targetName="NUMCONTRATO" />
+      </fields>
+    </relation>
+    <relation fromEntity="MGSCT_Modalidade_Contrato" toEntity="MGSCT_Dados_Contrato" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="NUMCONTRATO" targetName="NUMCONTRATO" />
+      </fields>
+    </relation>
+    <relation fromEntity="MGSCT_Dados_Contrato" toEntity="MGSCT_Modalidade_Contrato" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="NUMCONTRATO" targetName="NUMCONTRATO" />
+      </fields>
+    </relation>
+    <relation fromEntity="MGSCT_Modalidade_Contrato" toEntity="TipoNegociacaoPreVenda" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="CODTPN" targetName="CODTPN" />
+      </fields>
+    </relation>
+    <relation fromEntity="MGSCT_Unidades_Pai" toEntity="MGSCT_Dados_Contrato" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="NUMCONTRATO" targetName="NUMCONTRATO" />
+      </fields>
+    </relation>
+    <relation fromEntity="MGSCT_Local_Tipo_Fatura" toEntity="MGSCT_Dados_Contrato" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="NUMCONTRATO" targetName="NUMCONTRATO" />
+      </fields>
+    </relation>
+    <relation fromEntity="MGSCT_Local_Tipo_Fatura" toEntity="MGSCT_Local_Contrato" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="NULOCALCONT" targetName="NULOCALCONT" />
+      </fields>
+    </relation>
+    <relation fromEntity="MGSCT_Valores_Produtos" toEntity="MGSCT_Dados_Contrato" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="NUMCONTRATO" targetName="NUMCONTRATO" />
+      </fields>
+    </relation>
+    <relation fromEntity="MGSCT_Valores_Produtos" toEntity="MGSCT_Modalidade_Contrato" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="NUMODALIDADE" targetName="NUMODALIDADE" />
+      </fields>
+    </relation>
+    <relation fromEntity="MGSCT_Unidades_Filho" toEntity="MGSCT_Unidades_Pai" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="NUCONTRCENT" targetName="NUCONTRCENT" />
+      </fields>
+    </relation>
+    <relation fromEntity="MGSCT_Local_Contrato_V" toEntity="Parceiro" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="CODPARC" targetName="CODPARC" />
+      </fields>
+    </relation>
+    <relation fromEntity="MGSCT_Alocacoes_PS" toEntity="MGSCT_Apoio_Posto_Cargo" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="CODTIPOPOSTO" targetName="CODTIPOPOSTO" />
+      </fields>
+    </relation>
+    <relation fromEntity="MGSCT_Local_Tipo_Fatura" toEntity="MGSCT_Apoio_Tipo_Fatura" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="CODTIPOFATURA" targetName="CODTIPOFATURA" />
+      </fields>
+    </relation>
+    <relation fromEntity="MGSCT_Previsoes_Contrato_V" toEntity="TGFPSS" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="CODTIPOPOSTO" targetName="CODPOSTO" />
+      </fields>
+    </relation>
+    <relation fromEntity="MGSCT_Local_Contrato" toEntity="Cidade" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="CODCID" targetName="CODCID" />
+      </fields>
+    </relation>
+    <relation fromEntity="MGSCT_Valores_Eventos" toEntity="TGFPSS" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="CODTIPOPOSTO" targetName="CODPOSTO" />
+      </fields>
+    </relation>
+    <relation fromEntity="MGSCT_Previsoes_Contrato" toEntity="Produto3" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="CODSERVMATERIAL" targetName="CODPROD" />
+      </fields>
+    </relation>
+    <relation fromEntity="MGSCT_Unidades_Filho" toEntity="TGFECUS" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="CODEVENTO" targetName="CODEVENTO" />
+      </fields>
+    </relation>
+    <relation fromEntity="MGSCT_Previsoes_Contrato" toEntity="TGFPSS" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="CODTIPOPOSTO" targetName="CODPOSTO" />
+      </fields>
+    </relation>
+    <relation fromEntity="MGSCT_Unidades_Filho" toEntity="TGFPSS" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="CODTIPOPOSTO" targetName="CODPOSTO" />
+      </fields>
+    </relation>
+    <relation fromEntity="MGSCT_Local_Contrato_V" toEntity="Bairro" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="CODBAI" targetName="CODBAI" />
+      </fields>
+    </relation>
+    <relation fromEntity="MGSCT_Local_Contrato_V" toEntity="Cidade" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="CODCID" targetName="CODCID" />
+      </fields>
+    </relation>
+    <relation fromEntity="MGSCT_Valores_Eventos" toEntity="MGSCT_Dados_Contrato" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="NUMCONTRATO" targetName="NUMCONTRATO" />
+      </fields>
+    </relation>
+    <relation fromEntity="MGSCT_Valores_Eventos" toEntity="TGFECUS" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="CODEVENTO" targetName="CODEVENTO" />
+      </fields>
+    </relation>
+    <relation fromEntity="MGSCT_Previsoes_Contrato" toEntity="MGSCT_Dados_Contrato" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="NUMCONTRATO" targetName="NUMCONTRATO" />
+      </fields>
+    </relation>
+    <relation fromEntity="MGSCT_Alocacoes_PS" toEntity="MGSCT_Vagas_Unid_Fat" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="NUUNIDPREVVAGA" targetName="NUUNIDPREVVAGA" />
+      </fields>
+    </relation>
+    <relation fromEntity="MGSCT_Alocacoes_Serviços" toEntity="MGSCT_Unidades_Filho" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="NUUNIDPREV" targetName="NUUNIDPREV" />
+      </fields>
+    </relation>
+  </relationShip>
+  <controls>
+    <control name="br.com.sankhya.mgs.ct.cadastro" type="MN" childrenType="MN">
+      <description><![CDATA[Cadastro]]></description>
+      <url />
+      <properties />
+    </control>
+    <control name="br.com.sankhya.mgs.ct" type="DS" childrenType="MN">
+      <description><![CDATA[Contrato Corporativo]]></description>
+      <url />
+      <properties />
+    </control>
+    <control name="br.com.sankhya.mgs.ct.unidade" type="MN" childrenType="PL">
+      <description><![CDATA[Unidade (CT)]]></description>
+      <url><![CDATA[${dynaform:MGSCT_Unidades_Pai}]]></url>
+      <properties>
+        <resourceID><![CDATA[br.com.sankhya.mgs.ct.unidade]]></resourceID>
+        <contexto><![CDATA[ContratoCorporativo]]></contexto>
+      </properties>
+    </control>
+    <control name="br.com.sankhya.mgs.ct.controle" type="MN" childrenType="PL">
+      <description><![CDATA[Controle (CT)]]></description>
+      <url><![CDATA[${dynaform:MGSCT_Apoio_Controle}]]></url>
+      <properties>
+        <resourceID><![CDATA[br.com.sankhya.mgs.ct.controle]]></resourceID>
+        <contexto><![CDATA[ContratoCorporativo]]></contexto>
+      </properties>
+    </control>
+    <control name="br.com.sankhya.mgs.ct.SituacaoContrato" type="MN" childrenType="PL">
+      <description><![CDATA[Situação Contrato (CT)]]></description>
+      <url><![CDATA[${dynaform:MGSCT_Situacao_Contrato}]]></url>
+      <properties>
+        <resourceID><![CDATA[br.com.sankhya.mgs.ct.situacaocontrato]]></resourceID>
+        <contexto><![CDATA[ContratoCorporativo]]></contexto>
+      </properties>
+    </control>
+    <control name="br.com.sankhya.mgs.ct.TipoFatura" type="MN" childrenType="PL">
+      <description><![CDATA[Tipo Fatura (CT)]]></description>
+      <url><![CDATA[${dynaform:MGSCT_Apoio_Tipo_Fatura}]]></url>
+      <properties>
+        <resourceID><![CDATA[br.com.sankhya.mgs.ct.tipofatura]]></resourceID>
+        <contexto><![CDATA[ContratoCorporativo]]></contexto>
+      </properties>
+    </control>
+    <control name="br.com.sankhya.mgs.ct.LocalContrato" type="MN" childrenType="PL">
+      <description><![CDATA[Local do Contrato (CT)]]></description>
+      <url><![CDATA[${dynaform:MGSCT_Local_Contrato}]]></url>
+      <properties>
+        <resourceID><![CDATA[br.com.sankhya.mgs.ct.localcontrato]]></resourceID>
+        <contexto><![CDATA[ContratoCorporativo]]></contexto>
+      </properties>
+    </control>
+    <control name="br.com.sankhya.mgs.ct.ValoresEventos" type="MN" childrenType="PL">
+      <description><![CDATA[Valores dos Eventos (CT)]]></description>
+      <url><![CDATA[${dynaform:MGSCT_Valores_Eventos}]]></url>
+      <properties>
+        <resourceID><![CDATA[br.com.sankhya.mgs.ct.valoreseventos]]></resourceID>
+        <contexto><![CDATA[ContratoCorporativo]]></contexto>
+      </properties>
+    </control>
+    <control name="br.com.sankhya.mgs.ct.ValoresProdutos" type="MN" childrenType="PL">
+      <description><![CDATA[Valores dos Produtos (CT)]]></description>
+      <url><![CDATA[${dynaform:MGSCT_Valores_Produtos}]]></url>
+      <properties>
+        <resourceID><![CDATA[br.com.sankhya.mgs.ct.valoresprodutos]]></resourceID>
+        <contexto><![CDATA[ContratoCorporativo]]></contexto>
+      </properties>
+    </control>
+    <control name="br.com.sankhya.mgs.ct.ApoioTaxa" type="MN" childrenType="PL">
+      <description><![CDATA[Apoio Taxa (CT)]]></description>
+      <url><![CDATA[${dynaform:MGSCT_Apoio_Taxa}]]></url>
+      <properties>
+        <resourceID><![CDATA[br.com.sankhya.mgs.ct.apoiotaxa]]></resourceID>
+        <contexto><![CDATA[ContratoCorporativo]]></contexto>
+      </properties>
+    </control>
+    <control name="br.com.sankhya.mgs.ct.AlocacoesServico" type="MN" childrenType="PL">
+      <description><![CDATA[Alocações de Serviço (CT)]]></description>
+      <url><![CDATA[${dynaform:MGSCT_Alocacoes_Servicos}]]></url>
+      <properties>
+        <resourceID><![CDATA[br.com.sankhya.mgs.ct.alocacoesservico]]></resourceID>
+        <contexto><![CDATA[ContratoCorporativo]]></contexto>
+      </properties>
+    </control>
+    <control name="br.com.sankhya.mgs.ct.AlocacoesPostoServico" type="MN" childrenType="PL">
+      <description><![CDATA[Alocações Posto Serviço (CT)]]></description>
+      <url><![CDATA[${dynaform:MGSCT_Alocacoes_PS}]]></url>
+      <properties>
+        <resourceID><![CDATA[br.com.sankhya.mgs.ct.alocacoespostoservico]]></resourceID>
+        <contexto><![CDATA[ContratoCorporativo]]></contexto>
+      </properties>
+    </control>
+    <control name="br.com.sankhya.mgs.ct.ApoioPostoCargo" type="MN" childrenType="PL">
+      <description><![CDATA[Apoio Posto Cargo (CT)]]></description>
+      <url><![CDATA[${dynaform:MGSCT_Apoio_Posto_Cargo}]]></url>
+      <properties>
+        <resourceID><![CDATA[br.com.sankhya.mgs.ct.apoiopostocargo]]></resourceID>
+        <contexto><![CDATA[ContratoCorporativo]]></contexto>
+      </properties>
+    </control>
+    <control name="br.com.sankhya.ct.cadastro" type="FB" childrenType="MN">
+      <description><![CDATA[Contrato Corporativo]]></description>
+      <url />
+      <properties />
+    </control>
+    <control name="br.com.sankhya.mgs.ct.contrato" type="MN" childrenType="PL">
+      <description><![CDATA[Contrato (CT)]]></description>
+      <url><![CDATA[${dynaform:MGSCT_Dados_Contrato}]]></url>
+      <properties>
+        <resourceID><![CDATA[br.com.sankhya.mgs.ct.contrato]]></resourceID>
+        <contexto><![CDATA[ContratoCorporativo]]></contexto>
+      </properties>
+    </control>
+    <control name="br.com.sankhya.mgs.ct.Rotina" type="MN" childrenType="MN">
+      <description><![CDATA[Rotina]]></description>
+      <url />
+      <properties />
+    </control>
+    <control name="br.com.sankhya.mgs.ct.arquivo" type="MN" childrenType="MN">
+      <description><![CDATA[Arquivo]]></description>
+      <url />
+      <properties />
+    </control>
+  </controls>
+  <controlRelations>
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Rotina" toCtrl="br.com.sankhya.mgs.ct.unidade" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Rotina" toCtrl="br.com.sankhya.mgs.ct.AlocacoesServico" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct" toCtrl="br.com.sankhya.ct.cadastro" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.SituacaoContrato" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.ApoioPostoCargo" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.Rotina" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.TipoFatura" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.ValoresProdutos" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Rotina" toCtrl="br.com.sankhya.mgs.ct.AlocacoesPostoServico" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.controle" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.ApoioTaxa" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Rotina" toCtrl="br.com.sankhya.mgs.ct.contrato" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.arquivo" toCtrl="br.com.sankhya.mgs.ct.cadastro" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.arquivo" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Rotina" toCtrl="br.com.sankhya.mgs.ct.LocalContrato" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.ValoresEventos" />
+  </controlRelations>
+</metadata>
+

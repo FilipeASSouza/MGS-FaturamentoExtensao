@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE metadata-provider >
+<metadata-provider batch-fetch-size="200"
+		data-source="java:/MGEDS"
+		event-listener="br.com.sankhya.modelcore.dwfdata.DynamicEntityLoader"
+		name="ContratoCorporativo-dwf"
+		parent="mge-dwf"
+		use-ejb="false"
+		verbose="false"
+>
+	
+	<container-config commit-type-d-refresh-rate="120" entity-cache-max-idle="1800" entity-cache-max-size="5000" instance-cache-max-size="2000" />
+	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Dados_Contrato.xml' name='MGSCT_Dados_Contrato'/>
+	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Modalidade_Contrato.xml' name='MGSCT_Modalidade_Contrato'/>
+	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Previsoes_Contrato.xml' name='MGSCT_Previsoes_Contrato'/>
+    <descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Previsoes_Contrato_V.xml' name='MGSCT_Previsoes_Contrato_V'/>
+	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Local_Contrato.xml' name='MGSCT_Local_Contrato'/>
+	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Local_Contrato_V.xml' name='MGSCT_Local_Contrato_V'/>
+	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Unidades_Pai.xml' name='MGSCT_Unidades_Pai'/>
+	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Vagas_Unid_Fat.xml' name='MGSCT_Vagas_Unid_Fat'/>
+	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Unidades_Filho.xml' name='MGSCT_Unidades_Filho'/>
+	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Apoio_Vagas.xml' name='MGSCT_Apoio_Vagas'/>
+	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Metricas.xml' name='MGSCT_Metricas'/>
+	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Situacao_Contrato.xml' name='MGSCT_Situacao_Contrato'/>
+	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Local_Tipo_Fatura.xml' name='MGSCT_Local_Tipo_Fatura'/>
+	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Apoio_Controle.xml' name='MGSCT_Apoio_Controle'/>
+	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Apoio_Tipo_Fatura.xml' name='MGSCT_Apoio_Tipo_Fatura'/>
+	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Tributos_Contrato.xml' name='MGSCT_Tributos_Contrato'/>
+	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Taxa_Contrato.xml' name='MGSCT_Taxa_Contrato'/>
+	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Apoio_Taxa.xml' name='MGSCT_Apoio_Taxa'/>
+	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Vagas_Previsao_Contrato.xml' name='MGSCT_Vagas_Previsao_Contrato'/>
+	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Valores_Eventos.xml' name='MGSCT_Valores_Eventos'/>
+	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Valores_Produtos.xml' name='MGSCT_Valores_Produtos'/>
+	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Alocacoes_PS.xml' name='MGSCT_Alocacoes_PS'/>
+	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Alocacoes_Serviços.xml' name='MGSCT_Alocacoes_Serviços'/>
+
+</metadata-provider>
+
