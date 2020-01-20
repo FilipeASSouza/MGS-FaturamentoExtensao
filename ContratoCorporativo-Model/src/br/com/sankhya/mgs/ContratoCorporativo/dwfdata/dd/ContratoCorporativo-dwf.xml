@@ -32,7 +32,7 @@
 	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Valores_Eventos.xml' name='MGSCT_Valores_Eventos'/>
 	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Valores_Produtos.xml' name='MGSCT_Valores_Produtos'/>
 	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Alocacoes_PS.xml' name='MGSCT_Alocacoes_PS'/>
-	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Alocacoes_Serviços.xml' name='MGSCT_Alocacoes_Serviços'/>
+	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Alocacoes_Servicos.xml' name='MGSCT_Alocacoes_Servicos'/>
 	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Apoio_Posto_Cargo.xml' name='MGSCT_Apoio_Posto_Cargo'/>
 
 </metadata-provider>

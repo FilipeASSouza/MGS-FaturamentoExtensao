@@ -489,9 +489,6 @@
     <field name="DTREFERCCT" table="MGSTCTCONTRVLRSERV" dataType="H" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="10">
       <description><![CDATA[Dt. De Referência de CCT]]></description>
     </field>
-    <field name="NUMODALIDADE" table="MGSTCTCONTRVLRSERV" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="1">
-      <description><![CDATA[Cód. Modalidade]]></description>
-    </field>
     <field name="STATUSALOCACAO" table="MGSTCTALOCACAOPS" dataType="S" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="7">
       <description><![CDATA[Ativo]]></description>
     </field>
@@ -780,6 +777,9 @@
     <field name="NUBOLETOFATUR" table="MGSTCTBOLETOFATURA" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="0">
       <description><![CDATA[Nro. Único]]></description>
     </field>
+    <field name="CODTPN" table="MGSTCTCONTRVLRSERV" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="2">
+      <description><![CDATA[Cód. Modalidade]]></description>
+    </field>
     <field name="NUTIPOSERVICO" table="MGSTCTMODALCONTR" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="3">
       <description><![CDATA[Tipo Serviço]]></description>
     </field>
@@ -831,9 +831,6 @@
     </field>
     <field name="NUCONTRCENT" table="MGSTCTUNIDADEPREV" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="1">
       <description><![CDATA[Nro. Contr. Cent.]]></description>
-    </field>
-    <field name="NUMODALIDADE" table="MGSTCTCONTRVLRPS" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="2">
-      <description><![CDATA[Cód. Modalidade]]></description>
     </field>
     <field name="NUUNIDPREV" table="MGSTCTUNIDADEPREV" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="0">
       <description><![CDATA[Nro. Único]]></description>
@@ -972,6 +969,9 @@
     </field>
     <field name="SIGLA" table="MGSTCTVAGAS" dataType="S" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="1">
       <description><![CDATA[Sigla]]></description>
+    </field>
+    <field name="CODTPN" table="MGSTCTCONTRVLRPS" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="2">
+      <description><![CDATA[Cód. Modalidade]]></description>
     </field>
     <field name="DESCRTIPOFAT" table="MGSTCTTIPOFATURA" dataType="S" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="1">
       <description><![CDATA[Descrição]]></description>
@@ -1231,7 +1231,7 @@
     <instance name="MGSCT_Situacao_Contrato" tableName="MGSTCTTIPOSITUACAO">
       <description><![CDATA[Situação do Contrato]]></description>
     </instance>
-    <instance name="MGSCT_Alocacoes_Serviços" tableName="MGSTCTALOCACAOSERV">
+    <instance name="MGSCT_Alocacoes_Servicos" tableName="MGSTCTALOCACAOSERV">
       <description><![CDATA[Alocações de Serviços]]></description>
     </instance>
     <instance name="MGSCT_Cargo" tableName="MGSVCTCARGO">
@@ -1320,11 +1320,6 @@
         <field localName="NUMCONTRATO" targetName="NUMCONTRATO" />
       </fields>
     </relation>
-    <relation fromEntity="MGSCT_Valores_Eventos" toEntity="MGSCT_Modalidade_Contrato" type="I" insert="N" update="N" remove="N">
-      <fields>
-        <field localName="NUMODALIDADE" targetName="NUMODALIDADE" />
-      </fields>
-    </relation>
     <relation fromEntity="MGSCT_Previsoes_Contrato_V" toEntity="MGSCT_Apoio_Controle" type="I" insert="N" update="N" remove="N">
       <fields>
         <field localName="CODCONTROLE" targetName="CODCONTROLE" />
@@ -1383,6 +1378,11 @@
     <relation fromEntity="MGSCT_Modalidade_Contrato" toEntity="TGFTSE" type="I" insert="N" update="N" remove="N">
       <fields>
         <field localName="NUTIPOSERVICO" targetName="NUTIPOSERVICO" />
+      </fields>
+    </relation>
+    <relation fromEntity="MGSCT_Valores_Produtos" toEntity="TipoNegociacaoPreVenda" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="CODTPN" targetName="CODTPN" />
       </fields>
     </relation>
     <relation fromEntity="MGSCT_Modalidade_Contrato" toEntity="MGSCT_Previsoes_Contrato" type="I" insert="N" update="N" remove="N">
@@ -1500,6 +1500,11 @@
         <field localName="NUMCONTRATO" targetName="NUMCONTRATO" />
       </fields>
     </relation>
+    <relation fromEntity="MGSCT_Valores_Eventos" toEntity="TipoNegociacaoPreVenda" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="CODTPN" targetName="CODTPN" />
+      </fields>
+    </relation>
     <relation fromEntity="MGSCT_Modalidade_Contrato" toEntity="MGSCT_Dados_Contrato" type="I" insert="N" update="N" remove="N">
       <fields>
         <field localName="NUMCONTRATO" targetName="NUMCONTRATO" />
@@ -1533,11 +1538,6 @@
     <relation fromEntity="MGSCT_Valores_Produtos" toEntity="MGSCT_Dados_Contrato" type="I" insert="N" update="N" remove="N">
       <fields>
         <field localName="NUMCONTRATO" targetName="NUMCONTRATO" />
-      </fields>
-    </relation>
-    <relation fromEntity="MGSCT_Valores_Produtos" toEntity="MGSCT_Modalidade_Contrato" type="I" insert="N" update="N" remove="N">
-      <fields>
-        <field localName="NUMODALIDADE" targetName="NUMODALIDADE" />
       </fields>
     </relation>
     <relation fromEntity="MGSCT_Unidades_Filho" toEntity="MGSCT_Unidades_Pai" type="I" insert="N" update="N" remove="N">
@@ -1625,7 +1625,7 @@
         <field localName="NUUNIDPREVVAGA" targetName="NUUNIDPREVVAGA" />
       </fields>
     </relation>
-    <relation fromEntity="MGSCT_Alocacoes_Serviços" toEntity="MGSCT_Unidades_Filho" type="I" insert="N" update="N" remove="N">
+    <relation fromEntity="MGSCT_Alocacoes_Servicos" toEntity="MGSCT_Unidades_Filho" type="I" insert="N" update="N" remove="N">
       <fields>
         <field localName="NUUNIDPREV" targetName="NUUNIDPREV" />
       </fields>
@@ -1755,22 +1755,22 @@
     </control>
   </controls>
   <controlRelations>
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.ApoioPostoCargo" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Rotina" toCtrl="br.com.sankhya.mgs.ct.AlocacoesPostoServico" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct" toCtrl="br.com.sankhya.ct.cadastro" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Rotina" toCtrl="br.com.sankhya.mgs.ct.LocalContrato" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Rotina" toCtrl="br.com.sankhya.mgs.ct.contrato" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Rotina" toCtrl="br.com.sankhya.mgs.ct.AlocacoesServico" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Rotina" toCtrl="br.com.sankhya.mgs.ct.unidade" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.controle" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.arquivo" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.SituacaoContrato" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.TipoFatura" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.ApoioTaxa" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.Rotina" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.ValoresProdutos" />
     <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.ValoresEventos" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct" toCtrl="br.com.sankhya.ct.cadastro" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.ValoresProdutos" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Rotina" toCtrl="br.com.sankhya.mgs.ct.unidade" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.ApoioTaxa" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.SituacaoContrato" />
     <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.arquivo" toCtrl="br.com.sankhya.mgs.ct.cadastro" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Rotina" toCtrl="br.com.sankhya.mgs.ct.LocalContrato" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.arquivo" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.TipoFatura" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.ApoioPostoCargo" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.Rotina" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Rotina" toCtrl="br.com.sankhya.mgs.ct.AlocacoesServico" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.controle" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Rotina" toCtrl="br.com.sankhya.mgs.ct.contrato" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Rotina" toCtrl="br.com.sankhya.mgs.ct.AlocacoesPostoServico" />
   </controlRelations>
 </metadata>
 
