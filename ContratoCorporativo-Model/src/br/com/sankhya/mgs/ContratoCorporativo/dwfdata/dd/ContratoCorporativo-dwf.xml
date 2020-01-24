@@ -17,7 +17,7 @@
 	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Local_Contrato.xml' name='MGSCT_Local_Contrato'/>
 	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Local_Contrato_V.xml' name='MGSCT_Local_Contrato_V'/>
 	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Unidades.xml' name='MGSCT_Unidades'/>
-	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Vagas_Unid_Fat.xml' name='MGSCT_Vagas_Unid_Fat'/>
+	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Vagas_Previsao_Unidade.xml' name='MGSCT_Vagas_Previsao_Unidade'/>
 	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Previsoes_Unidade.xml' name='MGSCT_Previsoes_Unidade'/>
 	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Apoio_Vagas.xml' name='MGSCT_Apoio_Vagas'/>
 	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Metricas.xml' name='MGSCT_Metricas'/>
@@ -35,6 +35,8 @@
 	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Alocacoes_Servicos.xml' name='MGSCT_Alocacoes_Servicos'/>
 	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Apoio_PS.xml' name='MGSCT_Apoio_PS'/>
 	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Apoio_PS_V.xml' name='MGSCT_Apoio_PS_V'/>
+	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Previsoes_Unidade_Serv.xml' name='MGSCT_Previsoes_Unidade_Serv'/>
+	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Previsoes_Unidade_PS.xml' name='MGSCT_Previsoes_Unidade_PS'/>
 
 </metadata-provider>
 
