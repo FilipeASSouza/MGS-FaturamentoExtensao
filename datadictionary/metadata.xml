@@ -154,13 +154,10 @@
       <description><![CDATA[UF]]></description>
     </field>
     <field name="CODCID" table="MGSTCTLOCALCONT" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="12">
-      <description><![CDATA[Cidade]]></description>
+      <description><![CDATA[Cidade Prestação]]></description>
     </field>
     <field name="COMPLEMENTO" table="MGSTCTLOCALCONT" dataType="S" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="8">
       <description><![CDATA[Complemento]]></description>
-    </field>
-    <field name="NUMLOCAL" table="MGSTCTLOCALCONT" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="3">
-      <description><![CDATA[Num. Local]]></description>
     </field>
     <field name="NULOCALCONT" table="MGSTCTLOCALCONT" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="0">
       <description><![CDATA[Nro. Único]]></description>
@@ -185,9 +182,6 @@
     </field>
     <field name="DESCRCONTROLE" table="MGSTCTCONTROLE" dataType="S" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="S" order="1">
       <description><![CDATA[Descrição]]></description>
-    </field>
-    <field name="NUMCONTRATO" table="MGSTCTCONTRATOPREV" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="2">
-      <description><![CDATA[Num. Contrato]]></description>
     </field>
     <field name="DSCEVENTO" table="MGSTCTEVTMENSAL" dataType="S" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="13">
       <description><![CDATA[Descrição Evento]]></description>
@@ -489,37 +483,37 @@
     <field name="DTREFERCCT" table="MGSTCTCONTRVLRSERV" dataType="H" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="10">
       <description><![CDATA[Dt. De Referência de CCT]]></description>
     </field>
-    <field name="STATUSALOCACAO" table="MGSTCTALOCACAOPS" dataType="S" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="7">
+    <field name="STATUSALOCACAO" table="MGSTCTALOCACAOPS" dataType="S" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="8">
       <description><![CDATA[Ativo]]></description>
     </field>
-    <field name="CODTIPOPOSTO" table="MGSTCTALOCACAOPS" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="9">
+    <field name="CODTIPOPOSTO" table="MGSTCTALOCACAOPS" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="10">
       <description><![CDATA[Cód. Tipo do Posto]]></description>
     </field>
-    <field name="DTFIM" table="MGSTCTALOCACAOPS" dataType="H" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="6">
+    <field name="DTFIM" table="MGSTCTALOCACAOPS" dataType="H" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="7">
       <description><![CDATA[Dt. Fim Vigência]]></description>
     </field>
-    <field name="MATRICULA" table="MGSTCTALOCACAOPS" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="4">
+    <field name="MATRICULA" table="MGSTCTALOCACAOPS" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="5">
       <description><![CDATA[Matrícula do Emrpegado]]></description>
     </field>
     <field name="NUALOCAPS" table="MGSTCTALOCACAOPS" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="0">
       <description><![CDATA[Nro. Único]]></description>
     </field>
-    <field name="CODEVENTO" table="MGSTCTALOCACAOPS" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="10">
+    <field name="CODEVENTO" table="MGSTCTALOCACAOPS" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="11">
       <description><![CDATA[Cód. Evento]]></description>
     </field>
-    <field name="DTINICIO" table="MGSTCTALOCACAOPS" dataType="H" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="5">
+    <field name="DTINICIO" table="MGSTCTALOCACAOPS" dataType="H" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="6">
       <description><![CDATA[Dt. Inicio Vigência]]></description>
     </field>
-    <field name="NUUNIDPREV" table="MGSTCTALOCACAOPS" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="1">
+    <field name="NUUNIDPREV" table="MGSTCTALOCACAOPS" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="2">
       <description><![CDATA[Unid. Previsão]]></description>
     </field>
-    <field name="DTINS" table="MGSTCTALOCACAOPS" dataType="H" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="8">
+    <field name="DTINS" table="MGSTCTALOCACAOPS" dataType="H" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="9">
       <description><![CDATA[Dt. Inserção]]></description>
     </field>
-    <field name="NUUNIDPREVVAGA" table="MGSTCTALOCACAOPS" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="2">
+    <field name="NUUNIDPREVVAGA" table="MGSTCTALOCACAOPS" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="3">
       <description><![CDATA[Unid. Previsão Vaga]]></description>
     </field>
-    <field name="CODCARGO" table="MGSTCTALOCACAOPS" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="3">
+    <field name="CODCARGO" table="MGSTCTALOCACAOPS" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="4">
       <description><![CDATA[Cód. Cargo]]></description>
     </field>
     <field name="CODTIPOPOSTO" table="MGSTCTPOSTOCARGO" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="2">
@@ -689,6 +683,13 @@
     </field>
     <field name="NUMCONTRATO" table="MGSTCTLOCALTIPOFAT" dataType="I" presentationType="P" calculated="N" allowSearch="S" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="2">
       <description><![CDATA[Num. Contrato]]></description>
+      <expression><![CDATA[if($valorCampo != null){   
+    return $valorCampo; 
+} 
+$sql.select("NUMCONTRATO","MGSTCTLOCALCONT","NULOCALCONT = "+$col_NULOCALCONT);  
+if($sql.next()){   
+    return $sql.getBigDecimal(1); 
+}]]></expression>
     </field>
     <field name="NULOCALCONT" table="MGSTCTLOCALTIPOFAT" dataType="I" presentationType="P" calculated="N" allowSearch="S" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="1">
       <description><![CDATA[Nro. Local do Contrato]]></description>
@@ -714,8 +715,15 @@
     <field name="NUCONTREVENTO" table="MGSTCTCONTRVLRPS" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="0">
       <description><![CDATA[Nro. Único]]></description>
     </field>
-    <field name="DTREFERCCT" table="MGSTCTCONTRVLRPS" dataType="H" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="10">
-      <description><![CDATA[Dt. De Referência de CCT]]></description>
+    <field name="NUMCONTRATO" table="MGSTCTCONTRATOPREV" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="2">
+      <description><![CDATA[Num. Contrato]]></description>
+      <expression><![CDATA[if($valorCampo != null){   
+    return $valorCampo; 
+} 
+$sql.select("NUMCONTRATO","MGSTCTMODALCONTR","NUMODALIDADE = "+$col_NUMODALIDADE);  
+if($sql.next()){   
+    return $sql.getBigDecimal(1); 
+}]]></expression>
     </field>
     <field name="ALIQADM" table="MGSTCTCONTRVLRPS" dataType="F" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="11">
       <description><![CDATA[Alíquota da Taxa de Adm.]]></description>
@@ -735,31 +743,31 @@
     <field name="VLRPADRAO" table="MGSTCTTIPOTAXA" dataType="F" presentationType="P" calculated="N" allowSearch="S" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="2">
       <description><![CDATA[Valor Padrão da Taxa]]></description>
     </field>
-    <field name="QTDEALOCACAO" table="MGSTCTALOCACAOSERV" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="6">
+    <field name="QTDEALOCACAO" table="MGSTCTALOCACAOSERV" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="7">
       <description><![CDATA[Qtde Alocada]]></description>
     </field>
-    <field name="DTINS" table="MGSTCTALOCACAOSERV" dataType="H" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="5">
+    <field name="DTINS" table="MGSTCTALOCACAOSERV" dataType="H" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="6">
       <description><![CDATA[Dt. Inserção]]></description>
     </field>
-    <field name="STATUSALOCACAO" table="MGSTCTALOCACAOSERV" dataType="S" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="4">
+    <field name="STATUSALOCACAO" table="MGSTCTALOCACAOSERV" dataType="S" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="5">
       <description><![CDATA[Ativo]]></description>
     </field>
-    <field name="VLRUNITARIO" table="MGSTCTALOCACAOSERV" dataType="F" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="7">
+    <field name="VLRUNITARIO" table="MGSTCTALOCACAOSERV" dataType="F" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="8">
       <description><![CDATA[Valor Unitário]]></description>
     </field>
-    <field name="NUUNIDPREV" table="MGSTCTALOCACAOSERV" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="1">
+    <field name="NUUNIDPREV" table="MGSTCTALOCACAOSERV" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="2">
       <description><![CDATA[Unid. Previsão]]></description>
     </field>
-    <field name="VLRTOTAL" table="MGSTCTALOCACAOSERV" dataType="F" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="8">
+    <field name="VLRTOTAL" table="MGSTCTALOCACAOSERV" dataType="F" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="9">
       <description><![CDATA[Valor Total]]></description>
     </field>
     <field name="NUALOCASERV" table="MGSTCTALOCACAOSERV" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="0">
       <description><![CDATA[Nro. Único]]></description>
     </field>
-    <field name="DTINICIO" table="MGSTCTALOCACAOSERV" dataType="H" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="2">
+    <field name="DTINICIO" table="MGSTCTALOCACAOSERV" dataType="H" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="3">
       <description><![CDATA[Dt. Inicio Vigência]]></description>
     </field>
-    <field name="DTFIM" table="MGSTCTALOCACAOSERV" dataType="H" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="3">
+    <field name="DTFIM" table="MGSTCTALOCACAOSERV" dataType="H" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="4">
       <description><![CDATA[Dt. Fim Vigência]]></description>
     </field>
     <field name="VLRBRUTO" table="MGSTCTFATURA" dataType="F" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="14">
@@ -780,6 +788,9 @@
     <field name="CODTPN" table="MGSTCTCONTRVLRSERV" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="2">
       <description><![CDATA[Cód. Modalidade]]></description>
     </field>
+    <field name="NUMCONTRATO" table="MGSTCTALOCACAOPS" dataType="I" presentationType="P" calculated="N" allowSearch="S" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="1">
+      <description><![CDATA[Num. Contrato]]></description>
+    </field>
     <field name="NUTIPOSERVICO" table="MGSTCTMODALCONTR" dataType="I" presentationType="P" calculated="N" allowSearch="S" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="3">
       <description><![CDATA[Tipo Serviço]]></description>
     </field>
@@ -794,6 +805,13 @@
     </field>
     <field name="CODSITEPAI" table="MGSTCTCONTRCENT" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="3">
       <description><![CDATA[Unidade Faturamento Pai]]></description>
+      <expression><![CDATA[if($valorCampo != null){   
+    return $valorCampo; 
+} 
+$sql.select("CODSITEPAI","TGFSIT","CODSITE = "+$col_CODSITE);  
+if($sql.next()){   
+    return $sql.getBigDecimal(1); 
+}]]></expression>
     </field>
     <field name="DTINICIO" table="MGSTCTCONTRCENT" dataType="H" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="5">
       <description><![CDATA[Data Início Vigência]]></description>
@@ -806,6 +824,13 @@
     </field>
     <field name="NUMCONTRATO" table="MGSTCTCONTRCENT" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="2">
       <description><![CDATA[Num. Contrato]]></description>
+      <expression><![CDATA[if($valorCampo != null){   
+    return $valorCampo; 
+} 
+$sql.select("NUMCONTRATO","MGSTCTCONTRCENT","NUCONTRCENT = "+$col_NUCONTRCENT);  
+if($sql.next()){   
+    return $sql.getBigDecimal(1); 
+}]]></expression>
     </field>
     <field name="ALIQISS" table="MGSTCTCONTRVLRPS" dataType="F" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="8">
       <description><![CDATA[Alíquota de ISS]]></description>
@@ -828,40 +853,44 @@
     <field name="INTPERIODO" table="MGSTCTINTEGRADC" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="3">
       <description><![CDATA[Período Integração]]></description>
     </field>
-    <field name="NUCONTRCENT" table="MGSTCTUNIDADEPREV" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="1">
+    <field name="NUCONTRCENT" table="MGSTCTUNIDADEPREV" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="2">
       <description><![CDATA[Nro. Contr. Cent.]]></description>
+    </field>
+    <field name="QTDVIGOR" table="MGSTCTCONTRATOPREV" dataType="I" presentationType="P" calculated="S" allowSearch="N" allowDefault="N" visibleOnSearch="N" isPresentation="N" order="0">
+      <description><![CDATA[Quantidade em Vigor]]></description>
+      <expression><![CDATA[#type.sql# SELECT COUNT(*) FROM MGSTCTCONTRATOVAGA WHERE NUCONTRPREV = MGSTCTCONTRATOPREV.NUCONTRPREV AND DTFIM IS NULL]]></expression>
     </field>
     <field name="NUUNIDPREV" table="MGSTCTUNIDADEPREV" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="0">
       <description><![CDATA[Nro. Único]]></description>
     </field>
-    <field name="CODTIPOPOSTO" table="MGSTCTUNIDADEPREV" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="2">
+    <field name="CODTIPOPOSTO" table="MGSTCTUNIDADEPREV" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="4">
       <description><![CDATA[Cód. Tipo do Posto]]></description>
     </field>
-    <field name="CODEVENTO" table="MGSTCTUNIDADEPREV" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="4">
+    <field name="CODEVENTO" table="MGSTCTUNIDADEPREV" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="3">
       <description><![CDATA[Cód. Evento]]></description>
     </field>
-    <field name="CODCONTROLE" table="MGSTCTUNIDADEPREV" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="11">
+    <field name="CODCONTROLE" table="MGSTCTUNIDADEPREV" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="5">
       <description><![CDATA[Cód. Controle]]></description>
     </field>
-    <field name="CODSERVMATERIAL" table="MGSTCTUNIDADEPREV" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="3">
+    <field name="CODSERVMATERIAL" table="MGSTCTUNIDADEPREV" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="6">
       <description><![CDATA[Cód. Serviço ou Material]]></description>
     </field>
-    <field name="QTDEMPREGADOS" table="MGSTCTUNIDADEPREV" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="10">
+    <field name="QTDEMPREGADOS" table="MGSTCTUNIDADEPREV" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="12">
       <description><![CDATA[Quant. Informativa Empreg.]]></description>
     </field>
-    <field name="DTFIM" table="MGSTCTUNIDADEPREV" dataType="H" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="9">
+    <field name="DTFIM" table="MGSTCTUNIDADEPREV" dataType="H" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="11">
       <description><![CDATA[Data Fim Vigência]]></description>
     </field>
-    <field name="VLRUNITARIO" table="MGSTCTUNIDADEPREV" dataType="F" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="6">
+    <field name="VLRUNITARIO" table="MGSTCTUNIDADEPREV" dataType="F" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="8">
       <description><![CDATA[Valor Unitário]]></description>
     </field>
-    <field name="QTDCONTRATADA" table="MGSTCTUNIDADEPREV" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="5">
+    <field name="QTDCONTRATADA" table="MGSTCTUNIDADEPREV" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="7">
       <description><![CDATA[Quantidade Contratada]]></description>
     </field>
-    <field name="VLRCONTRATADA" table="MGSTCTUNIDADEPREV" dataType="F" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="7">
+    <field name="VLRCONTRATADA" table="MGSTCTUNIDADEPREV" dataType="F" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="9">
       <description><![CDATA[Valor Contratado]]></description>
     </field>
-    <field name="DTINICIO" table="MGSTCTUNIDADEPREV" dataType="H" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="8">
+    <field name="DTINICIO" table="MGSTCTUNIDADEPREV" dataType="H" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="10">
       <description><![CDATA[Data Início Vigência]]></description>
     </field>
     <field name="ATIVO" table="MGSTCTCONTRATOTAXA" dataType="S" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="2">
@@ -1191,12 +1220,38 @@
     <field name="DHINS" table="MGSTCTLCTCUSTO" dataType="H" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="19">
       <description><![CDATA[Data e Hora Inserção do registro]]></description>
     </field>
+    <field name="DESCRMODALIDADE" table="MGSTCTMODALCONTR" dataType="S" presentationType="P" calculated="S" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="S" order="4">
+      <description><![CDATA[Descrição Modalidade]]></description>
+      <expression><![CDATA[#type.sql# SELECT CODTPN || '-' ||DESCRICAO || ' (CONTRATO:' || MGSTCTMODALCONTR.NUMCONTRATO||')' FROM TCSTPN WHERE CODTPN = MGSTCTMODALCONTR.CODTPN]]></expression>
+    </field>
+    <field name="NUMLOCAL" table="MGSTCTLOCALCONT" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="3">
+      <description><![CDATA[Num. Local]]></description>
+      <expression><![CDATA[if($valorCampo != null){   
+    return $valorCampo; 
+} 
+$sql.select("NVL(MAX(NUMLOCAL),0)+1","MGSTCTLOCALCONT","NUMCONTRATO = "+$col_NUMCONTRATO);  
+if($sql.next()){   
+    return $sql.getBigDecimal(1); 
+}
+return java.math.BigDecimal.ONE;]]></expression>
+    </field>
+    <field name="NUMCONTRATO" table="MGSTCTUNIDADEPREV" dataType="I" presentationType="P" calculated="N" allowSearch="S" allowDefault="S" visibleOnSearch="S" isPresentation="N" order="1">
+      <description><![CDATA[Num. Contrato]]></description>
+    </field>
+    <field name="NUMCONTRATO" table="MGSTCTALOCACAOSERV" dataType="I" presentationType="P" calculated="N" allowSearch="S" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="1">
+      <description><![CDATA[Num. Contrato]]></description>
+    </field>
   </fields>
   <fieldProperties>
+    <prop table="MGSTCTUNIDADEPREV" field="NUMCONTRATO" name="visivel"><![CDATA[N]]></prop>
     <prop table="MGSTCTVAGAS" field="CODVAGA" name="readOnly"><![CDATA[S]]></prop>
     <prop table="MGSTCTCONTRCENT" field="CODSITEPAI" name="readOnly"><![CDATA[S]]></prop>
     <prop table="MGSTCTCONTRCENT" field="NUCONTRCENT" name="readOnly"><![CDATA[S]]></prop>
+    <prop table="MGSTCTLOCALCONT" field="NUMLOCAL" name="readOnly"><![CDATA[S]]></prop>
+    <prop table="MGSTCTLOCALTIPOFAT" field="NUMCONTRATO" name="visivel"><![CDATA[N]]></prop>
     <prop table="MGSTCTCONTRATOPREV" field="NUMCONTRATO" name="visivel"><![CDATA[N]]></prop>
+    <prop table="MGSTCTLOCALCONT" field="CODPARC" name="requerido"><![CDATA[S]]></prop>
+    <prop table="MGSTCTCONTRVLRPS" field="VLRTOTAL" name="nuCasasDecimais"><![CDATA[2]]></prop>
   </fieldProperties>
   <fieldOptions>
     <option table="MGSTCTCONTRATOTRIB" field="ATIVO" value="S"><![CDATA[Sim]]></option>
@@ -1606,6 +1661,7 @@
       </fields>
     </relation>
     <relation fromEntity="MGSCT_Unidades_Filho" toEntity="TGFPSS" type="I" insert="N" update="N" remove="N">
+      <expression><![CDATA[@form-filter[this.CODTIPOPOSTO IN (SELECT CODTIPOPOSTO FROM MGSTCTCONTRATOPREV WHERE NUMCONTRATO = form.NUMCOTNRATO)]]]></expression>
       <fields>
         <field localName="CODTIPOPOSTO" targetName="CODPOSTO" />
       </fields>
@@ -1630,11 +1686,6 @@
         <field localName="CODEVENTO" targetName="CODEVENTO" />
       </fields>
     </relation>
-    <relation fromEntity="MGSCT_Apoio_Posto_Cargo" toEntity="MGSCT_Alocacoes_PS" type="I" insert="N" update="N" remove="N">
-      <fields>
-        <field localName="CODTIPOPOSTO" targetName="CODTIPOPOSTO" />
-      </fields>
-    </relation>
     <relation fromEntity="MGSCT_Previsoes_Contrato" toEntity="MGSCT_Dados_Contrato" type="I" insert="N" update="N" remove="N">
       <fields>
         <field localName="NUMCONTRATO" targetName="NUMCONTRATO" />
@@ -1648,6 +1699,12 @@
     <relation fromEntity="MGSCT_Alocacoes_Servicos" toEntity="MGSCT_Unidades_Filho" type="I" insert="N" update="N" remove="N">
       <fields>
         <field localName="NUUNIDPREV" targetName="NUUNIDPREV" />
+      </fields>
+    </relation>
+    <relation fromEntity="MGSCT_Unidades_Pai" toEntity="MGSCT_Local_Contrato" type="I" insert="N" update="N" remove="N">
+      <expression><![CDATA[@form-filter[this.NUMCONTRATO = form.NUMCONTRATO]]]></expression>
+      <fields>
+        <field localName="NULOCALCONT" targetName="NULOCALCONT" />
       </fields>
     </relation>
   </relationShip>
