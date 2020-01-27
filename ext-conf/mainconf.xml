@@ -1,7 +1,7 @@
 <configs>
   <dataSources />
   <defaultJbossPath>../jboss</defaultJbossPath>
-  <buildDir>C:\Users\Public\Downloads\ContratoCorporativo</buildDir>
+  <buildDir>D:\Contrato_Corporativo\ContratoCorporativoExtensao</buildDir>
   <exportDir>D:\Export_Extension_ContratoCorporativo</exportDir>
   <recriaDefault>false</recriaDefault>
   <cleanJboss>false</cleanJboss>

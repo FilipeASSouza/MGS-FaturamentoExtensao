@@ -41,7 +41,10 @@
       <description><![CDATA[Integração Detalhamento de Custo]]></description>
     </table>
     <table name="MGSVCTCARGO" sequenceType="M">
-      <description><![CDATA[Cargo]]></description>
+      <description><![CDATA[View Cargo]]></description>
+    </table>
+    <table name="MGSVCTUNIDADEPREVSERV" sequenceType="M">
+      <description><![CDATA[Previsões da Unidade Serviço]]></description>
     </table>
     <table name="MGSTCTCONTRCENT" sequenceType="A" sequenceField="NUCONTRCENT">
       <description><![CDATA[Unidades]]></description>
@@ -72,6 +75,12 @@
     </table>
     <table name="MGSTCTBOLETOFATURA" sequenceType="A" sequenceField="NUBOLETOFATUR">
       <description><![CDATA[Boleto da Fatura]]></description>
+    </table>
+    <table name="MGSVCTUNIDADEPREV" sequenceType="M">
+      <description><![CDATA[View Previsões da Unidade]]></description>
+    </table>
+    <table name="MGSVCTUNIDADEPREVPS" sequenceType="M">
+      <description><![CDATA[Previsões da Unidade PS]]></description>
     </table>
     <table name="MGSTCTCONTRATOTRIB" sequenceType="A" sequenceField="NUCONTRATOTRIB">
       <description><![CDATA[Tributos do Contrato]]></description>
@@ -791,6 +800,45 @@ if($sql.next()){
     <field name="NUMCONTRATO" table="MGSTCTALOCACAOPS" dataType="I" presentationType="P" calculated="N" allowSearch="S" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="1">
       <description><![CDATA[Num. Contrato]]></description>
     </field>
+    <field name="NUUNIDPREV" table="MGSVCTUNIDADEPREVSERV" dataType="I" presentationType="P" calculated="N" allowSearch="S" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="0">
+      <description><![CDATA[NUUNIDPREV]]></description>
+    </field>
+    <field name="CODPARC" table="MGSVCTUNIDADEPREVSERV" dataType="I" presentationType="P" calculated="N" allowSearch="S" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="2">
+      <description><![CDATA[CODPARC]]></description>
+    </field>
+    <field name="NUMCONTRATO" table="MGSVCTUNIDADEPREVSERV" dataType="I" presentationType="P" calculated="N" allowSearch="S" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="1">
+      <description><![CDATA[NUMCONTRATO]]></description>
+    </field>
+    <field name="NUUNIDPREV" table="MGSVCTUNIDADEPREVPS" dataType="I" presentationType="P" calculated="N" allowSearch="S" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="0">
+      <description><![CDATA[NUUNIDPREV]]></description>
+    </field>
+    <field name="DTINICIO" table="MGSVCTUNIDADEPREVPS" dataType="H" presentationType="P" calculated="N" allowSearch="S" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="5">
+      <description><![CDATA[DTINICIO]]></description>
+    </field>
+    <field name="CODCONTROLE" table="MGSVCTUNIDADEPREVPS" dataType="I" presentationType="P" calculated="N" allowSearch="S" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="9">
+      <description><![CDATA[CODCONTROLE]]></description>
+    </field>
+    <field name="CODPARC" table="MGSVCTUNIDADEPREVPS" dataType="I" presentationType="P" calculated="N" allowSearch="S" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="2">
+      <description><![CDATA[CODPARC]]></description>
+    </field>
+    <field name="CODTIPOPOSTO" table="MGSVCTUNIDADEPREVPS" dataType="I" presentationType="P" calculated="N" allowSearch="S" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="8">
+      <description><![CDATA[CODTIPOPOSTO]]></description>
+    </field>
+    <field name="NUMCONTRATO" table="MGSVCTUNIDADEPREVPS" dataType="I" presentationType="P" calculated="N" allowSearch="S" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="1">
+      <description><![CDATA[NUMCONTRATO]]></description>
+    </field>
+    <field name="DTFIM" table="MGSVCTUNIDADEPREVPS" dataType="H" presentationType="P" calculated="N" allowSearch="S" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="6">
+      <description><![CDATA[DTFIM]]></description>
+    </field>
+    <field name="CODEVENTO" table="MGSVCTUNIDADEPREVPS" dataType="I" presentationType="P" calculated="N" allowSearch="S" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="7">
+      <description><![CDATA[CODEVENTO]]></description>
+    </field>
+    <field name="CODSITE" table="MGSVCTUNIDADEPREVPS" dataType="I" presentationType="P" calculated="N" allowSearch="S" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="3">
+      <description><![CDATA[CODSITE]]></description>
+    </field>
+    <field name="NULOCALCONT" table="MGSVCTUNIDADEPREVPS" dataType="I" presentationType="P" calculated="N" allowSearch="S" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="4">
+      <description><![CDATA[NULOCALCONT]]></description>
+    </field>
     <field name="NUTIPOSERVICO" table="MGSTCTMODALCONTR" dataType="I" presentationType="P" calculated="N" allowSearch="S" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="3">
       <description><![CDATA[Tipo Serviço]]></description>
     </field>
@@ -805,10 +853,7 @@ if($sql.next()){
     </field>
     <field name="CODSITEPAI" table="MGSTCTCONTRCENT" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="3">
       <description><![CDATA[Unidade Faturamento Pai]]></description>
-      <expression><![CDATA[if($valorCampo != null){   
-    return $valorCampo; 
-} 
-$sql.select("CODSITEPAI","TGFSIT","CODSITE = "+$col_CODSITE);  
+      <expression><![CDATA[$sql.select("CODSITEPAI","TGFSIT","CODSITE = "+$col_CODSITE);  
 if($sql.next()){   
     return $sql.getBigDecimal(1); 
 }]]></expression>
@@ -824,13 +869,6 @@ if($sql.next()){
     </field>
     <field name="NUMCONTRATO" table="MGSTCTCONTRCENT" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="2">
       <description><![CDATA[Num. Contrato]]></description>
-      <expression><![CDATA[if($valorCampo != null){   
-    return $valorCampo; 
-} 
-$sql.select("NUMCONTRATO","MGSTCTCONTRCENT","NUCONTRCENT = "+$col_NUCONTRCENT);  
-if($sql.next()){   
-    return $sql.getBigDecimal(1); 
-}]]></expression>
     </field>
     <field name="ALIQISS" table="MGSTCTCONTRVLRPS" dataType="F" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="8">
       <description><![CDATA[Alíquota de ISS]]></description>
@@ -1000,6 +1038,57 @@ if($sql.next()){
     </field>
     <field name="CODTPN" table="MGSTCTCONTRVLRPS" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="2">
       <description><![CDATA[Cód. Modalidade]]></description>
+    </field>
+    <field name="UNID_FATURAMENTO" table="MGSVCTUNIDADEPREV" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="2">
+      <description><![CDATA[UNID_FATURAMENTO]]></description>
+    </field>
+    <field name="SERVICO" table="MGSVCTUNIDADEPREV" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="9">
+      <description><![CDATA[SERVICO]]></description>
+    </field>
+    <field name="LOCALCONT" table="MGSVCTUNIDADEPREV" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="3">
+      <description><![CDATA[LOCALCONT]]></description>
+    </field>
+    <field name="DTINICPREV" table="MGSVCTUNIDADEPREV" dataType="H" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="4">
+      <description><![CDATA[DTINICPREV]]></description>
+    </field>
+    <field name="DTFIMPREV" table="MGSVCTUNIDADEPREV" dataType="H" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="5">
+      <description><![CDATA[DTFIMPREV]]></description>
+    </field>
+    <field name="CONTROLE" table="MGSVCTUNIDADEPREV" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="8">
+      <description><![CDATA[CONTROLE]]></description>
+    </field>
+    <field name="POSTO" table="MGSVCTUNIDADEPREV" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="7">
+      <description><![CDATA[POSTO]]></description>
+    </field>
+    <field name="EVENTO" table="MGSVCTUNIDADEPREV" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="6">
+      <description><![CDATA[EVENTO]]></description>
+    </field>
+    <field name="PARCEIRO" table="MGSVCTUNIDADEPREV" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="1">
+      <description><![CDATA[PARCEIRO]]></description>
+    </field>
+    <field name="CONTRATO" table="MGSVCTUNIDADEPREV" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="0">
+      <description><![CDATA[CONTRATO]]></description>
+    </field>
+    <field name="DTINICIO" table="MGSVCTUNIDADEPREVSERV" dataType="H" presentationType="P" calculated="N" allowSearch="S" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="5">
+      <description><![CDATA[DTINICIO]]></description>
+    </field>
+    <field name="DTFIM" table="MGSVCTUNIDADEPREVSERV" dataType="H" presentationType="P" calculated="N" allowSearch="S" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="6">
+      <description><![CDATA[DTFIM]]></description>
+    </field>
+    <field name="CODSITE" table="MGSVCTUNIDADEPREVSERV" dataType="I" presentationType="P" calculated="N" allowSearch="S" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="3">
+      <description><![CDATA[CODSITE]]></description>
+    </field>
+    <field name="CODCONTROLE" table="MGSVCTUNIDADEPREVSERV" dataType="I" presentationType="P" calculated="N" allowSearch="S" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="9">
+      <description><![CDATA[CODCONTROLE]]></description>
+    </field>
+    <field name="CODSERVMATERIAL" table="MGSVCTUNIDADEPREVSERV" dataType="I" presentationType="P" calculated="N" allowSearch="S" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="8">
+      <description><![CDATA[CODSERVMATERIAL]]></description>
+    </field>
+    <field name="NULOCALCONT" table="MGSVCTUNIDADEPREVSERV" dataType="I" presentationType="P" calculated="N" allowSearch="S" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="4">
+      <description><![CDATA[NULOCALCONT]]></description>
+    </field>
+    <field name="CODEVENTO" table="MGSVCTUNIDADEPREVSERV" dataType="I" presentationType="P" calculated="N" allowSearch="S" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="7">
+      <description><![CDATA[CODEVENTO]]></description>
     </field>
     <field name="DESCRTIPOFAT" table="MGSTCTTIPOFATURA" dataType="S" presentationType="P" calculated="N" allowSearch="S" allowDefault="N" visibleOnSearch="S" isPresentation="S" order="1">
       <description><![CDATA[Descrição]]></description>
@@ -1237,6 +1326,13 @@ return java.math.BigDecimal.ONE;]]></expression>
     </field>
     <field name="NUMCONTRATO" table="MGSTCTUNIDADEPREV" dataType="I" presentationType="P" calculated="N" allowSearch="S" allowDefault="S" visibleOnSearch="S" isPresentation="N" order="1">
       <description><![CDATA[Num. Contrato]]></description>
+      <expression><![CDATA[if($valorCampo != null){   
+    return $valorCampo; 
+} 
+$sql.select("NUMCONTRATO","MGSTCTCONTRCENT","NUCONTRCENT = "+$col_NUCONTRCENT);  
+if($sql.next()){   
+    return $sql.getBigDecimal(1); 
+}]]></expression>
     </field>
     <field name="NUMCONTRATO" table="MGSTCTALOCACAOSERV" dataType="I" presentationType="P" calculated="N" allowSearch="S" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="1">
       <description><![CDATA[Num. Contrato]]></description>
@@ -1245,13 +1341,31 @@ return java.math.BigDecimal.ONE;]]></expression>
   <fieldProperties>
     <prop table="MGSTCTUNIDADEPREV" field="NUMCONTRATO" name="visivel"><![CDATA[N]]></prop>
     <prop table="MGSTCTVAGAS" field="CODVAGA" name="readOnly"><![CDATA[S]]></prop>
+    <prop table="MGSTCTUNIDADEPREV" field="VLRCONTRATADA" name="UITabName"><![CDATA[__main]]></prop>
+    <prop table="MGSTCTCONTRATO" field="VLRTOTAL" name="requerido"><![CDATA[S]]></prop>
+    <prop table="MGSTCTCONTRATO" field="DTINICIO" name="requerido"><![CDATA[S]]></prop>
+    <prop table="MGSTCTCONTRATO" field="DTASSINATURA" name="requerido"><![CDATA[S]]></prop>
+    <prop table="MGSTCTCONTRATO" field="CODTIPSITUACAO" name="requerido"><![CDATA[S]]></prop>
     <prop table="MGSTCTCONTRCENT" field="CODSITEPAI" name="readOnly"><![CDATA[S]]></prop>
     <prop table="MGSTCTCONTRCENT" field="NUCONTRCENT" name="readOnly"><![CDATA[S]]></prop>
     <prop table="MGSTCTLOCALCONT" field="NUMLOCAL" name="readOnly"><![CDATA[S]]></prop>
+    <prop table="MGSTCTUNIDADEPREV" field="DTINICIO" name="UITabName"><![CDATA[__main]]></prop>
     <prop table="MGSTCTLOCALTIPOFAT" field="NUMCONTRATO" name="visivel"><![CDATA[N]]></prop>
+    <prop table="MGSTCTUNIDADEPREV" field="DTFIM" name="UITabName"><![CDATA[__main]]></prop>
+    <prop table="MGSTCTUNIDADEPREV" field="CODTIPOPOSTO" name="UITabName"><![CDATA[__main]]></prop>
+    <prop table="MGSTCTUNIDADEPREV" field="CODSERVMATERIAL" name="UITabName"><![CDATA[__main]]></prop>
+    <prop table="MGSTCTUNIDADEPREV" field="CODEVENTO" name="UITabName"><![CDATA[__main]]></prop>
+    <prop table="MGSTCTUNIDADEPREV" field="CODCONTROLE" name="UITabName"><![CDATA[__main]]></prop>
+    <prop table="MGSTCTUNIDADEPREV" field="QTDEMPREGADOS" name="UITabName"><![CDATA[__main]]></prop>
+    <prop table="MGSTCTCONTRATO" field="VLRMES" name="requerido"><![CDATA[S]]></prop>
+    <prop table="MGSTCTCONTRATO" field="DTFIM" name="requerido"><![CDATA[S]]></prop>
     <prop table="MGSTCTCONTRATOPREV" field="NUMCONTRATO" name="visivel"><![CDATA[N]]></prop>
+    <prop table="MGSTCTUNIDADEPREV" field="NUCONTRCENT" name="UITabName"><![CDATA[__main]]></prop>
+    <prop table="MGSTCTUNIDADEPREV" field="VLRUNITARIO" name="UITabName"><![CDATA[__main]]></prop>
     <prop table="MGSTCTLOCALCONT" field="CODPARC" name="requerido"><![CDATA[S]]></prop>
     <prop table="MGSTCTCONTRVLRPS" field="VLRTOTAL" name="nuCasasDecimais"><![CDATA[2]]></prop>
+    <prop table="MGSTCTUNIDADEPREV" field="QTDCONTRATADA" name="UITabName"><![CDATA[__main]]></prop>
+    <prop table="MGSTCTCONTRATO" field="CODPARC" name="requerido"><![CDATA[S]]></prop>
   </fieldProperties>
   <fieldOptions>
     <option table="MGSTCTCONTRATOTRIB" field="ATIVO" value="S"><![CDATA[Sim]]></option>
@@ -1277,10 +1391,13 @@ return java.math.BigDecimal.ONE;]]></expression>
     <instance name="MGSCT_Taxa_Contrato" tableName="MGSTCTCONTRATOTAXA">
       <description><![CDATA[Taxa do Contrato]]></description>
     </instance>
+    <instance name="MGSCT_Previsoes_Unidade_Ser" tableName="MGSTCTUNIDADEPREV">
+      <description><![CDATA[Previsões da Unidade Serviço]]></description>
+    </instance>
     <instance name="MGSCT_Local_Contrato" tableName="MGSTCTLOCALCONT">
       <description><![CDATA[Local do Contrato]]></description>
     </instance>
-    <instance name="MGSCT_Unidades_Pai" tableName="MGSTCTCONTRCENT">
+    <instance name="MGSCT_Unidades" tableName="MGSTCTCONTRCENT">
       <description><![CDATA[Unidades]]></description>
     </instance>
     <instance name="MGSCT_Situacao_Contrato" tableName="MGSTCTTIPOSITUACAO">
@@ -1292,16 +1409,16 @@ return java.math.BigDecimal.ONE;]]></expression>
     <instance name="MGSCT_Cargo" tableName="MGSVCTCARGO">
       <description><![CDATA[Cargo]]></description>
     </instance>
-    <instance name="MGSCT_Apoio_Posto_Cargo_V" tableName="MGSTCTPOSTOCARGO">
+    <instance name="MGSCT_Apoio_PS_V" tableName="MGSTCTPOSTOCARGO">
       <description><![CDATA[Apoio Posto Cargo]]></description>
     </instance>
     <instance name="MGSCT_Previsoes_Contrato" tableName="MGSTCTCONTRATOPREV">
       <description><![CDATA[Previsões do Contrato]]></description>
     </instance>
-    <instance name="MGSCT_Vagas_Unid_Fat" tableName="MGSTCTUNIDPREVVAGA">
+    <instance name="MGSCT_Vagas_Previsao_Unidade" tableName="MGSTCTUNIDPREVVAGA">
       <description><![CDATA[Vagas Previsão da Unidade]]></description>
     </instance>
-    <instance name="MGSCT_Unidades_Filho" tableName="MGSTCTUNIDADEPREV">
+    <instance name="MGSCT_Previsoes_Unidade" tableName="MGSTCTUNIDADEPREV">
       <description><![CDATA[Previsões da Unidade]]></description>
     </instance>
     <instance name="MGSCT_Apoio_Tipo_Fatura" tableName="MGSTCTTIPOFATURA">
@@ -1312,6 +1429,9 @@ return java.math.BigDecimal.ONE;]]></expression>
     </instance>
     <instance name="MGSCT_Alocacoes_PS" tableName="MGSTCTALOCACAOPS">
       <description><![CDATA[Alocações de Posto Serviço]]></description>
+    </instance>
+    <instance name="MGSCT_Previsoes_Unidade_PS" tableName="MGSVCTUNIDADEPREVPS">
+      <description><![CDATA[Previsões da Unidade PS]]></description>
     </instance>
     <instance name="MGSCT_Dados_Contrato" tableName="MGSTCTCONTRATO">
       <description><![CDATA[Dados do Contrato]]></description>
@@ -1328,6 +1448,9 @@ return java.math.BigDecimal.ONE;]]></expression>
     <instance name="MGSCT_Valores_Produtos" tableName="MGSTCTCONTRVLRSERV">
       <description><![CDATA[Valores dos Produtos]]></description>
     </instance>
+    <instance name="MGSCT_Previsoes_Unidade_V" tableName="MGSVCTUNIDADEPREV">
+      <description><![CDATA[View Previsões da Unidade]]></description>
+    </instance>
     <instance name="MGSCT_Modalidade_Contrato" tableName="MGSTCTMODALCONTR">
       <description><![CDATA[Modalidade do Contrato]]></description>
     </instance>
@@ -1343,8 +1466,11 @@ return java.math.BigDecimal.ONE;]]></expression>
     <instance name="MGSCT_Tributos_Contrato" tableName="MGSTCTCONTRATOTRIB">
       <description><![CDATA[Tributos do Contrato]]></description>
     </instance>
-    <instance name="MGSCT_Apoio_Posto_Cargo" tableName="MGSTCTPOSTOCARGO">
+    <instance name="MGSCT_Apoio_PS" tableName="MGSTCTPOSTOCARGO">
       <description><![CDATA[Apoio Posto Cargo]]></description>
+    </instance>
+    <instance name="MGSCT_Previsoes_Unidade_Serv" tableName="MGSVCTUNIDADEPREVSERV">
+      <description><![CDATA[Previsões da Unidade Serviço]]></description>
     </instance>
   </instances>
   <relationShip>
@@ -1358,12 +1484,13 @@ return java.math.BigDecimal.ONE;]]></expression>
         <field localName="NULOCALTIPOFAT" targetName="NULOCALTIPOFAT" />
       </fields>
     </relation>
-    <relation fromEntity="MGSCT_Unidades_Filho" toEntity="Produto3" type="I" insert="N" update="N" remove="N">
+    <relation fromEntity="MGSCT_Previsoes_Unidade" toEntity="Produto3" type="I" insert="N" update="N" remove="N">
+      <expression><![CDATA[@form-filter[this.CODPROD IN (SELECT CODSERVMATERIAL FROM MGSTCTCONTRATOPREV WHERE NUMCONTRATO = (SELECT NUMCONTRATO FROM MGSTCTCONTRCENT WHERE NUCONTRCENT = form.NUCONTRCENT))]]]></expression>
       <fields>
         <field localName="CODSERVMATERIAL" targetName="CODPROD" />
       </fields>
     </relation>
-    <relation fromEntity="MGSCT_Vagas_Unid_Fat" toEntity="MGSCT_Unidades_Filho" type="I" insert="N" update="N" remove="N">
+    <relation fromEntity="MGSCT_Vagas_Previsao_Unidade" toEntity="MGSCT_Previsoes_Unidade" type="I" insert="N" update="N" remove="N">
       <fields>
         <field localName="NUUNIDPREV" targetName="NUUNIDPREV" />
       </fields>
@@ -1399,12 +1526,27 @@ return java.math.BigDecimal.ONE;]]></expression>
         <field localName="NUMCONTRATO" targetName="NUMCONTRATO" />
       </fields>
     </relation>
-    <relation fromEntity="MGSCT_Alocacoes_PS" toEntity="MGSCT_Apoio_Posto_Cargo_V" type="I" insert="N" update="N" remove="N">
+    <relation fromEntity="MGSCT_Previsoes_Unidade_PS" toEntity="MGSCT_Alocacoes_PS" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="NUUNIDPREV" targetName="NUUNIDPREV" />
+      </fields>
+    </relation>
+    <relation fromEntity="MGSCT_Alocacoes_PS" toEntity="MGSCT_Apoio_PS_V" type="I" insert="N" update="N" remove="N">
       <fields>
         <field localName="CODTIPOPOSTO" targetName="CODTIPOPOSTO" />
       </fields>
     </relation>
-    <relation fromEntity="MGSCT_Unidades_Pai" toEntity="Site_AD001" type="I" insert="N" update="N" remove="N">
+    <relation fromEntity="MGSCT_Previsoes_Unidade_PS" toEntity="Site" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="CODSITE" targetName="CODSITE" />
+      </fields>
+    </relation>
+    <relation fromEntity="MGSCT_Previsoes_Unidade_Serv" toEntity="Site" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="CODSITE" targetName="CODSITE" />
+      </fields>
+    </relation>
+    <relation fromEntity="MGSCT_Unidades" toEntity="Site_AD001" type="I" insert="N" update="N" remove="N">
       <fields>
         <field localName="CODSITE" targetName="CODSITE" />
       </fields>
@@ -1429,7 +1571,8 @@ return java.math.BigDecimal.ONE;]]></expression>
         <field localName="NULOCALTIPOFAT" targetName="NULOCALTIPOFAT" />
       </fields>
     </relation>
-    <relation fromEntity="MGSCT_Unidades_Filho" toEntity="MGSCT_Apoio_Controle" type="I" insert="N" update="N" remove="N">
+    <relation fromEntity="MGSCT_Previsoes_Unidade" toEntity="MGSCT_Apoio_Controle" type="I" insert="N" update="N" remove="N">
+      <expression><![CDATA[@form-filter[this.CODCONTROLE IN (SELECT CODCONTROLE FROM MGSTCTCONTRATOPREV WHERE NUMCONTRATO = (SELECT NUMCONTRATO FROM MGSTCTCONTRCENT WHERE NUCONTRCENT = form.NUCONTRCENT))]]]></expression>
       <fields>
         <field localName="CODCONTROLE" targetName="CODCONTROLE" />
       </fields>
@@ -1439,7 +1582,7 @@ return java.math.BigDecimal.ONE;]]></expression>
         <field localName="CODUF" targetName="CODUF" />
       </fields>
     </relation>
-    <relation fromEntity="MGSCT_Unidades_Pai" toEntity="Site" type="I" insert="N" update="N" remove="N">
+    <relation fromEntity="MGSCT_Unidades" toEntity="Site" type="I" insert="N" update="N" remove="N">
       <fields>
         <field localName="CODSITEPAI" targetName="CODSITE" />
       </fields>
@@ -1452,6 +1595,11 @@ return java.math.BigDecimal.ONE;]]></expression>
     <relation fromEntity="MGSCT_Valores_Produtos" toEntity="TipoNegociacaoPreVenda" type="I" insert="N" update="N" remove="N">
       <fields>
         <field localName="CODTPN" targetName="CODTPN" />
+      </fields>
+    </relation>
+    <relation fromEntity="MGSCT_Previsoes_Unidade_Serv" toEntity="Parceiro" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="CODPARC" targetName="CODPARC" />
       </fields>
     </relation>
     <relation fromEntity="MGSCT_Modalidade_Contrato" toEntity="MGSCT_Previsoes_Contrato" type="I" insert="N" update="N" remove="N">
@@ -1495,7 +1643,7 @@ return java.math.BigDecimal.ONE;]]></expression>
         <field localName="CODSERVMATERIAL" targetName="CODPROD" />
       </fields>
     </relation>
-    <relation fromEntity="MGSCT_Unidades_Filho" toEntity="MGSCT_Vagas_Unid_Fat" type="I" insert="N" update="N" remove="N">
+    <relation fromEntity="MGSCT_Previsoes_Unidade" toEntity="MGSCT_Vagas_Previsao_Unidade" type="I" insert="N" update="N" remove="N">
       <fields>
         <field localName="NUUNIDPREV" targetName="NUUNIDPREV" />
       </fields>
@@ -1505,7 +1653,7 @@ return java.math.BigDecimal.ONE;]]></expression>
         <field localName="NUMODALIDADE" targetName="NUMODALIDADE" />
       </fields>
     </relation>
-    <relation fromEntity="MGSCT_Alocacoes_PS" toEntity="MGSCT_Unidades_Filho" type="I" insert="N" update="N" remove="N">
+    <relation fromEntity="MGSCT_Alocacoes_PS" toEntity="MGSCT_Previsoes_Unidade" type="I" insert="N" update="N" remove="N">
       <fields>
         <field localName="NUUNIDPREV" targetName="NUUNIDPREV" />
       </fields>
@@ -1545,9 +1693,14 @@ return java.math.BigDecimal.ONE;]]></expression>
         <field localName="CODEND" targetName="CODEND" />
       </fields>
     </relation>
-    <relation fromEntity="MGSCT_Unidades_Pai" toEntity="MGSCT_Unidades_Filho" type="I" insert="N" update="N" remove="N">
+    <relation fromEntity="MGSCT_Unidades" toEntity="MGSCT_Previsoes_Unidade" type="I" insert="N" update="N" remove="N">
       <fields>
         <field localName="NUCONTRCENT" targetName="NUCONTRCENT" />
+      </fields>
+    </relation>
+    <relation fromEntity="MGSCT_Previsoes_Unidade_PS" toEntity="Parceiro" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="CODPARC" targetName="CODPARC" />
       </fields>
     </relation>
     <relation fromEntity="MGSCT_Taxa_Contrato" toEntity="MGSCT_Apoio_Taxa" type="I" insert="N" update="N" remove="N">
@@ -1595,7 +1748,12 @@ return java.math.BigDecimal.ONE;]]></expression>
         <field localName="CODTPN" targetName="CODTPN" />
       </fields>
     </relation>
-    <relation fromEntity="MGSCT_Unidades_Pai" toEntity="MGSCT_Dados_Contrato" type="I" insert="N" update="N" remove="N">
+    <relation fromEntity="MGSCT_Previsoes_Unidade_Serv" toEntity="Produto3" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="CODSERVMATERIAL" targetName="CODPROD" />
+      </fields>
+    </relation>
+    <relation fromEntity="MGSCT_Unidades" toEntity="MGSCT_Dados_Contrato" type="I" insert="N" update="N" remove="N">
       <fields>
         <field localName="NUMCONTRATO" targetName="NUMCONTRATO" />
       </fields>
@@ -1615,7 +1773,12 @@ return java.math.BigDecimal.ONE;]]></expression>
         <field localName="NUMCONTRATO" targetName="NUMCONTRATO" />
       </fields>
     </relation>
-    <relation fromEntity="MGSCT_Unidades_Filho" toEntity="MGSCT_Unidades_Pai" type="I" insert="N" update="N" remove="N">
+    <relation fromEntity="MGSCT_Previsoes_Unidade_PS" toEntity="MGSCT_Apoio_Controle" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="CODCONTROLE" targetName="CODCONTROLE" />
+      </fields>
+    </relation>
+    <relation fromEntity="MGSCT_Previsoes_Unidade" toEntity="MGSCT_Unidades" type="I" insert="N" update="N" remove="N">
       <fields>
         <field localName="NUCONTRCENT" targetName="NUCONTRCENT" />
       </fields>
@@ -1623,6 +1786,16 @@ return java.math.BigDecimal.ONE;]]></expression>
     <relation fromEntity="MGSCT_Local_Contrato_V" toEntity="Parceiro" type="I" insert="N" update="N" remove="N">
       <fields>
         <field localName="CODPARC" targetName="CODPARC" />
+      </fields>
+    </relation>
+    <relation fromEntity="MGSCT_Previsoes_Unidade_Serv" toEntity="MGSCT_Apoio_Controle" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="CODCONTROLE" targetName="CODCONTROLE" />
+      </fields>
+    </relation>
+    <relation fromEntity="MGSCT_Previsoes_Unidade_PS" toEntity="TGFPSS" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="CODTIPOPOSTO" targetName="CODPOSTO" />
       </fields>
     </relation>
     <relation fromEntity="MGSCT_Local_Tipo_Fatura" toEntity="MGSCT_Apoio_Tipo_Fatura" type="I" insert="N" update="N" remove="N">
@@ -1650,7 +1823,8 @@ return java.math.BigDecimal.ONE;]]></expression>
         <field localName="CODSERVMATERIAL" targetName="CODPROD" />
       </fields>
     </relation>
-    <relation fromEntity="MGSCT_Unidades_Filho" toEntity="TGFECUS" type="I" insert="N" update="N" remove="N">
+    <relation fromEntity="MGSCT_Previsoes_Unidade" toEntity="TGFECUS" type="I" insert="N" update="N" remove="N">
+      <expression><![CDATA[@form-filter[this.CODEVENTO IN (SELECT CODEVENTO FROM MGSTCTCONTRATOPREV WHERE NUMCONTRATO = (SELECT NUMCONTRATO FROM MGSTCTCONTRCENT WHERE NUCONTRCENT = form.NUCONTRCENT))]]]></expression>
       <fields>
         <field localName="CODEVENTO" targetName="CODEVENTO" />
       </fields>
@@ -1660,8 +1834,8 @@ return java.math.BigDecimal.ONE;]]></expression>
         <field localName="CODTIPOPOSTO" targetName="CODPOSTO" />
       </fields>
     </relation>
-    <relation fromEntity="MGSCT_Unidades_Filho" toEntity="TGFPSS" type="I" insert="N" update="N" remove="N">
-      <expression><![CDATA[@form-filter[this.CODTIPOPOSTO IN (SELECT CODTIPOPOSTO FROM MGSTCTCONTRATOPREV WHERE NUMCONTRATO = form.NUMCOTNRATO)]]]></expression>
+    <relation fromEntity="MGSCT_Previsoes_Unidade" toEntity="TGFPSS" type="I" insert="N" update="N" remove="N">
+      <expression><![CDATA[@form-filter[this.CODPOSTO IN (SELECT CODTIPOPOSTO FROM MGSTCTCONTRATOPREV WHERE NUMCONTRATO =(SELECT NUMCONTRATO FROM MGSTCTCONTRCENT WHERE NUCONTRCENT = form.NUCONTRCENT))]]]></expression>
       <fields>
         <field localName="CODTIPOPOSTO" targetName="CODPOSTO" />
       </fields>
@@ -1686,25 +1860,40 @@ return java.math.BigDecimal.ONE;]]></expression>
         <field localName="CODEVENTO" targetName="CODEVENTO" />
       </fields>
     </relation>
+    <relation fromEntity="MGSCT_Previsoes_Unidade_Serv" toEntity="MGSCT_Alocacoes_Servicos" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="NUUNIDPREV" targetName="NUUNIDPREV" />
+      </fields>
+    </relation>
     <relation fromEntity="MGSCT_Previsoes_Contrato" toEntity="MGSCT_Dados_Contrato" type="I" insert="N" update="N" remove="N">
       <fields>
         <field localName="NUMCONTRATO" targetName="NUMCONTRATO" />
       </fields>
     </relation>
-    <relation fromEntity="MGSCT_Alocacoes_PS" toEntity="MGSCT_Vagas_Unid_Fat" type="I" insert="N" update="N" remove="N">
+    <relation fromEntity="MGSCT_Alocacoes_PS" toEntity="MGSCT_Vagas_Previsao_Unidade" type="I" insert="N" update="N" remove="N">
       <fields>
         <field localName="NUUNIDPREVVAGA" targetName="NUUNIDPREVVAGA" />
       </fields>
     </relation>
-    <relation fromEntity="MGSCT_Alocacoes_Servicos" toEntity="MGSCT_Unidades_Filho" type="I" insert="N" update="N" remove="N">
+    <relation fromEntity="MGSCT_Alocacoes_Servicos" toEntity="MGSCT_Previsoes_Unidade" type="I" insert="N" update="N" remove="N">
       <fields>
         <field localName="NUUNIDPREV" targetName="NUUNIDPREV" />
       </fields>
     </relation>
-    <relation fromEntity="MGSCT_Unidades_Pai" toEntity="MGSCT_Local_Contrato" type="I" insert="N" update="N" remove="N">
+    <relation fromEntity="MGSCT_Unidades" toEntity="MGSCT_Local_Contrato" type="I" insert="N" update="N" remove="N">
       <expression><![CDATA[@form-filter[this.NUMCONTRATO = form.NUMCONTRATO]]]></expression>
       <fields>
         <field localName="NULOCALCONT" targetName="NULOCALCONT" />
+      </fields>
+    </relation>
+    <relation fromEntity="MGSCT_Previsoes_Unidade_PS" toEntity="TGFECUS" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="CODEVENTO" targetName="CODEVENTO" />
+      </fields>
+    </relation>
+    <relation fromEntity="MGSCT_Previsoes_Unidade_Serv" toEntity="TGFECUS" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="CODEVENTO" targetName="CODEVENTO" />
       </fields>
     </relation>
   </relationShip>
@@ -1719,11 +1908,11 @@ return java.math.BigDecimal.ONE;]]></expression>
       <url />
       <properties />
     </control>
-    <control name="br.com.sankhya.mgs.ct.unidade" type="MN" childrenType="PL">
-      <description><![CDATA[Unidade (CT)]]></description>
-      <url><![CDATA[${dynaform:MGSCT_Unidades_Pai}]]></url>
+    <control name="br.com.sankhya.mgs.ct.unidades" type="MN" childrenType="PL">
+      <description><![CDATA[Unidades (CT)]]></description>
+      <url><![CDATA[${dynaform:MGSCT_Unidades}]]></url>
       <properties>
-        <resourceID><![CDATA[br.com.sankhya.mgs.ct.unidade]]></resourceID>
+        <resourceID><![CDATA[br.com.sankhya.mgs.ct.unidades]]></resourceID>
         <contexto><![CDATA[ContratoCorporativo]]></contexto>
       </properties>
     </control>
@@ -1783,27 +1972,19 @@ return java.math.BigDecimal.ONE;]]></expression>
         <contexto><![CDATA[ContratoCorporativo]]></contexto>
       </properties>
     </control>
-    <control name="br.com.sankhya.mgs.ct.AlocacoesServico" type="MN" childrenType="PL">
-      <description><![CDATA[Alocações de Serviço (CT)]]></description>
-      <url><![CDATA[${dynaform:MGSCT_Alocacoes_Servicos}]]></url>
+    <control name="br.com.sankhya.mgs.ct.PrevisoesUnidadePS" type="MN" childrenType="PL">
+      <description><![CDATA[Previsões da Unidade PS (CT)]]></description>
+      <url><![CDATA[${dynaform:MGSCT_Previsoes_Unidade_PS}]]></url>
       <properties>
-        <resourceID><![CDATA[br.com.sankhya.mgs.ct.alocacoesservico]]></resourceID>
+        <resourceID><![CDATA[br.com.sankhya.mgs.ct.previsoesunidadeps]]></resourceID>
         <contexto><![CDATA[ContratoCorporativo]]></contexto>
       </properties>
     </control>
-    <control name="br.com.sankhya.mgs.ct.AlocacoesPostoServico" type="MN" childrenType="PL">
-      <description><![CDATA[Alocações Posto Serviço (CT)]]></description>
-      <url><![CDATA[${dynaform:MGSCT_Alocacoes_PS}]]></url>
+    <control name="br.com.sankhya.mgs.ct.ApoioPS" type="MN" childrenType="PL">
+      <description><![CDATA[Apoio PS (CT)]]></description>
+      <url><![CDATA[${dynaform:MGSCT_Apoio_PS}]]></url>
       <properties>
-        <resourceID><![CDATA[br.com.sankhya.mgs.ct.alocacoespostoservico]]></resourceID>
-        <contexto><![CDATA[ContratoCorporativo]]></contexto>
-      </properties>
-    </control>
-    <control name="br.com.sankhya.mgs.ct.ApoioPostoCargo" type="MN" childrenType="PL">
-      <description><![CDATA[Apoio Posto Cargo (CT)]]></description>
-      <url><![CDATA[${dynaform:MGSCT_Apoio_Posto_Cargo}]]></url>
-      <properties>
-        <resourceID><![CDATA[br.com.sankhya.mgs.ct.apoiopostocargo]]></resourceID>
+        <resourceID><![CDATA[br.com.sankhya.mgs.ct.apoiops]]></resourceID>
         <contexto><![CDATA[ContratoCorporativo]]></contexto>
       </properties>
     </control>
@@ -1830,24 +2011,32 @@ return java.math.BigDecimal.ONE;]]></expression>
       <url />
       <properties />
     </control>
+    <control name="br.com.sankhya.mgs.ct.PrevisoesUnidadeServ" type="MN" childrenType="PL">
+      <description><![CDATA[Previsões da Unidade Serviço (CT)]]></description>
+      <url><![CDATA[${dynaform:MGSCT_Previsoes_Unidade_Serv}]]></url>
+      <properties>
+        <resourceID><![CDATA[br.com.sankhya.mgs.ct.previsoesunidadeserv]]></resourceID>
+        <contexto><![CDATA[ContratoCorporativo]]></contexto>
+      </properties>
+    </control>
   </controls>
   <controlRelations>
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Rotina" toCtrl="br.com.sankhya.mgs.ct.unidade" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.TipoFatura" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.controle" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Rotina" toCtrl="br.com.sankhya.mgs.ct.AlocacoesServico" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.ValoresProdutos" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct" toCtrl="br.com.sankhya.ct.cadastro" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.ApoioPostoCargo" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Rotina" toCtrl="br.com.sankhya.mgs.ct.LocalContrato" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.ValoresEventos" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.arquivo" toCtrl="br.com.sankhya.mgs.ct.cadastro" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.SituacaoContrato" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.arquivo" />
     <ctrlRelationship fromCtrl="br.com.sankhya.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.Rotina" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.controle" />
     <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.ApoioTaxa" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Rotina" toCtrl="br.com.sankhya.mgs.ct.AlocacoesPostoServico" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.ValoresProdutos" />
     <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Rotina" toCtrl="br.com.sankhya.mgs.ct.contrato" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.ValoresEventos" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Rotina" toCtrl="br.com.sankhya.mgs.ct.PrevisoesUnidadeServ" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.arquivo" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.SituacaoContrato" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Rotina" toCtrl="br.com.sankhya.mgs.ct.PrevisoesUnidadePS" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct" toCtrl="br.com.sankhya.ct.cadastro" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Rotina" toCtrl="br.com.sankhya.mgs.ct.unidades" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.ApoioPS" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.TipoFatura" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Rotina" toCtrl="br.com.sankhya.mgs.ct.LocalContrato" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.arquivo" toCtrl="br.com.sankhya.mgs.ct.cadastro" />
   </controlRelations>
 </metadata>
 
