@@ -7,12 +7,14 @@
 **/*.ear
 
 #pasta do Idea
-../FaturamentoModuloJava/.idea/
+.idea/
 
 
 #pastas de arquivos temporarios
 temp/
 out/
+ejb/
+
 
 # arquivo compilando do iReport
 *.jasper
