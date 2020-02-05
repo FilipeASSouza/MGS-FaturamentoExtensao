@@ -39,6 +39,8 @@
 	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Previsoes_Unidade_PS.xml' name='MGSCT_Previsoes_Unidade_PS'/>
 	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Empregado_RH.xml' name='MGSCT_Empregado_RH'/>
 	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Cargo.xml' name='MGSCT_Cargo'/>
+	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Tipo_Metrica.xml' name='MGSCT_Tipo_Metrica'/>
+	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Item_Metrica.xml' name='MGSCT_Item_Metrica'/>
 
 </metadata-provider>
 
