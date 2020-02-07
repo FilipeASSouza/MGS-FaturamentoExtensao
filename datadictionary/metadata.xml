@@ -1445,9 +1445,6 @@ if($sql.next()){
     <field name="CODUSU" table="MGSTCTFILAPROC" dataType="I" presentationType="P" calculated="N" allowSearch="S" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="7">
       <description><![CDATA[Usuário]]></description>
     </field>
-    <field name="CODTIPOMETRICA" table="MGSTCTTIPOMETRICA" dataType="I" presentationType="P" calculated="N" allowSearch="S" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="0">
-      <description><![CDATA[Tipo da Métrica]]></description>
-    </field>
     <field name="NUTIPOPROC" table="MGSTCTTIPOPROC" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="0">
       <description><![CDATA[Nro. Unico]]></description>
     </field>
@@ -1741,6 +1738,41 @@ return null;]]></expression>
     <prop table="MGSTCTALOCACAOSERV" field="NUMCONTRATO" name="UITabName"><![CDATA[__main]]></prop>
     <prop table="MGSTCTALOCACAOSERV" field="DTINS" name="UITabName"><![CDATA[__main]]></prop>
     <prop table="MGSTCTALOCACAOSERV" field="DTINICIO" name="UITabName"><![CDATA[__main]]></prop>
+    <prop table="MGSTCTTIPOMETRICA" field="INSERIRAUTCONTR" name="UITabName"><![CDATA[__main]]></prop>
+    <prop table="MGSTCTTIPOMETRICA" field="TIPOMETRICA" name="UITabName"><![CDATA[__main]]></prop>
+    <prop table="MGSTCTTIPOMETRICA" field="TEXTOCHAVE" name="UITabName"><![CDATA[__main]]></prop>
+    <prop table="MGSTCTTIPOMETRICA" field="DESCRMETRICA" name="UITabName"><![CDATA[__main]]></prop>
+    <prop table="MGSTCTMETRICAS" field="NUMCONTRATO" name="UITabName"><![CDATA[__main]]></prop>
+    <prop table="MGSTCTPOSTOCARGO" field="CODCARGO" name="UITabName"><![CDATA[__main]]></prop>
+    <prop table="MGSTCTCONTRVLRPS" field="VLRTOTAL" name="UITabName"><![CDATA[__main]]></prop>
+    <prop table="MGSTCTCONTRVLRPS" field="NUMCONTRATO" name="UITabName"><![CDATA[__main]]></prop>
+    <prop table="MGSTCTCONTRVLRPS" field="DTINICIO" name="UITabName"><![CDATA[__main]]></prop>
+    <prop table="MGSTCTCONTRVLRPS" field="CODTIPOPOSTO" name="UITabName"><![CDATA[__main]]></prop>
+    <prop table="MGSTCTCONTRVLRSERV" field="NROOCORENCIA" name="UITabName"><![CDATA[__main]]></prop>
+    <prop table="MGSTCTCONTRVLRSERV" field="DTINICIO" name="UITabName"><![CDATA[__main]]></prop>
+    <prop table="MGSTCTCONTRVLRSERV" field="CODEVENTO" name="UITabName"><![CDATA[__main]]></prop>
+    <prop table="MGSTCTCONTRVLRPS" field="NROOCORENCIA" name="UITabName"><![CDATA[__main]]></prop>
+    <prop table="MGSTCTCONTRVLRPS" field="DTFIM" name="UITabName"><![CDATA[__main]]></prop>
+    <prop table="MGSTCTPOSTOCARGO" field="CODTIPOPOSTO" name="UITabName"><![CDATA[__main]]></prop>
+    <prop table="MGSTCTTIPOFATURA" field="DESCRTIPOFAT" name="UITabName"><![CDATA[__main]]></prop>
+    <prop table="MGSTCTTIPOTAXA" field="DESCRTAXA" name="UITabName"><![CDATA[__main]]></prop>
+    <prop table="MGSTCTCONTRVLRPS" field="CODTPN" name="UITabName"><![CDATA[__main]]></prop>
+    <prop table="MGSTCTCONTRVLRPS" field="CODEVENTO" name="UITabName"><![CDATA[__main]]></prop>
+    <prop table="MGSTCTCONTRVLRPS" field="ALIQADM" name="UITabName"><![CDATA[__main]]></prop>
+    <prop table="MGSTCTCONTRVLRSERV" field="ALIQISS" name="UITabName"><![CDATA[__main]]></prop>
+    <prop table="MGSTCTALOCACAOPS" field="CODVAGA" name="UITabName"><![CDATA[__main]]></prop>
+    <prop table="MGSTCTTIPOSITUACAO" field="DESCRSITUACAO" name="UITabName"><![CDATA[__main]]></prop>
+    <prop table="MGSTCTMETRICAS" field="NUTIPOMETRICA" name="UITabName"><![CDATA[__main]]></prop>
+    <prop table="MGSTCTCONTROLE" field="DESCRCONTROLE" name="UITabName"><![CDATA[__main]]></prop>
+    <prop table="MGSTCTTIPOTAXA" field="VLRPADRAO" name="UITabName"><![CDATA[__main]]></prop>
+    <prop table="MGSTCTCONTRVLRPS" field="ALIQISS" name="UITabName"><![CDATA[__main]]></prop>
+    <prop table="MGSTCTCONTRVLRSERV" field="VLRTOTAL" name="UITabName"><![CDATA[__main]]></prop>
+    <prop table="MGSTCTCONTRVLRSERV" field="NUMCONTRATO" name="UITabName"><![CDATA[__main]]></prop>
+    <prop table="MGSTCTCONTRVLRSERV" field="DTREFERCCT" name="UITabName"><![CDATA[__main]]></prop>
+    <prop table="MGSTCTCONTRVLRSERV" field="DTFIM" name="UITabName"><![CDATA[__main]]></prop>
+    <prop table="MGSTCTCONTRVLRSERV" field="CODTPN" name="UITabName"><![CDATA[__main]]></prop>
+    <prop table="MGSTCTCONTRVLRSERV" field="CODSERVMATERIAL" name="UITabName"><![CDATA[__main]]></prop>
+    <prop table="MGSTCTCONTRVLRSERV" field="ALIQADM" name="UITabName"><![CDATA[__main]]></prop>
   </fieldProperties>
   <fieldOptions>
     <option table="MGSTCTCONTRATOTRIB" field="ATIVO" value="S"><![CDATA[Sim]]></option>
@@ -2470,6 +2502,14 @@ NOT EXISTS (SELECT 1 FROM MGSTCTALOCACAOPS WHERE DTFIM IS NULL AND CODVAGA = thi
         <contexto><![CDATA[ContratoCorporativo]]></contexto>
       </properties>
     </control>
+    <control name="br.com.sankhya.mgs.ct.ApoioMetrica" type="MN" childrenType="PL">
+      <description><![CDATA[Apoio Métrica (CT)]]></description>
+      <url><![CDATA[${dynaform:MGSCT_Apoio_Metrica}]]></url>
+      <properties>
+        <resourceID><![CDATA[br.com.sankhya.mgs.ct.apoiometrica]]></resourceID>
+        <contexto><![CDATA[ContratoCorporativo]]></contexto>
+      </properties>
+    </control>
     <control name="br.com.sankhya.ct.cadastro" type="FB" childrenType="MN">
       <description><![CDATA[Contrato Corporativo]]></description>
       <url />
@@ -2480,14 +2520,6 @@ NOT EXISTS (SELECT 1 FROM MGSTCTALOCACAOPS WHERE DTFIM IS NULL AND CODVAGA = thi
       <url><![CDATA[${dynaform:MGSCT_Dados_Contrato}]]></url>
       <properties>
         <resourceID><![CDATA[br.com.sankhya.mgs.ct.contrato]]></resourceID>
-        <contexto><![CDATA[ContratoCorporativo]]></contexto>
-      </properties>
-    </control>
-    <control name="br.com.sankhya.mgs.ct.ItemMetrica" type="MN" childrenType="PL">
-      <description><![CDATA[Item Métrica (CT)]]></description>
-      <url><![CDATA[${dynaform:MGSCT_Item_Metrica}]]></url>
-      <properties>
-        <resourceID><![CDATA[br.com.sankhya.mgs.ct.itemmetrica]]></resourceID>
         <contexto><![CDATA[ContratoCorporativo]]></contexto>
       </properties>
     </control>
@@ -2509,26 +2541,32 @@ NOT EXISTS (SELECT 1 FROM MGSTCTALOCACAOPS WHERE DTFIM IS NULL AND CODVAGA = thi
         <contexto><![CDATA[ContratoCorporativo]]></contexto>
       </properties>
     </control>
+    <control name="br.com.sankhya.mgs.ct.ApoioParametroMetrica" type="MN" childrenType="PL">
+      <description><![CDATA[Apoio Parâmetro Métrica (CT)]]></description>
+      <url><![CDATA[${dynaform:MGSCT_Apoio_Parametro_Metrica}]]></url>
+      <properties />
+    </control>
   </controls>
   <controlRelations>
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.ValoresEventos" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Rotina" toCtrl="br.com.sankhya.mgs.ct.PrevisoesUnidadeServ" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.ApoioTaxa" />
     <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Rotina" toCtrl="br.com.sankhya.mgs.ct.PrevisoesUnidadePS" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Rotina" toCtrl="br.com.sankhya.mgs.ct.contrato" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.Rotina" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct" toCtrl="br.com.sankhya.ct.cadastro" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.arquivo" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Rotina" toCtrl="br.com.sankhya.mgs.ct.PrevisoesUnidadeServ" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.ApoioMetrica" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.arquivo" toCtrl="br.com.sankhya.mgs.ct.cadastro" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.ValoresProdutos" />
     <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.controle" />
     <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.TipoMetrica" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.ItemMetrica" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.ValoresEventos" />
     <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.ApoioPS" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.ValoresProdutos" />
     <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.TipoFatura" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.SituacaoContrato" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.ApoioTaxa" />
     <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Rotina" toCtrl="br.com.sankhya.mgs.ct.unidades" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.SituacaoContrato" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct" toCtrl="br.com.sankhya.ct.cadastro" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.Rotina" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.ApoioParametroMetrica" />
     <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Rotina" toCtrl="br.com.sankhya.mgs.ct.LocalContrato" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.arquivo" toCtrl="br.com.sankhya.mgs.ct.cadastro" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Rotina" toCtrl="br.com.sankhya.mgs.ct.contrato" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.arquivo" />
   </controlRelations>
 </metadata>
 
