@@ -553,22 +553,22 @@ return java.math.BigDecimal.ONE;]]></expression>
     <field name="NUUNIDPREVVAGA" table="MGSTCTALOCACAOPS" dataType="I" presentationType="P" calculated="N" allowSearch="S" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="6">
       <description><![CDATA[Unid. Previsão Vaga]]></description>
     </field>
-    <field name="CODCARGO" table="MGSTCTALOCACAOPS" dataType="I" presentationType="P" calculated="N" allowSearch="S" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="3">
+    <field name="CODCARGO" table="MGSTCTALOCACAOPS" dataType="S" presentationType="P" calculated="N" allowSearch="S" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="3">
       <description><![CDATA[Cargo]]></description>
     </field>
     <field name="CODTIPOPOSTO" table="MGSTCTPOSTOCARGO" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="2">
       <description><![CDATA[Cód. Tipo do Posto]]></description>
     </field>
-    <field name="CODCARGO" table="MGSTCTPOSTOCARGO" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="1">
+    <field name="CODCARGO" table="MGSTCTPOSTOCARGO" dataType="S" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="1">
       <description><![CDATA[Cód. do Cargo]]></description>
     </field>
     <field name="NUPOSTOCARGO" table="MGSTCTPOSTOCARGO" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="0">
       <description><![CDATA[Nro. Único]]></description>
     </field>
-    <field name="CD_CARGO" table="MGSVCTCARGO" dataType="I" presentationType="P" calculated="N" allowSearch="S" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="0">
+    <field name="CODCARGO" table="MGSVCTCARGO" dataType="S" presentationType="P" calculated="N" allowSearch="S" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="0">
       <description><![CDATA[Cód. Cargo]]></description>
     </field>
-    <field name="NM_EXTENSO" table="MGSVCTCARGO" dataType="S" presentationType="P" calculated="N" allowSearch="S" allowDefault="N" visibleOnSearch="S" isPresentation="S" order="1">
+    <field name="DESCRCARGO" table="MGSVCTCARGO" dataType="S" presentationType="P" calculated="N" allowSearch="S" allowDefault="N" visibleOnSearch="S" isPresentation="S" order="1">
       <description><![CDATA[Descrição]]></description>
     </field>
     <field name="CODTIPOPOSTO" table="MGSTCTLCTCUSTO" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="15">
@@ -863,7 +863,7 @@ if($sql.next()){
     <field name="NOME" table="MGSVCTEMPREGADORH" dataType="S" presentationType="P" calculated="N" allowSearch="S" allowDefault="N" visibleOnSearch="S" isPresentation="S" order="1">
       <description><![CDATA[Nome]]></description>
     </field>
-    <field name="CARGO" table="MGSVCTEMPREGADORH" dataType="I" presentationType="P" calculated="N" allowSearch="S" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="2">
+    <field name="CODCARGO" table="MGSVCTEMPREGADORH" dataType="S" presentationType="P" calculated="N" allowSearch="S" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="2">
       <description><![CDATA[Cargo]]></description>
     </field>
     <field name="TOTEMPREGADO" table="MGSTCTCONTRATO" dataType="I" presentationType="P" calculated="N" allowSearch="S" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="9">
@@ -1782,17 +1782,14 @@ return null;]]></expression>
     <option table="MGSTCTFILAPROC" field="STATUS" value="Erro"><![CDATA[E]]></option>
   </fieldOptions>
   <instances>
-    <instance name="MGSCT_Apoio_Metricas" tableName="MGSTCTMETRICAS">
-      <description><![CDATA[Apoio da Métricas]]></description>
+    <instance name="MGSCT_Metricas" tableName="MGSTCTMETRICAS">
+      <description><![CDATA[Métricas]]></description>
     </instance>
     <instance name="MGSCT_Apoio_Controle" tableName="MGSTCTCONTROLE">
       <description><![CDATA[Apoio de Controle]]></description>
     </instance>
     <instance name="MGSCT_Taxa_Contrato" tableName="MGSTCTCONTRATOTAXA">
       <description><![CDATA[Taxa do Contrato]]></description>
-    </instance>
-    <instance name="MGSCT_Previsoes_Unidade_Ser" tableName="MGSTCTUNIDADEPREV">
-      <description><![CDATA[Previsões da Unidade Serviço]]></description>
     </instance>
     <instance name="MGSCT_Local_Contrato" tableName="MGSTCTLOCALCONT">
       <description><![CDATA[Local do Contrato]]></description>
@@ -1812,11 +1809,11 @@ return null;]]></expression>
     <instance name="MGSCT_Apoio_PS_V" tableName="MGSTCTPOSTOCARGO">
       <description><![CDATA[Apoio Posto Cargo]]></description>
     </instance>
-    <instance name="MGSCT_Tipo_Metrica" tableName="MGSTCTTIPOMETRICA">
-      <description><![CDATA[Tipo da Métrica]]></description>
+    <instance name="MGSCT_Apoio_Metrica" tableName="MGSTCTTIPOMETRICA">
+      <description><![CDATA[Apoio da Métrica]]></description>
     </instance>
-    <instance name="MGSCT_Tipo_Parametro_Metrica" tableName="MGSTCTTIPOPARAMMETRICA">
-      <description><![CDATA[Tipo Parâmetro da Métrica]]></description>
+    <instance name="MGSCT_Apoio_Parametro_Metrica" tableName="MGSTCTTIPOPARAMMETRICA">
+      <description><![CDATA[Apoio Parâmetro da Métrica]]></description>
     </instance>
     <instance name="MGSCT_Previsoes_Contrato" tableName="MGSTCTCONTRATOPREV">
       <description><![CDATA[Previsões do Contrato]]></description>
@@ -1835,9 +1832,6 @@ return null;]]></expression>
     </instance>
     <instance name="MGSCT_Alocacoes_PS" tableName="MGSTCTALOCACAOPS">
       <description><![CDATA[Alocações de Posto Serviço]]></description>
-    </instance>
-    <instance name="MGSCT_Previsoes_Unidade_PS" tableName="MGSVCTUNIDADEPREVPS">
-      <description><![CDATA[Previsões da Unidade PS]]></description>
     </instance>
     <instance name="MGSCT_Tipo_Vaga_Evento" tableName="MGSTCTTPVAGAEVENTO">
       <description><![CDATA[Tipo Vaga Evento]]></description>
@@ -1863,8 +1857,8 @@ return null;]]></expression>
     <instance name="MGSCT_Previsoes_Unidade_V" tableName="MGSVCTUNIDADEPREV">
       <description><![CDATA[View Previsões da Unidade]]></description>
     </instance>
-    <instance name="MGSCT_Apoio_Parametro_Metrica" tableName="MGSTCTPARAMMETRICA">
-      <description><![CDATA[Apoio Parâmetro da Métrica]]></description>
+    <instance name="MGSCT_Parametro_Metrica" tableName="MGSTCTPARAMMETRICA">
+      <description><![CDATA[Parâmetro da Métrica]]></description>
     </instance>
     <instance name="MGSCT_Modalidade_Contrato" tableName="MGSTCTMODALCONTR">
       <description><![CDATA[Modalidade do Contrato]]></description>
@@ -1886,6 +1880,9 @@ return null;]]></expression>
     </instance>
     <instance name="MGSCT_Previsoes_Unidade_Serv" tableName="MGSVCTUNIDADEPREVSERV">
       <description><![CDATA[Previsões da Unidade Serviço]]></description>
+    </instance>
+    <instance name="MGSCT_Previsoes_Unidade_PS" tableName="MGSVCTUNIDADEPREVPS">
+      <description><![CDATA[Previsões da Unidade PS]]></description>
     </instance>
   </instances>
   <relationShip>
@@ -1910,7 +1907,7 @@ return null;]]></expression>
         <field localName="NULOCALCONT" targetName="NULOCALCONT" />
       </fields>
     </relation>
-    <relation fromEntity="MGSCT_Dados_Contrato" toEntity="MGSCT_Apoio_Metricas" type="I" insert="N" update="N" remove="N">
+    <relation fromEntity="MGSCT_Dados_Contrato" toEntity="MGSCT_Metricas" type="I" insert="N" update="N" remove="N">
       <fields>
         <field localName="NUMCONTRATO" targetName="NUMCONTRATO" />
       </fields>
@@ -1957,11 +1954,16 @@ return null;]]></expression>
       </fields>
     </relation>
     <relation fromEntity="MGSCT_Alocacoes_PS" toEntity="MGSCT_Cargo" type="I" insert="N" update="N" remove="N">
+      <expression><![CDATA[@form-filter[EXISTS(SELECT 1 FROM MGSTCTPOSTOCARGO, MGSTCTUNIDADEPREV, MGSTCTUNIDPREVVAGA
+WHERE MGSTCTUNIDADEPREV.NUUNIDPREV = MGSTCTUNIDPREVVAGA.NUUNIDPREV
+AND MGSTCTPOSTOCARGO.CODTIPOPOSTO = MGSTCTUNIDADEPREV.CODTIPOPOSTO
+AND MGSTCTPOSTOCARGO.CODCARGO = this.CD_CARGO
+AND MGSTCTUNIDPREVVAGA.CODVAGA = form.CODVAGA)]]]></expression>
       <fields>
-        <field localName="CODCARGO" targetName="CD_CARGO" />
+        <field localName="CODCARGO" targetName="CODCARGO" />
       </fields>
     </relation>
-    <relation fromEntity="MGSCT_Apoio_Parametro_Metrica" toEntity="MGSCT_Apoio_Metricas" type="I" insert="N" update="N" remove="N">
+    <relation fromEntity="MGSCT_Parametro_Metrica" toEntity="MGSCT_Metricas" type="I" insert="N" update="N" remove="N">
       <fields>
         <field localName="NUCONTRMETRICA" targetName="NUCONTRMETRICA" />
       </fields>
@@ -1971,9 +1973,19 @@ return null;]]></expression>
         <field localName="CODTIPOPOSTO" targetName="CODPOSTO" />
       </fields>
     </relation>
-    <relation fromEntity="MGSCT_Tipo_Parametro_Metrica" toEntity="MGSCT_Tipo_Metrica" type="I" insert="N" update="N" remove="N">
+    <relation fromEntity="MGSCT_Apoio_Parametro_Metrica" toEntity="MGSCT_Apoio_Metrica" type="I" insert="N" update="N" remove="N">
       <fields>
         <field localName="NUTIPOMETRICA" targetName="NUTIPOMETRICA" />
+      </fields>
+    </relation>
+    <relation fromEntity="MGSCT_Metricas" toEntity="MGSCT_Dados_Contrato" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="NUMCONTRATO" targetName="NUMCONTRATO" />
+      </fields>
+    </relation>
+    <relation fromEntity="MGSCT_Empregado_RH" toEntity="MGSCT_Cargo" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="CODCARGO" targetName="CODCARGO" />
       </fields>
     </relation>
     <relation fromEntity="MGSCT_Unidades" toEntity="Site_AD001" type="I" insert="N" update="N" remove="N">
@@ -2042,6 +2054,11 @@ return null;]]></expression>
         <field localName="CODEVENTO" targetName="CODEVENTO" />
       </fields>
     </relation>
+    <relation fromEntity="MGSCT_Apoio_Metrica" toEntity="MGSCT_Apoio_Parametro_Metrica" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="NUTIPOMETRICA" targetName="NUTIPOMETRICA" />
+      </fields>
+    </relation>
     <relation fromEntity="MGSCT_Modalidade_Contrato" toEntity="MGSCT_Previsoes_Contrato" type="I" insert="N" update="N" remove="N">
       <fields>
         <field localName="NUMODALIDADE" targetName="NUMODALIDADE" />
@@ -2064,8 +2081,14 @@ return null;]]></expression>
       </fields>
     </relation>
     <relation fromEntity="MGSCT_Alocacoes_PS" toEntity="MGSCT_Empregado_RH" type="I" insert="N" update="N" remove="N">
+      <expression><![CDATA[@form-filter[this.CODCARGO = form.CODCARGO]]]></expression>
       <fields>
         <field localName="MATRICULA" targetName="MATRICULA" />
+      </fields>
+    </relation>
+    <relation fromEntity="MGSCT_Metricas" toEntity="MGSCT_Parametro_Metrica" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="NUCONTRMETRICA" targetName="NUCONTRMETRICA" />
       </fields>
     </relation>
     <relation fromEntity="MGSCT_Local_Contrato" toEntity="CidadeOrigem" type="I" insert="N" update="N" remove="N">
@@ -2108,7 +2131,7 @@ return null;]]></expression>
         <field localName="CODVAGA" targetName="CODVAGA" />
       </fields>
     </relation>
-    <relation fromEntity="MGSCT_Apoio_Parametro_Metrica" toEntity="MGSCT_Tipo_Parametro_Metrica" type="I" insert="N" update="N" remove="N">
+    <relation fromEntity="MGSCT_Parametro_Metrica" toEntity="MGSCT_Apoio_Parametro_Metrica" type="I" insert="N" update="N" remove="N">
       <fields>
         <field localName="NUPARAM" targetName="NUPARAM" />
       </fields>
@@ -2266,7 +2289,7 @@ return null;]]></expression>
     <relation fromEntity="MGSCT_Alocacoes_PS" toEntity="MGSCT_Apoio_Vagas" type="I" insert="N" update="N" remove="N">
       <expression><![CDATA[@form-filter[this.CODVAGA IN (SELECT CODVAGA FROM MGSTCTUNIDPREVVAGA WHERE NUUNIDPREV = form.NUUNIDPREV)
 AND
-NOT EXISTS (SELECT 1 FROM MGSTCTALOCACAOPS WHERE DTFIM IS NULL AND CODVAGA = this.CODVAGA)]]]></expression>
+NOT EXISTS (SELECT 1 FROM MGSTCTALOCACAOPS WHERE TRUNC(DTFIM) < TRUNC(SYSDATE) AND CODVAGA = this.CODVAGA)]]]></expression>
       <fields>
         <field localName="CODVAGA" targetName="CODVAGA" />
       </fields>
@@ -2372,20 +2395,10 @@ NOT EXISTS (SELECT 1 FROM MGSTCTALOCACAOPS WHERE DTFIM IS NULL AND CODVAGA = thi
     </relation>
     <relation fromEntity="MGSCT_Apoio_PS" toEntity="MGSCT_Cargo" type="I" insert="N" update="N" remove="N">
       <fields>
-        <field localName="CODCARGO" targetName="CD_CARGO" />
+        <field localName="CODCARGO" targetName="CODCARGO" />
       </fields>
     </relation>
-    <relation fromEntity="MGSCT_Apoio_Metricas" toEntity="Contrato" type="I" insert="N" update="N" remove="N">
-      <fields>
-        <field localName="NUMCONTRATO" targetName="NUMCONTRATO" />
-      </fields>
-    </relation>
-    <relation fromEntity="MGSCT_Apoio_Metricas" toEntity="MGSCT_Tipo_Metrica" type="I" insert="N" update="N" remove="N">
-      <fields>
-        <field localName="NUTIPOMETRICA" targetName="NUTIPOMETRICA" />
-      </fields>
-    </relation>
-    <relation fromEntity="MGSCT_Tipo_Metrica" toEntity="MGSCT_Apoio_Metricas" type="I" insert="N" update="N" remove="N">
+    <relation fromEntity="MGSCT_Metricas" toEntity="MGSCT_Apoio_Metrica" type="I" insert="N" update="N" remove="N">
       <fields>
         <field localName="NUTIPOMETRICA" targetName="NUTIPOMETRICA" />
       </fields>
@@ -2490,11 +2503,11 @@ NOT EXISTS (SELECT 1 FROM MGSTCTALOCACAOPS WHERE DTFIM IS NULL AND CODVAGA = thi
         <contexto><![CDATA[ContratoCorporativo]]></contexto>
       </properties>
     </control>
-    <control name="br.com.sankhya.mgs.ct.ApoioMetrica" type="MN" childrenType="PL">
-      <description><![CDATA[Apoio Métrica (CT)]]></description>
-      <url><![CDATA[${dynaform:MGSCT_Apoio_Metrica}]]></url>
+    <control name="br.com.sankhya.mgs.ct.ApoioMetricas" type="MN" childrenType="PL">
+      <description><![CDATA[Apoio Métricas (CT)]]></description>
+      <url><![CDATA[${dynaform:MGSCT_Apoio_Metricas}]]></url>
       <properties>
-        <resourceID><![CDATA[br.com.sankhya.mgs.ct.apoiometrica]]></resourceID>
+        <resourceID><![CDATA[br.com.sankhya.mgs.ct.apoiometricas]]></resourceID>
         <contexto><![CDATA[ContratoCorporativo]]></contexto>
       </properties>
     </control>
@@ -2539,25 +2552,25 @@ NOT EXISTS (SELECT 1 FROM MGSTCTALOCACAOPS WHERE DTFIM IS NULL AND CODVAGA = thi
     </control>
   </controls>
   <controlRelations>
-    <ctrlRelationship fromCtrl="br.com.sankhya.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.Rotina" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.ApoioPS" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.ApoioTaxa" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Rotina" toCtrl="br.com.sankhya.mgs.ct.unidades" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.ValoresEventos" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Rotina" toCtrl="br.com.sankhya.mgs.ct.PrevisoesUnidadePS" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Rotina" toCtrl="br.com.sankhya.mgs.ct.LocalContrato" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.ApoioParametroMetrica" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.ApoioMetrica" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Rotina" toCtrl="br.com.sankhya.mgs.ct.contrato" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.arquivo" toCtrl="br.com.sankhya.mgs.ct.cadastro" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct" toCtrl="br.com.sankhya.ct.cadastro" />
     <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Rotina" toCtrl="br.com.sankhya.mgs.ct.PrevisoesUnidadeServ" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.arquivo" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.controle" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.ValoresProdutos" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.SituacaoContrato" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Rotina" toCtrl="br.com.sankhya.mgs.ct.contrato" />
     <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.TipoMetrica" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.ApoioTaxa" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Rotina" toCtrl="br.com.sankhya.mgs.ct.PrevisoesUnidadePS" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.ValoresEventos" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.ApoioParametroMetrica" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.ValoresProdutos" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct" toCtrl="br.com.sankhya.ct.cadastro" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.arquivo" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Rotina" toCtrl="br.com.sankhya.mgs.ct.unidades" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Rotina" toCtrl="br.com.sankhya.mgs.ct.LocalContrato" />
     <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.TipoFatura" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.ApoioPS" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.arquivo" toCtrl="br.com.sankhya.mgs.ct.cadastro" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.SituacaoContrato" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.Rotina" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.controle" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.ApoioMetricas" />
   </controlRelations>
 </metadata>
 
