@@ -1730,7 +1730,6 @@ return null;]]></expression>
     <prop table="MGSTCTTIPOMETRICA" field="TIPOMETRICA" name="UITabName"><![CDATA[__main]]></prop>
     <prop table="MGSTCTTIPOMETRICA" field="TEXTOCHAVE" name="UITabName"><![CDATA[__main]]></prop>
     <prop table="MGSTCTTIPOMETRICA" field="DESCRMETRICA" name="UITabName"><![CDATA[__main]]></prop>
-    <prop table="MGSTCTMETRICAS" field="NUMCONTRATO" name="UITabName"><![CDATA[__main]]></prop>
     <prop table="MGSTCTPOSTOCARGO" field="CODCARGO" name="UITabName"><![CDATA[__main]]></prop>
     <prop table="MGSTCTCONTRVLRPS" field="VLRTOTAL" name="UITabName"><![CDATA[__main]]></prop>
     <prop table="MGSTCTCONTRVLRPS" field="NUMCONTRATO" name="UITabName"><![CDATA[__main]]></prop>
@@ -1739,6 +1738,7 @@ return null;]]></expression>
     <prop table="MGSTCTCONTRVLRSERV" field="NROOCORENCIA" name="UITabName"><![CDATA[__main]]></prop>
     <prop table="MGSTCTCONTRVLRSERV" field="DTINICIO" name="UITabName"><![CDATA[__main]]></prop>
     <prop table="MGSTCTCONTRVLRSERV" field="CODEVENTO" name="UITabName"><![CDATA[__main]]></prop>
+    <prop table="MGSTCTPARAMMETRICA" field="VALOR" name="UITabName"><![CDATA[__main]]></prop>
     <prop table="MGSTCTCONTRVLRPS" field="NROOCORENCIA" name="UITabName"><![CDATA[__main]]></prop>
     <prop table="MGSTCTCONTRVLRPS" field="DTFIM" name="UITabName"><![CDATA[__main]]></prop>
     <prop table="MGSTCTPOSTOCARGO" field="CODTIPOPOSTO" name="UITabName"><![CDATA[__main]]></prop>
@@ -1750,7 +1750,6 @@ return null;]]></expression>
     <prop table="MGSTCTCONTRVLRSERV" field="ALIQISS" name="UITabName"><![CDATA[__main]]></prop>
     <prop table="MGSTCTALOCACAOPS" field="CODVAGA" name="UITabName"><![CDATA[__main]]></prop>
     <prop table="MGSTCTTIPOSITUACAO" field="DESCRSITUACAO" name="UITabName"><![CDATA[__main]]></prop>
-    <prop table="MGSTCTMETRICAS" field="NUTIPOMETRICA" name="UITabName"><![CDATA[__main]]></prop>
     <prop table="MGSTCTCONTROLE" field="DESCRCONTROLE" name="UITabName"><![CDATA[__main]]></prop>
     <prop table="MGSTCTTIPOTAXA" field="VLRPADRAO" name="UITabName"><![CDATA[__main]]></prop>
     <prop table="MGSTCTCONTRVLRPS" field="ALIQISS" name="UITabName"><![CDATA[__main]]></prop>
@@ -1761,6 +1760,7 @@ return null;]]></expression>
     <prop table="MGSTCTCONTRVLRSERV" field="CODTPN" name="UITabName"><![CDATA[__main]]></prop>
     <prop table="MGSTCTCONTRVLRSERV" field="CODSERVMATERIAL" name="UITabName"><![CDATA[__main]]></prop>
     <prop table="MGSTCTCONTRVLRSERV" field="ALIQADM" name="UITabName"><![CDATA[__main]]></prop>
+    <prop table="MGSTCTPARAMMETRICA" field="NUPARAM" name="UITabName"><![CDATA[__main]]></prop>
   </fieldProperties>
   <fieldOptions>
     <option table="MGSTCTCONTRATOTRIB" field="ATIVO" value="S"><![CDATA[Sim]]></option>
@@ -2552,25 +2552,25 @@ NOT EXISTS (SELECT 1 FROM MGSTCTALOCACAOPS WHERE TRUNC(DTFIM) < TRUNC(SYSDATE) A
     </control>
   </controls>
   <controlRelations>
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct" toCtrl="br.com.sankhya.ct.cadastro" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Rotina" toCtrl="br.com.sankhya.mgs.ct.PrevisoesUnidadeServ" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Rotina" toCtrl="br.com.sankhya.mgs.ct.unidades" />
     <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.ApoioTaxa" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Rotina" toCtrl="br.com.sankhya.mgs.ct.contrato" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.controle" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.ApoioPS" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.TipoMetrica" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Rotina" toCtrl="br.com.sankhya.mgs.ct.PrevisoesUnidadePS" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.Rotina" />
     <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Rotina" toCtrl="br.com.sankhya.mgs.ct.LocalContrato" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.ValoresEventos" />
     <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.arquivo" toCtrl="br.com.sankhya.mgs.ct.cadastro" />
     <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.ApoioParametroMetrica" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Rotina" toCtrl="br.com.sankhya.mgs.ct.PrevisoesUnidadePS" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Rotina" toCtrl="br.com.sankhya.mgs.ct.PrevisoesUnidadeServ" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.controle" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct" toCtrl="br.com.sankhya.ct.cadastro" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.TipoMetrica" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.TipoFatura" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.ApoioPS" />
     <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.ApoioMetrica" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Rotina" toCtrl="br.com.sankhya.mgs.ct.contrato" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Rotina" toCtrl="br.com.sankhya.mgs.ct.unidades" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.Rotina" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.SituacaoContrato" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.ValoresProdutos" />
     <ctrlRelationship fromCtrl="br.com.sankhya.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.arquivo" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.ValoresProdutos" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.SituacaoContrato" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.TipoFatura" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.cadastro" toCtrl="br.com.sankhya.mgs.ct.ValoresEventos" />
   </controlRelations>
 </metadata>
 

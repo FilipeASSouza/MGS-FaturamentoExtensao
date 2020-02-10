@@ -3,6 +3,6 @@
 <entity name="MGSCT_Cargo" main-object="MGSCT_Cargo" commit-type="D">
     <runtime max-results="500" timeout="20" load-on-find="true" />
     <entity-key>
-        <key-member field="CD_CARGO"/>
+        <key-member field="CODCARGO"/>
     </entity-key>
 </entity>
