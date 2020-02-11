@@ -44,6 +44,8 @@
 	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Vagas_Previsao_Unidade.xml' name='MGSCT_Vagas_Previsao_Unidade'/>
 	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Valores_Eventos.xml' name='MGSCT_Valores_Eventos'/>
 	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Valores_Produtos.xml' name='MGSCT_Valores_Produtos'/>
+	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Eventos_Custos.xml' name='MGSCT_Eventos_Custos'/>
+	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Eventos_Apontamentos.xml' name='MGSCT_Eventos_Apontamentos'/>
 
 
 </metadata-provider>
