@@ -20,14 +20,26 @@
 	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Apoio_Taxa.xml' name='MGSCT_Apoio_Taxa'/>
 	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Apoio_Tipo_Fatura.xml' name='MGSCT_Apoio_Tipo_Fatura'/>
 	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Apoio_Vagas.xml' name='MGSCT_Apoio_Vagas'/>
+    <descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Boleto_Fatura.xml' name='MGSCT_Boleto_Fatura'/>
 	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Cargo.xml' name='MGSCT_Cargo'/>
 	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Dados_Contrato.xml' name='MGSCT_Dados_Contrato'/>
+    <descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Detalhamento_Custo.xml' name='MGSCT_Detalhamento_Custo'/>
+    <descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Eventos_Apontamentos.xml' name='MGSCT_Eventos_Apontamentos'/>
+    <descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Eventos_Custos.xml' name='MGSCT_Eventos_Custos'/>
 	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Empregado_RH.xml' name='MGSCT_Empregado_RH'/>
+    <descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Fatura_Anexo.xml' name='MGSCT_Fatura_Anexo'/>
+    <descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Fila_Processamento.xml' name='MGSCT_Fila_Processamento'/>
+    <descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Geracao_Boleto.xml' name='MGSCT_Geracao_Boleto'/>
+    <descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Geracao_Faturas.xml' name='MGSCT_Geracao_Faturas'/>
+    <descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Integr_Detalha_Custo.xml' name='MGSCT_Integr_Detalha_Custo'/>
+    <descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Integr_Lanc_Custo.xml' name='MGSCT_Integr_Lanc_Custo'/>
+    <descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Itens_Fatura.xml' name='MGSCT_Itens_Fatura'/>
 	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Local_Contrato.xml' name='MGSCT_Local_Contrato'/>
 	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Local_Contrato_V.xml' name='MGSCT_Local_Contrato_V'/>
 	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Local_Tipo_Fatura.xml' name='MGSCT_Local_Tipo_Fatura'/>
 	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Metricas.xml' name='MGSCT_Metricas'/>
 	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Modalidade_Contrato.xml' name='MGSCT_Modalidade_Contrato'/>
+    <descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Numero_NFE.xml' name='MGSCT_Numero_NFE'/>
 	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Parametro_Metrica.xml' name='MGSCT_Parametro_Metrica'/>
 	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Previsoes_Contrato.xml' name='MGSCT_Previsoes_Contrato'/>
 	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Previsoes_Contrato_V.xml' name='MGSCT_Previsoes_Contrato_V'/>
@@ -35,23 +47,20 @@
 	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Previsoes_Unidade_PS.xml' name='MGSCT_Previsoes_Unidade_PS'/>
 	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Previsoes_Unidade_Serv.xml' name='MGSCT_Previsoes_Unidade_Serv'/>
 	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Previsoes_Unidade_V.xml' name='MGSCT_Previsoes_Unidade_V'/>
+    <descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Rateio_Fatura.xml' name='MGSCT_Rateio_Fatura'/>
+    <descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Relatorio_Anexo.xml' name='MGSCT_Relatorio_Anexo'/>
 	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Situacao_Contrato.xml' name='MGSCT_Situacao_Contrato'/>
 	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Taxa_Contrato.xml' name='MGSCT_Taxa_Contrato'/>
+    <descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Taxas_Fatura.xml' name='MGSCT_Taxas_Fatura'/>
+    <descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Tipo_Processamento.xml' name='MGSCT_Tipo_Processamento'/>
 	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Tipo_Vaga_Evento.xml' name='MGSCT_Tipo_Vaga_Evento'/>
 	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Tributos_Contrato.xml' name='MGSCT_Tributos_Contrato'/>
+    <descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Tributos_Fatura.xml' name='MGSCT_Tributos_Fatura'/>
 	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Unidades.xml' name='MGSCT_Unidades'/>
 	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Vagas_Previsao_Contrato.xml' name='MGSCT_Vagas_Previsao_Contrato'/>
 	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Vagas_Previsao_Unidade.xml' name='MGSCT_Vagas_Previsao_Unidade'/>
 	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Valores_Eventos.xml' name='MGSCT_Valores_Eventos'/>
 	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Valores_Produtos.xml' name='MGSCT_Valores_Produtos'/>
-	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Eventos_Custos.xml' name='MGSCT_Eventos_Custos'/>
-	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Eventos_Apontamentos.xml' name='MGSCT_Eventos_Apontamentos'/>
-	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Detalhamento_Custo.xml' name='MGSCT_Detalhamento_Custo'/>
-	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Integr_Detalha_Custo.xml' name='MGSCT_Integr_Detalha_Custo'/>
-	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Integr_Lanc_Custo.xml' name='MGSCT_Integr_Lanc_Custo'/>
-	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Fila_Processamento.xml' name='MGSCT_Fila_Processamento'/>
-	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Tipo_Processamento.xml' name='MGSCT_Tipo_Processamento'/>
-
 
 </metadata-provider>
 
