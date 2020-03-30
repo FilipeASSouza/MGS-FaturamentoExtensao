@@ -28,6 +28,7 @@
     <descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Eventos_Custos.xml' name='MGSCT_Eventos_Custos'/>
 	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Empregado_RH.xml' name='MGSCT_Empregado_RH'/>
     <descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Fatura_Anexo.xml' name='MGSCT_Fatura_Anexo'/>
+	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Faturas_NFE.xml' name='MGSCT_Faturas_NFE'/>
     <descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Fila_Processamento.xml' name='MGSCT_Fila_Processamento'/>
     <descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Geracao_Boleto.xml' name='MGSCT_Geracao_Boleto'/>
     <descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Geracao_Faturas.xml' name='MGSCT_Geracao_Faturas'/>
@@ -41,6 +42,7 @@
 	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Modalidade_Contrato.xml' name='MGSCT_Modalidade_Contrato'/>
     <descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Numero_NFE.xml' name='MGSCT_Numero_NFE'/>
 	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Parametro_Metrica.xml' name='MGSCT_Parametro_Metrica'/>
+	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Planilhas.xml' name='MGSCT_Planilhas'/>
 	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Previsoes_Contrato.xml' name='MGSCT_Previsoes_Contrato'/>
 	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Previsoes_Contrato_V.xml' name='MGSCT_Previsoes_Contrato_V'/>
 	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Previsoes_Unidade.xml' name='MGSCT_Previsoes_Unidade'/>
