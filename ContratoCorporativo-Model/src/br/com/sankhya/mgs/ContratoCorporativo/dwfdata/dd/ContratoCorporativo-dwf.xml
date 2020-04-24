@@ -34,6 +34,8 @@
     <descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Fila_Processamento.xml' name='MGSCT_Fila_Processamento'/>
     <descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Geracao_Boleto.xml' name='MGSCT_Geracao_Boleto'/>
     <descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Geracao_Faturas.xml' name='MGSCT_Geracao_Faturas'/>
+	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Importacao_Evento_Mensal.xml' name='MGSCT_Importacao_Evento_Mensal'/>
+	<descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Importacao_Valores.xml' name='MGSCT_Importacao_Valores'/>
     <descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Integr_Detalha_Custo.xml' name='MGSCT_Integr_Detalha_Custo'/>
     <descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Integr_Lanc_Custo.xml' name='MGSCT_Integr_Lanc_Custo'/>
     <descriptor location='br/com/sankhya/mgs/ContratoCorporativo/dwfdata/dd/MGSCT_Itens_Fatura.xml' name='MGSCT_Itens_Fatura'/>
