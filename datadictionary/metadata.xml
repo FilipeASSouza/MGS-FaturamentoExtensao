@@ -424,10 +424,10 @@ return java.math.BigDecimal.ONE;]]></expression>
     <field name="CODUNIDADEFATUR" table="MGSTCTLCTCUSTO" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="5">
       <description><![CDATA[Cód. Unidade Faturamento]]></description>
     </field>
-    <field name="VLRUNITARIO" table="MGSTCTCONTRATOPREV" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="9">
+    <field name="VLRUNITARIO" table="MGSTCTCONTRATOPREV" dataType="F" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="9">
       <description><![CDATA[Vlr. Unitário]]></description>
     </field>
-    <field name="QTDCONTRATADA" table="MGSTCTCONTRATOPREV" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="7">
+    <field name="QTDCONTRATADA" table="MGSTCTCONTRATOPREV" dataType="F" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="7">
       <description><![CDATA[Qtd. Contratada]]></description>
     </field>
     <field name="CODEVENTO" table="MGSTCTCONTRATOPREV" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="2">
@@ -763,7 +763,7 @@ if($sql.next()){
     <field name="VLRPADRAO" table="MGSTCTTIPOTAXA" dataType="F" presentationType="P" calculated="N" allowSearch="S" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="2">
       <description><![CDATA[Valor Padrão da Taxa]]></description>
     </field>
-    <field name="QTDEALOCACAO" table="MGSTCTALOCACAOSERV" dataType="I" presentationType="P" calculated="N" allowSearch="S" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="3">
+    <field name="QTDEALOCACAO" table="MGSTCTALOCACAOSERV" dataType="F" presentationType="P" calculated="N" allowSearch="S" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="3">
       <description><![CDATA[Qtde Alocada]]></description>
     </field>
     <field name="DTINS" table="MGSTCTALOCACAOSERV" dataType="H" presentationType="P" calculated="N" allowSearch="S" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="6">
@@ -777,7 +777,7 @@ return $valorCampo;]]></expression>
     <field name="STATUSALOCACAO" table="MGSTCTALOCACAOSERV" dataType="S" presentationType="P" calculated="N" allowSearch="S" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="9">
       <description><![CDATA[Ativo]]></description>
     </field>
-    <field name="VLRUNITARIO" table="MGSTCTALOCACAOSERV" dataType="I" presentationType="P" calculated="N" allowSearch="S" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="4">
+    <field name="VLRUNITARIO" table="MGSTCTALOCACAOSERV" dataType="F" presentationType="P" calculated="N" allowSearch="S" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="4">
       <description><![CDATA[Valor Unitário]]></description>
     </field>
     <field name="NUUNIDPREV" table="MGSTCTALOCACAOSERV" dataType="I" presentationType="P" calculated="N" allowSearch="S" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="2">
@@ -1007,10 +1007,10 @@ if($sql.next()){
     <field name="DTFIM" table="MGSTCTUNIDADEPREV" dataType="D" presentationType="P" calculated="N" allowSearch="S" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="11">
       <description><![CDATA[Data Fim Vigência]]></description>
     </field>
-    <field name="VLRUNITARIO" table="MGSTCTUNIDADEPREV" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="8">
+    <field name="VLRUNITARIO" table="MGSTCTUNIDADEPREV" dataType="F" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="8">
       <description><![CDATA[Valor Unitário]]></description>
     </field>
-    <field name="QTDCONTRATADA" table="MGSTCTUNIDADEPREV" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="7">
+    <field name="QTDCONTRATADA" table="MGSTCTUNIDADEPREV" dataType="F" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="7">
       <description><![CDATA[Quantidade Contratada]]></description>
     </field>
     <field name="VLRCONTRATADA" table="MGSTCTUNIDADEPREV" dataType="F" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="9">
@@ -1548,6 +1548,11 @@ if($sql.next()){
     </field>
     <field name="DHINS" table="MGSTCTIMPEVTMENSAL" dataType="H" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="N" isPresentation="N" order="0">
       <description><![CDATA[Data e Hora Inserção do registro]]></description>
+      <expression><![CDATA[if( $valorCampo == null ){
+  return getDateTime();
+}
+
+return $valorCampo;]]></expression>
     </field>
     <field name="CEP" table="MGSTCTLOCALCONT" dataType="S" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="N" isPresentation="N" order="6">
       <description><![CDATA[CEP]]></description>
@@ -1605,12 +1610,20 @@ return null;]]></expression>
     </field>
     <field name="USUINS" table="MGSTCTIMPVLR" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="N" isPresentation="N" order="0">
       <description><![CDATA[Usuário que inseriu o registro]]></description>
+      <expression><![CDATA[return $valorCampo == null ? $ctx_usuario_logado: $valorCampo;]]></expression>
     </field>
     <field name="STATUS" table="MGSTCTIMPVLR" dataType="S" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="N" isPresentation="N" order="0">
       <description><![CDATA[Status]]></description>
+      <expression><![CDATA[if($valorCampo == null ){           
+   return 'I';
+}
+return $valorCampo;]]></expression>
     </field>
     <field name="LOG" table="MGSTCTIMPVLR" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="N" isPresentation="N" order="0">
       <description><![CDATA[Log]]></description>
+    </field>
+    <field name="VLRTAXAADM" table="MGSTCTALOCACAOSERV" dataType="F" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="13">
+      <description><![CDATA[Valor Taxa Administração]]></description>
     </field>
     <field name="NUTIPOSERVICO" table="MGSTCTIMPEVTMENSAL" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="N" isPresentation="N" order="0">
       <description><![CDATA[Tipo Serviço]]></description>
@@ -1662,6 +1675,9 @@ return null;]]></expression>
     </field>
     <field name="DESC_EVENTO" table="MGSVCTDETALHACUSTO" dataType="S" presentationType="P" calculated="N" allowSearch="S" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="17">
       <description><![CDATA[Desc. Evento]]></description>
+    </field>
+    <field name="VLRTAXAADM" table="MGSTCTALOCACAOPS" dataType="F" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="14">
+      <description><![CDATA[Valor Taxa Administração]]></description>
     </field>
     <field name="PARAMETRO" table="MGSTCTTIPOPARAMMETRICA" dataType="S" presentationType="P" calculated="N" allowSearch="S" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="5">
       <description><![CDATA[Parâmetro]]></description>
@@ -1766,8 +1782,13 @@ return null;]]></expression>
     <field name="NUIMPVLR" table="MGSTCTIMPVLR" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="N" isPresentation="N" order="0">
       <description><![CDATA[Nro Unico]]></description>
     </field>
-    <field name="DHINS" table="MGSTCTIMPVLR" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="N" isPresentation="N" order="0">
+    <field name="DHINS" table="MGSTCTIMPVLR" dataType="H" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="N" isPresentation="N" order="0">
       <description><![CDATA[Data e Hora Inserção do registro]]></description>
+      <expression><![CDATA[if( $valorCampo == null ){
+  return getDateTime();
+}
+
+return $valorCampo;]]></expression>
     </field>
     <field name="NROOCORRENCIA" table="MGSTCTCONTRVLRSERV" dataType="I" presentationType="P" calculated="N" allowSearch="S" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="5">
       <description><![CDATA[Nro.da Ocorrência]]></description>
@@ -1913,6 +1934,13 @@ return null;]]></expression>
     </field>
     <field name="STATUS" table="MGSTCTIMPEVTMENSAL" dataType="S" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="N" isPresentation="N" order="0">
       <description><![CDATA[Status]]></description>
+      <expression><![CDATA[if($valorCampo == null ){           
+   return 'I';
+}
+return $valorCampo;]]></expression>
+    </field>
+    <field name="CALCULATXMANUAL" table="MGSTCTEVTMENSAL" dataType="S" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="50">
+      <description><![CDATA[Calcula Taxa?]]></description>
     </field>
     <field name="ANEXO" table="MGSTCTRLTANEXO" dataType="B" presentationType="P" calculated="N" allowSearch="S" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="13">
       <description><![CDATA[Anexo]]></description>
@@ -2045,6 +2073,7 @@ return null;]]></expression>
     </field>
     <field name="USUINS" table="MGSTCTIMPEVTMENSAL" dataType="S" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="N" isPresentation="N" order="0">
       <description><![CDATA[Usuário que inseriu o registro]]></description>
+      <expression><![CDATA[return $valorCampo == null ? $ctx_usuario_logado: $valorCampo;]]></expression>
     </field>
   </fields>
   <fieldProperties>
@@ -2187,6 +2216,13 @@ return null;]]></expression>
     <prop table="MGSTCTRLTANEXO" field="APROVADO" name="UITabName"><![CDATA[__main]]></prop>
     <prop table="MGSTCTRLTANEXO" field="USUINS" name="visivel"><![CDATA[N]]></prop>
     <prop table="MGSTCTRLTANEXO" field="NUMODALIDADE" name="visivel"><![CDATA[N]]></prop>
+    <prop table="MGSTCTIMPVLR" field="DHINS" name="readOnly"><![CDATA[S]]></prop>
+    <prop table="MGSTCTIMPVLR" field="LOG" name="readOnly"><![CDATA[S]]></prop>
+    <prop table="MGSTCTIMPEVTMENSAL" field="USUINS" name="readOnly"><![CDATA[S]]></prop>
+    <prop table="MGSTCTIMPEVTMENSAL" field="LOG" name="readOnly"><![CDATA[S]]></prop>
+    <prop table="MGSTCTIMPEVTMENSAL" field="DHINS" name="readOnly"><![CDATA[S]]></prop>
+    <prop table="MGSTCTCONTRATOPREV" field="VLRUNITARIO" name="nuCasasDecimais"><![CDATA[10]]></prop>
+    <prop table="MGSTCTUNIDADEPREV" field="VLRUNITARIO" name="nuCasasDecimais"><![CDATA[10]]></prop>
     <prop table="MGSTCTTIPOMETRICA" field="TIPOMETRICA" name="UITabName"><![CDATA[__main]]></prop>
     <prop table="MGSTCTTIPOMETRICA" field="TEXTOCHAVE" name="UITabName"><![CDATA[__main]]></prop>
     <prop table="MGSTCTTIPOMETRICA" field="DESCRMETRICA" name="UITabName"><![CDATA[__main]]></prop>
@@ -2201,6 +2237,9 @@ return null;]]></expression>
     <prop table="MGSTCTPARAMMETRICA" field="VALOR" name="UITabName"><![CDATA[__main]]></prop>
     <prop table="MGSTCTCONTRCENT" field="DTFIM" name="UITabName"><![CDATA[__main]]></prop>
     <prop table="MGSTCTRATEIOFATURA" field="CODMODALIDADE" name="UITabName"><![CDATA[__main]]></prop>
+    <prop table="MGSTCTIMPVLR" field="USUINS" name="readOnly"><![CDATA[S]]></prop>
+    <prop table="MGSTCTALOCACAOSERV" field="VLRUNITARIO" name="nuCasasDecimais"><![CDATA[10]]></prop>
+    <prop table="MGSTCTALOCACAOSERV" field="VLRTAXAADM" name="UITabName"><![CDATA[__main]]></prop>
     <prop table="MGSTCTCONTRCENT" field="CODSITE" name="UITabName"><![CDATA[__main]]></prop>
     <prop table="MGSTCTCONTRVLRPS" field="DTFIM" name="UITabName"><![CDATA[__main]]></prop>
     <prop table="MGSTCTUNIDPREVVAGA" field="ALOCADO" name="readOnly"><![CDATA[S]]></prop>
@@ -2215,6 +2254,7 @@ return null;]]></expression>
     <prop table="MGSTCTRATEIOFATURA" field="CODTIPOPOSTO" name="UITabName"><![CDATA[__main]]></prop>
     <prop table="MGSTCTRATEIOFATURA" field="CODTIPOFATURA" name="UITabName"><![CDATA[__main]]></prop>
     <prop table="MGSTCTRATEIOFATURA" field="CODTAXAINCIDENCIA" name="UITabName"><![CDATA[__main]]></prop>
+    <prop table="MGSTCTIMPEVTMENSAL" field="STATUS" name="readOnly"><![CDATA[S]]></prop>
     <prop table="MGSTCTPOSTOCARGO" field="CODTIPOPOSTO" name="UITabName"><![CDATA[__main]]></prop>
     <prop table="MGSTCTTIPOFATURA" field="DESCRTIPOFAT" name="UITabName"><![CDATA[__main]]></prop>
     <prop table="MGSTCTLOCALCONT" field="NUMCONTRATO" name="UITabName"><![CDATA[__main]]></prop>
@@ -2232,6 +2272,7 @@ return null;]]></expression>
     <prop table="MGSTCTRLTANEXO" field="DHINS" name="visivel"><![CDATA[N]]></prop>
     <prop table="MGSTCTRLTANEXO" field="ANEXO" name="visivel"><![CDATA[N]]></prop>
     <prop table="MGSTCTRLTANEXO" field="ANEXO" name="UITabName"><![CDATA[__main]]></prop>
+    <prop table="MGSTCTALOCACAOPS" field="VLRTAXAADM" name="UITabName"><![CDATA[__main]]></prop>
     <prop table="MGSTCTTIPOTAXA" field="DESCRTAXA" name="UITabName"><![CDATA[__main]]></prop>
     <prop table="MGSTCTCONTRVLRPS" field="CODTPN" name="UITabName"><![CDATA[__main]]></prop>
     <prop table="MGSTCTCONTRVLRPS" field="CODEVENTO" name="UITabName"><![CDATA[__main]]></prop>
@@ -2253,6 +2294,7 @@ return null;]]></expression>
     <prop table="MGSTCTLOCALCONT" field="CODPARC" name="UITabName"><![CDATA[__main]]></prop>
     <prop table="MGSTCTLOCALCONT" field="CODCID" name="UITabName"><![CDATA[__main]]></prop>
     <prop table="MGSTCTRLTANEXO" field="USUINS" name="UITabName"><![CDATA[__main]]></prop>
+    <prop table="MGSTCTIMPVLR" field="STATUS" name="readOnly"><![CDATA[S]]></prop>
     <prop table="MGSTCTTIPOSITUACAO" field="DESCRSITUACAO" name="UITabName"><![CDATA[__main]]></prop>
     <prop table="MGSTCTMETRICAS" field="NUTIPOMETRICA" name="UITabName"><![CDATA[__main]]></prop>
     <prop table="MGSTCTMETRICAS" field="NUCONTRMETRICA" name="UITabName"><![CDATA[__main]]></prop>
@@ -2341,6 +2383,7 @@ return null;]]></expression>
     <prop table="MGSTCTRLTANEXO" field="NUMODALIDADE" name="UITabName"><![CDATA[__main]]></prop>
     <prop table="MGSTCTRLTANEXO" field="DHAPROVACAO" name="UITabName"><![CDATA[__main]]></prop>
     <prop table="MGSTCTRLTANEXO" field="TIPGESTOR" name="visivel"><![CDATA[N]]></prop>
+    <prop table="MGSTCTUNIDADEPREV" field="VLRTAXAADM" name="UITabName"><![CDATA[__main]]></prop>
   </fieldProperties>
   <fieldOptions>
     <option table="MGSTCTCONTRATOTRIB" field="ATIVO" value="S"><![CDATA[Sim]]></option>
@@ -2385,6 +2428,16 @@ return null;]]></expression>
     <option table="MGSTCTINTEGRALC" field="COMPLEMENTO" value="E"><![CDATA[Erro]]></option>
     <option table="MGSTCTCONTRCENT" field="LIBERADOFATURAMENTO" value="N"><![CDATA[Não]]></option>
     <option table="MGSTCTCONTRCENT" field="LIBERADOFATURAMENTO" value="S"><![CDATA[Sim]]></option>
+    <option table="MGSTCTIMPEVTMENSAL" field="STATUS" value="P"><![CDATA[Processado]]></option>
+    <option table="MGSTCTIMPEVTMENSAL" field="STATUS" value="E"><![CDATA[Erro]]></option>
+    <option table="MGSTCTIMPEVTMENSAL" field="STATUS" value="I"><![CDATA[Incluido]]></option>
+    <option table="MGSTCTIMPVLR" field="STATUS" value="I"><![CDATA[Incluido]]></option>
+    <option table="MGSTCTIMPVLR" field="STATUS" value="P"><![CDATA[Processado]]></option>
+    <option table="MGSTCTIMPVLR" field="STATUS" value="E"><![CDATA[Erro]]></option>
+    <option table="MGSTCTIMPVLR" field="TIPOARQUIVO" value="SR"><![CDATA[Serviço]]></option>
+    <option table="MGSTCTIMPVLR" field="TIPOARQUIVO" value="PS"><![CDATA[Posto de Serviço]]></option>
+    <option table="MGSTCTEVTMENSAL" field="CALCULATXMANUAL" value="N"><![CDATA[Não]]></option>
+    <option table="MGSTCTEVTMENSAL" field="CALCULATXMANUAL" value="S"><![CDATA[Sim]]></option>
   </fieldOptions>
   <instances>
     <instance name="MGSCT_Metricas" tableName="MGSTCTMETRICAS">
@@ -2691,11 +2744,6 @@ return null;]]></expression>
     <relation fromEntity="MGSCT_Importacao_Evento_Mensal" toEntity="MGSCT_Dados_Contrato" type="I" insert="N" update="N" remove="N">
       <fields>
         <field localName="NUMCONTRATO" targetName="NUMCONTRATO" />
-      </fields>
-    </relation>
-    <relation fromEntity="MGSCT_Alocacoes_Servicos" toEntity="MGSCT_Previsoes_Unidade_Serv" type="I" insert="N" update="N" remove="N">
-      <fields>
-        <field localName="CODCONTROLE" targetName="CODCONTROLE" />
       </fields>
     </relation>
     <relation fromEntity="MGSCT_Importacao_Evento_Mensal" toEntity="TGFTSE" type="I" insert="N" update="N" remove="N">
@@ -3254,6 +3302,11 @@ NOT EXISTS(SELECT 1 AS QTD FROM MV_CONTRATACAO@DLINK_MGS WHERE STATUS_MOVIMENTAC
         <field localName="CODCUSTO" targetName="CODCUSTO" />
       </fields>
     </relation>
+    <relation fromEntity="MGSCT_Alocacoes_Servicos" toEntity="MGSCT_Apoio_Controle" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="CODCONTROLE" targetName="CODCONTROLE" />
+      </fields>
+    </relation>
   </relationShip>
   <controls>
     <control name="br.com.sankhya.mgs.ct.Cadastro" type="MN" childrenType="MN">
@@ -3469,46 +3522,52 @@ NOT EXISTS(SELECT 1 AS QTD FROM MV_CONTRATACAO@DLINK_MGS WHERE STATUS_MOVIMENTAC
     </control>
     <control name="br.com.sankhya.mgs.ct.Importacao.EventoMensal" type="MN" childrenType="PL">
       <description><![CDATA[Importação Evento Mensal]]></description>
-      <url><![CDATA[${dynaform:MGSCT_Detalha_Custo}]]></url>
-      <properties />
+      <url><![CDATA[${dynaform:MGSCT_Importacao_Evento_Mensal}]]></url>
+      <properties>
+        <resourceID><![CDATA[br.com.sankhya.mgs.ct.importacao.eventomensal]]></resourceID>
+        <contexto><![CDATA[ContratoCorporativo]]></contexto>
+      </properties>
     </control>
     <control name="br.com.sankhya.mgs.ct.Importacao.Valores" type="MN" childrenType="PL">
       <description><![CDATA[Importação Valores]]></description>
-      <url><![CDATA[${dynaform:MGSCT_Detalha_Custo}]]></url>
-      <properties />
+      <url><![CDATA[${dynaform:MGSCT_Importacao_Valores}]]></url>
+      <properties>
+        <resourceID><![CDATA[br.com.sankhya.mgs.ct.importacao.valores]]></resourceID>
+        <contexto><![CDATA[ContratoCorporativo]]></contexto>
+      </properties>
     </control>
   </controls>
   <controlRelations>
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Rotina" toCtrl="br.com.sankhya.mgs.ct.Contrato" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.ct.Cadastro" toCtrl="br.com.sankhya.mgs.ct.Consultas" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Cadastro" toCtrl="br.com.sankhya.mgs.ct.FilaProcessamento" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct" toCtrl="br.com.sankhya.ct.Cadastro" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Rotina" toCtrl="br.com.sankhya.mgs.ct.PrevisoesUnidadePS" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Rotina" toCtrl="br.com.sankhya.mgs.ct.RelatorioAnexo" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Cadastro" toCtrl="br.com.sankhya.mgs.ct.ApoioTaxa" />
     <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Cadastro" toCtrl="br.com.sankhya.mgs.ct.ApoioMetrica" />
     <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Rotina" toCtrl="br.com.sankhya.mgs.ct.PrevisoesUnidadeServ" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.ct.Cadastro" toCtrl="br.com.sankhya.mgs.ct.Cadastro" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.ct.Cadastro" toCtrl="br.com.sankhya.mgs.ct.importacao" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Rotina" toCtrl="br.com.sankhya.mgs.ct.DetalhamentodeCusto" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct" toCtrl="br.com.sankhya.ct.Cadastro" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Cadastro" toCtrl="br.com.sankhya.mgs.ct.ValoresEventos" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Cadastro" toCtrl="br.com.sankhya.mgs.ct.EventosApontamentos" />
     <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.importacao" toCtrl="br.com.sankhya.mgs.ct.Importacao.EventoMensal" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.importacao" toCtrl="br.com.sankhya.mgs.ct.Importacao.Valores" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Rotina" toCtrl="br.com.sankhya.mgs.ct.LocalContrato" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.ct.Cadastro" toCtrl="br.com.sankhya.mgs.ct.Cadastro" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Rotina" toCtrl="br.com.sankhya.mgs.ct.Contrato" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Cadastro" toCtrl="br.com.sankhya.mgs.ct.EventosApontamentos" />
     <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Cadastro" toCtrl="br.com.sankhya.mgs.ct.Controle" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Consultas" toCtrl="br.com.sankhya.mgs.ct.FaturasNfe" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Cadastro" toCtrl="br.com.sankhya.mgs.ct.ApoioTaxa" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Cadastro" toCtrl="br.com.sankhya.mgs.ct.ApoioPS" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Cadastro" toCtrl="br.com.sankhya.mgs.ct.FilaProcessamento" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Cadastro" toCtrl="br.com.sankhya.mgs.ct.TipoFatura" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.ct.Cadastro" toCtrl="br.com.sankhya.mgs.ct.Rotina" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Cadastro" toCtrl="br.com.sankhya.mgs.ct.EventosCustos" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.ct.Cadastro" toCtrl="br.com.sankhya.mgs.ct.Consultas" />
     <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Rotina" toCtrl="br.com.sankhya.mgs.ct.Unidades" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Rotina" toCtrl="br.com.sankhya.mgs.ct.PrevisoesUnidadePS" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Consultas" toCtrl="br.com.sankhya.mgs.ct.DetalhaCusto" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Rotina" toCtrl="br.com.sankhya.mgs.ct.RelatorioAnexo" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Cadastro" toCtrl="br.com.sankhya.mgs.ct.ValoresProdutos" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Cadastro" toCtrl="br.com.sankhya.mgs.ct.SituacaoContrato" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Consultas" toCtrl="br.com.sankhya.mgs.ct.Planilhas" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.ct.Cadastro" toCtrl="br.com.sankhya.mgs.ct.importacao" />
     <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Consultas" toCtrl="br.com.sankhya.mgs.ct.DetalhaIntegracao" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Cadastro" toCtrl="br.com.sankhya.mgs.ct.SituacaoContrato" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Cadastro" toCtrl="br.com.sankhya.mgs.ct.ValoresEventos" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Consultas" toCtrl="br.com.sankhya.mgs.ct.FaturasNfe" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.importacao" toCtrl="br.com.sankhya.mgs.ct.Importacao.Valores" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Cadastro" toCtrl="br.com.sankhya.mgs.ct.EventosCustos" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Cadastro" toCtrl="br.com.sankhya.mgs.ct.ApoioPS" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Rotina" toCtrl="br.com.sankhya.mgs.ct.DetalhamentodeCusto" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Rotina" toCtrl="br.com.sankhya.mgs.ct.LocalContrato" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Consultas" toCtrl="br.com.sankhya.mgs.ct.Planilhas" />
     <ctrlRelationship fromCtrl="br.com.sankhya.ct.Cadastro" toCtrl="br.com.sankhya.mgs.ct.Arquivo" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Cadastro" toCtrl="br.com.sankhya.mgs.ct.ValoresProdutos" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Cadastro" toCtrl="br.com.sankhya.mgs.ct.TipoFatura" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Consultas" toCtrl="br.com.sankhya.mgs.ct.DetalhaCusto" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.ct.Cadastro" toCtrl="br.com.sankhya.mgs.ct.Rotina" />
   </controlRelations>
 </metadata>
 
