@@ -1599,6 +1599,15 @@ return null;]]></expression>
     <field name="USUUPD" table="MGSTCTEVTMENSAL" dataType="S" presentationType="P" calculated="N" allowSearch="S" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="48">
       <description><![CDATA[Usuário que Atualizou o registro]]></description>
     </field>
+    <field name="SNK_NUFIN" table="MGSTCTNFENOTAS" dataType="I" presentationType="P" calculated="N" allowSearch="S" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="7">
+      <description><![CDATA[Nro. Financeiro]]></description>
+    </field>
+    <field name="SNK_NURENEG" table="MGSTCTNFENOTAS" dataType="I" presentationType="P" calculated="N" allowSearch="S" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="8">
+      <description><![CDATA[Nro. Renegociação]]></description>
+    </field>
+    <field name="SNK_NUNOTA" table="MGSTCTNFENOTAS" dataType="I" presentationType="P" calculated="N" allowSearch="S" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="6">
+      <description><![CDATA[Nro. NF]]></description>
+    </field>
     <field name="CODEVENTO" table="MGSTCTTPVAGAEVENTO" dataType="I" presentationType="P" calculated="N" allowSearch="S" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="2">
       <description><![CDATA[Evento]]></description>
     </field>
@@ -1615,11 +1624,11 @@ return null;]]></expression>
     <field name="STATUS" table="MGSTCTIMPVLR" dataType="S" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="N" isPresentation="N" order="0">
       <description><![CDATA[Status]]></description>
       <expression><![CDATA[if($valorCampo == null ){           
-   return 'I';
+   return "I";
 }
 return $valorCampo;]]></expression>
     </field>
-    <field name="LOG" table="MGSTCTIMPVLR" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="N" isPresentation="N" order="0">
+    <field name="LOG" table="MGSTCTIMPVLR" dataType="S" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="N" isPresentation="N" order="0">
       <description><![CDATA[Log]]></description>
     </field>
     <field name="VLRTAXAADM" table="MGSTCTALOCACAOSERV" dataType="F" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="13">
@@ -1935,7 +1944,7 @@ return null;]]></expression>
     <field name="STATUS" table="MGSTCTIMPEVTMENSAL" dataType="S" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="N" isPresentation="N" order="0">
       <description><![CDATA[Status]]></description>
       <expression><![CDATA[if($valorCampo == null ){           
-   return 'I';
+   return "I";
 }
 return $valorCampo;]]></expression>
     </field>
@@ -2071,7 +2080,7 @@ return $valorCampo;]]></expression>
     <field name="TEXTOCHAVE" table="MGSTCTTIPOMETRICA" dataType="S" presentationType="P" calculated="N" allowSearch="S" allowDefault="N" visibleOnSearch="S" isPresentation="N" order="1">
       <description><![CDATA[Chave]]></description>
     </field>
-    <field name="USUINS" table="MGSTCTIMPEVTMENSAL" dataType="S" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="N" isPresentation="N" order="0">
+    <field name="USUINS" table="MGSTCTIMPEVTMENSAL" dataType="I" presentationType="P" calculated="N" allowSearch="N" allowDefault="N" visibleOnSearch="N" isPresentation="N" order="0">
       <description><![CDATA[Usuário que inseriu o registro]]></description>
       <expression><![CDATA[return $valorCampo == null ? $ctx_usuario_logado: $valorCampo;]]></expression>
     </field>
@@ -2751,6 +2760,11 @@ return $valorCampo;]]></expression>
         <field localName="NUTIPOSERVICO" targetName="NUTIPOSERVICO" />
       </fields>
     </relation>
+    <relation fromEntity="MGSCT_Lancamento_Custo" toEntity="MGSCT_Integr_Detalha_Custo" type="I" insert="N" update="N" remove="N">
+      <fields>
+        <field localName="CODINTEGRACAODC" targetName="NUINTEGRADC" />
+      </fields>
+    </relation>
     <relation fromEntity="MGSCT_Unidades" toEntity="Site_AD001" type="I" insert="N" update="N" remove="N">
       <fields>
         <field localName="CODSITE" targetName="CODSITE" />
@@ -3310,7 +3324,7 @@ NOT EXISTS(SELECT 1 AS QTD FROM MV_CONTRATACAO@DLINK_MGS WHERE STATUS_MOVIMENTAC
   </relationShip>
   <controls>
     <control name="br.com.sankhya.mgs.ct.Cadastro" type="MN" childrenType="MN">
-      <description><![CDATA[Cadastro]]></description>
+      <description><![CDATA[Tabelas de Apoio]]></description>
       <url />
       <properties />
     </control>
@@ -3456,7 +3470,7 @@ NOT EXISTS(SELECT 1 AS QTD FROM MV_CONTRATACAO@DLINK_MGS WHERE STATUS_MOVIMENTAC
       </properties>
     </control>
     <control name="br.com.sankhya.mgs.ct.DetalhaCusto" type="MN" childrenType="PL">
-      <description><![CDATA[Detalha Custo (CT)]]></description>
+      <description><![CDATA[Detalhamento Custo (CT)]]></description>
       <url><![CDATA[${dynaform:MGSCT_Detalha_Custo}]]></url>
       <properties>
         <resourceID><![CDATA[br.com.sankhya.mgs.ct.detalhacusto]]></resourceID>
@@ -3464,7 +3478,7 @@ NOT EXISTS(SELECT 1 AS QTD FROM MV_CONTRATACAO@DLINK_MGS WHERE STATUS_MOVIMENTAC
       </properties>
     </control>
     <control name="br.com.sankhya.mgs.ct.importacao" type="MN" childrenType="MN">
-      <description><![CDATA[Importação]]></description>
+      <description><![CDATA[Importações]]></description>
       <url />
       <properties />
     </control>
@@ -3487,7 +3501,7 @@ NOT EXISTS(SELECT 1 AS QTD FROM MV_CONTRATACAO@DLINK_MGS WHERE STATUS_MOVIMENTAC
       <properties />
     </control>
     <control name="br.com.sankhya.mgs.ct.Rotina" type="MN" childrenType="MN">
-      <description><![CDATA[Rotina]]></description>
+      <description><![CDATA[Cadastros]]></description>
       <url />
       <properties />
     </control>
@@ -3513,7 +3527,7 @@ NOT EXISTS(SELECT 1 AS QTD FROM MV_CONTRATACAO@DLINK_MGS WHERE STATUS_MOVIMENTAC
       </properties>
     </control>
     <control name="br.com.sankhya.mgs.ct.DetalhaIntegracao" type="MN" childrenType="PL">
-      <description><![CDATA[Detalha Integração (CT)]]></description>
+      <description><![CDATA[Detalhamento Integração (CT)]]></description>
       <url><![CDATA[${dynaform:MGSCT_Detalha_Integracao}]]></url>
       <properties>
         <resourceID><![CDATA[br.com.sankhya.mgs.ct.detalhaintegracao]]></resourceID>
@@ -3521,7 +3535,7 @@ NOT EXISTS(SELECT 1 AS QTD FROM MV_CONTRATACAO@DLINK_MGS WHERE STATUS_MOVIMENTAC
       </properties>
     </control>
     <control name="br.com.sankhya.mgs.ct.Importacao.EventoMensal" type="MN" childrenType="PL">
-      <description><![CDATA[Importação Evento Mensal]]></description>
+      <description><![CDATA[Importação de Detalhamento de Custos (CT)]]></description>
       <url><![CDATA[${dynaform:MGSCT_Importacao_Evento_Mensal}]]></url>
       <properties>
         <resourceID><![CDATA[br.com.sankhya.mgs.ct.importacao.eventomensal]]></resourceID>
@@ -3529,7 +3543,7 @@ NOT EXISTS(SELECT 1 AS QTD FROM MV_CONTRATACAO@DLINK_MGS WHERE STATUS_MOVIMENTAC
       </properties>
     </control>
     <control name="br.com.sankhya.mgs.ct.Importacao.Valores" type="MN" childrenType="PL">
-      <description><![CDATA[Importação Valores]]></description>
+      <description><![CDATA[Importação de Valores de Eventos (CT)]]></description>
       <url><![CDATA[${dynaform:MGSCT_Importacao_Valores}]]></url>
       <properties>
         <resourceID><![CDATA[br.com.sankhya.mgs.ct.importacao.valores]]></resourceID>
@@ -3538,36 +3552,36 @@ NOT EXISTS(SELECT 1 AS QTD FROM MV_CONTRATACAO@DLINK_MGS WHERE STATUS_MOVIMENTAC
     </control>
   </controls>
   <controlRelations>
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Cadastro" toCtrl="br.com.sankhya.mgs.ct.FilaProcessamento" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct" toCtrl="br.com.sankhya.ct.Cadastro" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Rotina" toCtrl="br.com.sankhya.mgs.ct.PrevisoesUnidadePS" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Rotina" toCtrl="br.com.sankhya.mgs.ct.RelatorioAnexo" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Cadastro" toCtrl="br.com.sankhya.mgs.ct.ApoioTaxa" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Cadastro" toCtrl="br.com.sankhya.mgs.ct.ApoioMetrica" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Rotina" toCtrl="br.com.sankhya.mgs.ct.PrevisoesUnidadeServ" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.importacao" toCtrl="br.com.sankhya.mgs.ct.Importacao.EventoMensal" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.ct.Cadastro" toCtrl="br.com.sankhya.mgs.ct.Cadastro" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Rotina" toCtrl="br.com.sankhya.mgs.ct.Contrato" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Cadastro" toCtrl="br.com.sankhya.mgs.ct.EventosApontamentos" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Cadastro" toCtrl="br.com.sankhya.mgs.ct.Controle" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.ct.Cadastro" toCtrl="br.com.sankhya.mgs.ct.Consultas" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Rotina" toCtrl="br.com.sankhya.mgs.ct.Unidades" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.ct.Cadastro" toCtrl="br.com.sankhya.mgs.ct.importacao" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Consultas" toCtrl="br.com.sankhya.mgs.ct.DetalhaIntegracao" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Cadastro" toCtrl="br.com.sankhya.mgs.ct.SituacaoContrato" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Cadastro" toCtrl="br.com.sankhya.mgs.ct.ValoresEventos" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Consultas" toCtrl="br.com.sankhya.mgs.ct.FaturasNfe" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.importacao" toCtrl="br.com.sankhya.mgs.ct.Importacao.Valores" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Cadastro" toCtrl="br.com.sankhya.mgs.ct.EventosCustos" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Cadastro" toCtrl="br.com.sankhya.mgs.ct.ApoioPS" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Rotina" toCtrl="br.com.sankhya.mgs.ct.DetalhamentodeCusto" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Rotina" toCtrl="br.com.sankhya.mgs.ct.LocalContrato" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Consultas" toCtrl="br.com.sankhya.mgs.ct.Planilhas" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.ct.Cadastro" toCtrl="br.com.sankhya.mgs.ct.Arquivo" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Cadastro" toCtrl="br.com.sankhya.mgs.ct.ValoresProdutos" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Cadastro" toCtrl="br.com.sankhya.mgs.ct.TipoFatura" />
-    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Consultas" toCtrl="br.com.sankhya.mgs.ct.DetalhaCusto" />
     <ctrlRelationship fromCtrl="br.com.sankhya.ct.Cadastro" toCtrl="br.com.sankhya.mgs.ct.Rotina" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Cadastro" toCtrl="br.com.sankhya.mgs.ct.ValoresEventos" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Rotina" toCtrl="br.com.sankhya.mgs.ct.RelatorioAnexo" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Rotina" toCtrl="br.com.sankhya.mgs.ct.PrevisoesUnidadeServ" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Consultas" toCtrl="br.com.sankhya.mgs.ct.Planilhas" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Consultas" toCtrl="br.com.sankhya.mgs.ct.DetalhaIntegracao" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.importacao" toCtrl="br.com.sankhya.mgs.ct.Importacao.EventoMensal" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.ct.Cadastro" toCtrl="br.com.sankhya.mgs.ct.Consultas" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.ct.Cadastro" toCtrl="br.com.sankhya.mgs.ct.Arquivo" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Rotina" toCtrl="br.com.sankhya.mgs.ct.Unidades" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Consultas" toCtrl="br.com.sankhya.mgs.ct.FaturasNfe" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Cadastro" toCtrl="br.com.sankhya.mgs.ct.ApoioPS" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Cadastro" toCtrl="br.com.sankhya.mgs.ct.ApoioTaxa" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Cadastro" toCtrl="br.com.sankhya.mgs.ct.SituacaoContrato" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Rotina" toCtrl="br.com.sankhya.mgs.ct.LocalContrato" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Cadastro" toCtrl="br.com.sankhya.mgs.ct.ValoresProdutos" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Cadastro" toCtrl="br.com.sankhya.mgs.ct.ApoioMetrica" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Rotina" toCtrl="br.com.sankhya.mgs.ct.PrevisoesUnidadePS" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Rotina" toCtrl="br.com.sankhya.mgs.ct.DetalhamentodeCusto" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Cadastro" toCtrl="br.com.sankhya.mgs.ct.EventosCustos" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Cadastro" toCtrl="br.com.sankhya.mgs.ct.EventosApontamentos" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Rotina" toCtrl="br.com.sankhya.mgs.ct.Contrato" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct" toCtrl="br.com.sankhya.ct.Cadastro" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.ct.Cadastro" toCtrl="br.com.sankhya.mgs.ct.importacao" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Consultas" toCtrl="br.com.sankhya.mgs.ct.DetalhaCusto" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Cadastro" toCtrl="br.com.sankhya.mgs.ct.TipoFatura" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Cadastro" toCtrl="br.com.sankhya.mgs.ct.FilaProcessamento" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.ct.Cadastro" toCtrl="br.com.sankhya.mgs.ct.Cadastro" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.Cadastro" toCtrl="br.com.sankhya.mgs.ct.Controle" />
+    <ctrlRelationship fromCtrl="br.com.sankhya.mgs.ct.importacao" toCtrl="br.com.sankhya.mgs.ct.Importacao.Valores" />
   </controlRelations>
 </metadata>
 
