@@ -1,8 +1,8 @@
 <configs>
   <dataSources />
   <defaultJbossPath>../jboss</defaultJbossPath>
-  <buildDir>D:\Contrato_Corporativo\ContratoCorporativoExtensao</buildDir>
-  <exportDir>D:\Export_Extension_ContratoCorporativo</exportDir>
+  <buildDir>C:\Users\fernando.lopes\workspaceSankhya\projetos\clientes\MGS\FaturamentoExtensao</buildDir>
+  <exportDir>C:\Users\fernando.lopes\workspaceSankhya\apps\SkWExtensionTool\.\Export</exportDir>
   <recriaDefault>false</recriaDefault>
   <cleanJboss>false</cleanJboss>
   <devEnvironment>
@@ -14,8 +14,8 @@
       <user>sankhyadev</user>
       <pass>sankhya@2020</pass>
       <baseName />
-      <poolSizeMin>100</poolSizeMin>
-      <poolSizeMax>100</poolSizeMax>
+      <poolSizeMin>0</poolSizeMin>
+      <poolSizeMax>0</poolSizeMax>
     </DataSource>
   </devEnvironment>
 </configs>
