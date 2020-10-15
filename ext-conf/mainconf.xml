@@ -1,8 +1,20 @@
 <configs>
-  <dataSources />
+  <dataSources>
+    <DataSource name="SANKHYA_DEV">
+      <dataBase>ORACLE</dataBase>
+      <host>192.168.7.125</host>
+      <sidInstance>orcl</sidInstance>
+      <port>1521</port>
+      <user>sankhyadev</user>
+      <pass>mgs$s18</pass>
+      <baseName />
+      <poolSizeMin>0</poolSizeMin>
+      <poolSizeMax>0</poolSizeMax>
+    </DataSource>
+  </dataSources>
   <defaultJbossPath>../jboss</defaultJbossPath>
-  <buildDir>C:\Users\fernando.lopes\workspaceSankhya\projetos\clientes\MGS\FaturamentoExtensao</buildDir>
-  <exportDir>C:\Users\fernando.lopes\workspaceSankhya\apps\SkWExtensionTool\.\Export</exportDir>
+  <buildDir>C:\FILIPE\PROJETOS\MGS-FaturamentoExtensao</buildDir>
+  <exportDir>C:\FILIPE\EXTENSÃO\OneDrive-2020-09-18\SkWExtensionToool-Windows-1.6b4\SkWExtensionTools\export</exportDir>
   <recriaDefault>false</recriaDefault>
   <cleanJboss>false</cleanJboss>
   <devEnvironment>
@@ -12,10 +24,10 @@
       <sidInstance>orcl</sidInstance>
       <port>1521</port>
       <user>sankhyadev</user>
-      <pass>sankhya@2020</pass>
+      <pass>mgs$s18</pass>
       <baseName />
-      <poolSizeMin>0</poolSizeMin>
-      <poolSizeMax>0</poolSizeMax>
+      <poolSizeMin>100</poolSizeMin>
+      <poolSizeMax>100</poolSizeMax>
     </DataSource>
   </devEnvironment>
 </configs>
